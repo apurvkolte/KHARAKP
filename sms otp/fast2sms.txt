@@ -1,0 +1,60 @@
+//.env
+API_KEY = rjiCSN4XDnFLgBEys5RQ6YI0hGu8meAb9Uafq3tlzVkoMZPWO7gL9KdMUjOQ4hFVIps512ucla6wkre7
+
+
+
+//index.js
+const express = require('express');
+const fast2sms = require('fast-two-sms')
+
+const app = express()
+app.set('view engine', 'ejs')
+require('dotenv').config()
+app.use(express.urlencoded({ extended: false }))
+app.get('/', (req, res) => {
+    res.render('index.ejs')
+})
+
+app.post('/sendMessage', async (req, res) => {
+    const response = await fast2sms.sendMessage({ authorization: process.env.API_KEY, message: req.body.message, numbers: [req.body.number] })
+    res.send(response)
+})
+
+app.listen(3000, () => {
+    console.log("Server is listening on port 3000");
+})
+
+
+//index.ejs
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message Sender</title>
+  </head>
+  <body>
+    <form action="/sendMessage" method="post">
+      <div class="form-group">
+        <label for="number">Enter Number</label>
+        <input type="text" id="number" name="number" />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Enter Message</label>
+        <input type="text" id="message" name="message" />
+      </div>
+      <input type="submit" value="Send Message" />
+    </form>
+  </body>
+</html>
+
+ "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "fast-two-sms": "^3.0.0",
+    "fast2sms": "^1.0.3",
+    "nodemon": "^2.0.20"
+  }

@@ -1,0 +1,42 @@
+var axios = require('axios');
+var data = JSON.stringify({
+    "messages": [
+        {
+            "channel": "sms",
+            "recipients": [
+                "+919511708928",
+                "+919511708928"
+            ],
+            "content": "Hello 123",
+            "msg_type": "text",
+            "data_coding": "text"
+        }
+    ],
+    "message_globals": {
+        "originator": "SignOTP",
+        "report_url": "https://the_url_to_recieve_delivery_report.com"
+    }
+});
+
+
+
+var config = {
+    method: 'post',
+    url: 'https://api.d7networks.com/messages/v1/send',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiNDc1N2E0M2UtNWU4Ni00ZWNhLTgwNGMtMDg0ZDhmOTJhYWY1In0.WB9tgmZscsR-SxIFVA9DWeXNdTAFCJkxvNuZzq-O1aU'
+    },
+    data: data
+};
+
+axios(config)
+    .then(function (response) {
+        console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+
+    //eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiNDc1N2E0M2UtNWU4Ni00ZWNhLTgwNGMtMDg0ZDhmOTJhYWY1In0

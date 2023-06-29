@@ -1,0 +1,42 @@
+git init
+git add .
+git commit -m "myproj"
+git status
+git remote add origin http
+git push origin master
+
+git push -f origin master
+git remote remove origin
+git config --global user.email "apurvkolte10@gmail.com"
+git config --global user.name "apurvkolte10@gmail.com"
+git pull hett copy git to dir
+
+git remote set-url origin https://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@github.com/apurvkolte/indicent.git
+
+------------------------------------
+Heroku
+
+npm install -g heroku
+heroku login
+heroku create projectname
+heroku git remote -a projectname
+
+git push heroku master
+
+
+-----------------------------------
+create own package
+1. npm login
+2. npm init   +>name, version
+3. npm publish
+
+------------------------------------
+Debugger Node app
+
+node --inspect-brk server.js
+
+chrome://inspect/
+
+git remote set-url origin https://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@github.com/apurvkolte/indicent.git
+https://stackoverflow.com/questions/71953666/remote-permission-to-repository-denied-url-returned-error-403
+git remote set-url origin https://<token>@github.com/<username>/<repo>

@@ -1,0 +1,578 @@
+
+
+return res.status(400).send({
+   message: 'This is an error!'
+});
+
+
+
+
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
+    statusType: "",
+    featured: "",
+    isGridOrList: false,
+};
+
+export const filterSlice = createSlice({
+    name: "filter",
+    initialState,
+    reducers: {
+        addStatusType: (state, action) => {
+            state.statusType = action.payload;
+        },
+        addFeatured: (state, action) => {
+            state.featured = action.payload;
+        },
+        toggleGridAndList: (state, action) => {
+            state.isGridOrList = action.payload;
+        },
+    },
+});
+
+export const { addStatusType, addFeatured, toggleGridAndList } =
+    filterSlice.actions;
+export default filterSlice.reducer;
+
+
+
+
+
+
+String(user.date).substring(0, 10)
+
+conscert string tio array
+let str1 = "Hire the top 1% freelance developers";
+
+const split_string = str1.split(" ");
+console.log(split_string)
+
+//Output = ["Hire", "the", "top", "1%", "freelance", "developers"]
+
+
+var imageName = productImages.filter((item) => item.product_id === product.id)
+
+
+import { useRouter } from "next/router";
+  const router = useRouter();
+  const id = router.query.id;
+
+ router.push('/my-properties')
+ signOut({ callbackUrl: '/login' });
+
+
+//string to array
+var string = "0,1";
+var array = string.split(",");
+alert(array[0]);
+
+
+
+//getting json value only
+ var values = Object.keys(amenities).map(function (key, value) {
+      // console.log(key);
+      if (amenities[key] === true) {
+        checkBoxArray.push(key)
+      }
+    });
+log(checkBoxArray)
+
+//remove element in array
+function removeItemOnce(arr, value) {
+  var index = arr.indexOf(value);
+  if (index > -1) {
+    arr.splice(index, 1);
+  }
+  return arr;
+}
+
+function removeItemAll(arr, value) {
+  var i = 0;
+  while (i < arr.length) {
+    if (arr[i] === value) {
+      arr.splice(i, 1);
+    } else {
+      ++i;
+    }
+  }
+  return arr;
+}
+
+
+import NextAuth from "next-auth";
+import CredentialProvider from "next-auth/providers/credentials";
+
+export default NextAuth({
+    providers: [
+        CredentialProvider({
+            name: "credentials",
+            credentials: {
+                username: {
+                    label: "Email",
+                    type: "text",
+                    placeholder: "johndoe@test.com",
+                },
+                password: { label: "Password", type: "password" },
+            },
+            authorize: async (credentials) => {
+                console.log("credentials", credentials);
+                // connection.getConnection((error) => {
+                //     if (error) throw error;
+                //     if (!error) {
+                //         console.log("Database is connected successfully...!");
+                //     } else {
+                //         console.log("Database connection failed :", error.message);
+                //     }
+                // });
+                // // database look up
+
+                // var hash = crypto.createHash('md5').update(credentials.password).digest('hex');
+
+                // const sql = `select * from users where email='${credentials.username}' and password='${hash}';`;
+                // const query = util.promisify(connection.query).bind(connection);
+
+                // const rows = await query(sql);
+                // var isAdmin = rows[0]
+                // console.log("rows", rows);
+
+
+                if (
+                    credentials.username === "apurvkolte10@gmail.com" &&
+                    credentials.password === "Admin@123"
+                ) {
+                    return {
+                        id: 2,
+                        name: "John",
+                        email: "johndoe@test.com",
+                    };
+                }
+
+                // login failed
+                return null;
+            },
+        }),
+    ],
+    secret: "test",
+    jwt: {
+        secret: "test",
+        encryption: true,
+    },
+    callbacks: {
+        async jwt({ token, user }) {
+            if (user) {
+                token.id = user.id;
+            }
+
+            return token;
+        },
+        async session({ session, token }) {
+            if (token) {
+                session.id = token.id;
+            }
+
+            return session;
+        },
+    },
+
+});
+
+
+
+
+
+
+
+import Link from "next/link";
+import { signIn, useSession } from "next-auth/react";
+import React, { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
+// import { getError } from "@/utils/error";
+// import { toast } from "react-toastify";
+import { useRouter } from "next/router";
+
+const Form = () => {
+  const { data: session } = useSession();
+  console.log("session", session);
+  const router = useRouter();
+  const { redirect } = router.query;
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [pre, setPre] = useState('');
+
+  useEffect(() => { 
+    if (session?.user) {
+      router.push(redirect || "/");
+    }
+  }, [router, session, redirect]);
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const submitHandler = async () => {
+    try {
+      const result = await signIn();
+
+      if (result.error) {
+        toast.error(result.error);
+      }
+    } catch (error) {
+      toast.error(getError(error));
+    }
+  };
+
+  return (
+    // <form onSubmit={submitHandler}>
+    //   <div className="heading text-center">
+    //     <h3>Login to your account</h3>
+    //     <p className="text-center">
+    //       Dont have an account?{" "}
+    //       <Link href="/profile">
+    //         <a className="text-thm">Sign Up!</a>
+    //       </Link>
+    //     </p>
+    //   </div>
+    //   {/* End .heading */}
+
+    //   <div className="input-group mb-2 mr-sm-2">
+    //     <input
+    //       type="text"
+    //       className="form-control"
+    //       onChange={(e) => setEmail(e.target.value)}
+    //       required
+    //       placeholder="User Name Or Email"
+    //     />
+    //     <div className="input-group-prepend">
+    //       <div className="input-group-text">
+    //         <i className="flaticon-user"></i>
+    //       </div>
+    //     </div>
+    //   </div>
+    //   {/* End .input-group */}
+
+    //   <div className="input-group form-group">
+    //     <input
+    //       type="password"
+    //       className="form-control"
+    //       onChange={(e) => setPassword(e.target.value)}
+    //       required
+    //       placeholder="Password"
+    //     />
+    //     <div className="input-group-prepend">
+    //       <div className="input-group-text">
+    //         <i className="flaticon-password"></i>
+    //       </div>
+    //     </div>
+    //   </div>
+    //   {/* End .input-group */}
+
+    //   <div className="form-group form-check custom-checkbox mb-3">
+    //     <input
+    //       className="form-check-input"
+    //       type="checkbox"
+    //       value=""
+    //       id="remeberMe"
+    //     />
+    //     <label
+    //       className="form-check-label form-check-label"
+    //       htmlFor="remeberMe"
+    //     >
+    //       Remember me
+    //     </label>
+
+    //     <a className="btn-fpswd float-end" href="#">
+    //       Forgot password?
+    //     </a>
+    //   </div>
+    //   {/* End .form-group */}
+
+    //   <button type="submit" className="btn btn-log w-100 btn-thm">
+    //     Log In
+    //   </button>
+    //   {/* login button */}
+
+    //   <div className="divide">
+    //     <span className="lf_divider">Or</span>
+    //     <hr />
+    //   </div>
+    //   {/* devider */}
+
+    //   <div className="row mt25">
+    //     <div className="col-lg-6">
+    //       <button
+    //         type="submit"
+    //         className="btn btn-block color-white bgc-fb mb0 w-100"
+    //       >
+    //         <i className="fa fa-facebook float-start mt5"></i> Facebook
+    //       </button>
+    //     </div>
+    //     {/* End .col */}
+
+    //     <div className="col-lg-6">
+    //       <button
+    //         type="submit"
+    //         className="btn btn2 btn-block color-white bgc-gogle mb0 w-100"
+    //       >
+    //         <i className="fa fa-google float-start mt5"></i> Google
+    //       </button>
+    //     </div>
+    //     {/* End .col */}
+    //   </div>
+    //   {/* more signin options */}
+    // </form>
+    <main className="">
+      {session ? (
+        <button onClick={() => signOut()}>Log out</button>
+      ) : (
+        <button
+          onClick={() => {
+            router.push("/api/auth/signin");
+          }}
+        >
+          Sign in
+        </button>
+      )}
+
+    </main>
+  );
+};
+
+export default Form;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import CredentialsProvider from "next-auth/providers/credentials";
+
+
+throw new Error('sample')
+throw new Error({'hehe':'haha'}) 
+
+return res.status(404).json({
+success:false,
+message:  'no data found',
+error:'Id not found'
+})
+
+//no use try catch by this funn in node
+
+module.exports = func => (req, res, next) =>
+    Promise.resolve(func(req, res, next))
+        .catch(next) 
+
+
+// db.raw('ALTER TABLE users AUTO_INCREMENT=1;')
+  //   .then(function (resp) {
+  //     console.log("res", resp);
+  //   });
+
+
+
+
+npm audit fix --force
+
+mongodb://127.0.0.1:27017/
+
+
+//Convert HTML Table to JSON
+https://www.convertsimple.com/convert-html-table-to-json/
+
+https://stackoverflow.com/questions/72480275/is-there-a-work-around-google-disabling-less-secure-apps
+
+
+SET sql_mode='NO_UNSIGNED_SUBTRACTION';
+
+// center button
+d-flex justify-content-center
+
+// search bar
+
+    // handling Search
+    const handleSearching = (e) => {
+        const searchedTerm = e.target.value.toLowerCase().trim();
+
+        const updatedSearchResults = allProducts.filter(item => item.name.toLowerCase().includes(searchedTerm));
+
+        searchedTerm === '' ? setSearchResults([]) : setSearchResults(updatedSearchResults);
+    };
+
+
+
+remove or delete
+cartItems: state.cartItems.filter(i => i.product !== action.payload)
+
+
+// React Library
+1. React Bootstrap
+2. Core UI
+3. PrimeReact
+4. Grommet
+5. Onsen UI
+6. MUI
+7. Chakra UI
+9. Semantic UI React
+10. Blueprint UI
+
+
+/model 
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Launch static backdrop modal
+                    </button>
+
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Understood</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+if(capital !== null){ 
+//Capital has something 
+}
+
+#f3f7f8 
+
+
+
+       background: var(--bg-color-2);
+
+    background-color: var(--bg-color);
+
+
+var(--text-color)
+
+
+
+
+
+
+
+
+// chatbot
+
+
+In simple HTML, CSS, bootstrap chatbot messenger.
+
+two-way communication, delay message with animate, after type automatic scrolling to last message
+user counter will increase by 1 get the next question
+adding dynamic CSS by
+click and keypress two addEventListener used. 
+ 
+getting user data like name, mobile, and email with accurate validation.
+after that, I added 100 & more questions and answer in JSON objects.
+
+array. includes filters apply on JSON objects if any message is found the chatbot sends these answers to the user.
+window.onbeforeunload
+after ending or closing the conversion automatic geolocation of user and storing all conversion arrays & all data will send in an email with the proper template design
+& user location link also sends by client mail.
+
+function getLocation() {
+    if (navigator. geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            // Success function
+            showPosition,
+            // Error function
+            null,
+            // Options. See MDN for details.
+            {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+            });
+    }
+}
+
+function showPosition(position) {
+    userLocation += "User Location: http://www.google.com/maps/place/" + position.coords.latitude + "," + position.coords.longitude;
+}
+ window.onbeforeunload = confirmExit;
+        function confirmExit() {}
+
+filter the result
+var result = arrayOfPossibleMessages.filter(val => val.message.includes(user.message.toLowerCase()));
+
+ var messageElement = document.createElement('div');
+    messageElement.classList.add('w-60');
+    messageElement.classList.add('float-left');
+    messageElement.classList.add('shadow-sm');
+    messageElement.classList.add('rounded-pill');
+    messageElement.style.margin = '10px';
+    messageElement.style.padding = '5px';
+
+    messageElement.innerHTML = "<span><img src=" + "images/favicon.png" + " " + "width=" + "38px" + " " + "class=" + "rounded-circle float-left img-thumnail"
+        + "/></span>" + " " +
+        `<span style="margin: top 10px; padding: 10px">` + messageText + "</span > ";
+
+
+
+
+ i use delay message in 1 second animate
+  messageElement.animate([{ easing: "ease-in", opacity: 0.4 }, { opacity: 1 }], { duration: 1000 });
+    chatContainer.appendChild(messageElement);
+
+
+ //scroll to last message
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+
+
+i use two events
+sendBtn.addEventListener('click', function (e) {}
+textBox.addEventListener('keypress', function (e) {}
+
+
+
+
+
+
+//send an email elastic email smtp
+function send(message) {
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "trivia424@gmail.com",
+        Password: "5798030052C0638A62F27C2E62B796CAD51A",
+        To: 'trivia424@gmail.com',
+        From: "trivia424@gmail.com",
+        Subject: "New user getting a message from chatbot",
+        Body: message
+
+    }).then(
+        // message => alert(message)
+    );
+}
+
+the asked questions in JSON files
+var questionsToAsk = [
+    { "question": "what's your name?", "answer": "" },}
+
+Every time event getting 
+var user = { message: "", counter: 0, meals: [], ticket };
+user counter will increase by 1 to get next question

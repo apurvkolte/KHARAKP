@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>HTML Forms</h2>
+
+    <form>
+      <label for="pwd">Password:</label>
+      <input
+        type="password"
+        id="pwd"
+        name="pwd"
+        pattern=".{8,}"
+        title="Eight or more characters"
+        required
+      /><br /><br />
+
+      <label for="pwd">Password:</label>
+      <input
+        type="password"
+        id="pwd"
+        name="pwd"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+        required
+      /><br /><br />
+
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+		maxlength="10"
+		minlength="8"
+        required
+      /><br /><br />
+
+      <label for="search">Search:</label>
+      <input
+        type="search"
+        id="search"
+        name="search"
+        pattern="[^'\x22]+"
+        title="Invalid input"
+        required
+      /><br /><br />
+
+      <label for="website">Homepage:</label>
+      <input
+        type="url"
+        id="website"
+        name="website"
+        pattern="https?://.+"
+        title="Include http://"
+        required
+      /><br /><br />
+
+      <input type="submit" />
+    </form>
+
+    <p>
+      If you click the "Submit" button, the form-data will be sent to a page
+      called "/action_page.php".
+    </p>
+  </body>
+</html>
+
+//onkeyup='check();' for confirm password
+/*
+var check = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('confirm_password').value) {
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = 'matching';
+  } else {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'not matching';
+  }
+}
+or
+
+function onChange() {
+  const password = document.querySelector('input[name=password]');
+  const confirm = document.querySelector('input[name=confirm]');
+  if (confirm.value === password.value) {
+    confirm.setCustomValidity('');
+  } else {
+    confirm.setCustomValidity('Passwords do not match');
+  }
+}
+*/
+
+
+let mobile = /^(?:(?:\+|0{0,2})91(\s*[ -]\s*)?|[0]?)?[789]\d{9}$/g;
+let email = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;

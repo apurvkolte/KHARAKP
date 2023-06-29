@@ -1,0 +1,239 @@
+import "./App.css";
+import { useForm } from "react-hook-form";
+function App() {
+  const { register, handleSubmit, formState: { errors }, reset, trigger, watch } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+    reset();
+  };
+
+  return (
+    <div className="container pt-5">
+      <div className="row justify-content-sm-center pt-5">
+        <div className="col-sm-6 shadow round pb-3">
+          <h1 className="text-center pt-3 text-secondary">Example Form</h1>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="form-group">
+              <label className="col-form-label">Name:</label>
+              <input
+                type="text"
+                className={`form-control ${errors.name && "invalid"}`}
+                {...register("name", { required: "Name is Required" })}
+                oninvalid={() => {
+                  trigger("name");
+                }}
+              />
+              {errors.name && (
+                <small className="text-danger">{errors.name.message}</small>
+              )}
+            </div>
+            <div className="form-group">
+              <label className="col-form-label">Age:</label>
+              <input
+                type="text"
+                className={`form-control ${errors.age && "invalid"}`}
+                {...register("age", {
+                  required: "Age is Required",
+                  min: {
+                    value: 13,
+                    message: "Minimum Required age is 13",
+                  },
+                  max: {
+                    value: 65,
+                    message: "Maximum allowed age is 65",
+                  },
+                  pattern: {
+                    value: /^[0-9]*$/,
+                    message: "Only numbers are allowed",
+                  },
+				    value: { xyz }
+                })}
+                oninvalid={() => {
+                  trigger("age");
+                }}
+              />
+              {errors.age && (
+                <small className="text-danger">{errors.age.message}</small>
+              )}
+            </div>
+            <div className="form-group">
+              <label className="col-form-label">Email:</label>
+              <input
+                type="text"
+                className={`form-control ${errors.email && "invalid"}`}
+                {...register("email", {
+                  required: "Email is Required",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: "Invalid email address",
+                  }
+                })}
+                oninvalid={() => {
+                  trigger("email");
+                }}
+              />
+              {errors.email && (
+                <small className="text-danger">{errors.email.message}</small>
+              )}
+            </div>
+            <div className="form-group">
+              <label className="col-form-label">Phone:</label>
+              <input
+                type="text"
+                className={`form-control ${errors.phone && "invalid"}`}
+                {...register("phone", {
+                  required: "Phone is Required",
+                  pattern: {
+                    value: /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/,
+					// for indian mobile no /^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[789]\d{9}|(\d[ -]?){10}\d$/
+                    message: "Invalid phone no",
+                  },
+				  ,
+				    value: { xyz }
+                })}
+                oninvalid={() => {
+                  trigger("phone");
+                }}
+              />
+              {errors.phone && (
+                <small className="text-danger">{errors.phone.message}</small>
+              )}
+            </div>
+            <div className="form-group">
+              <label className="col-form-label">Message:</label>
+              <textarea
+                className={`form-control ${errors.message && "invalid"}`}
+                {...register("message", {
+                  required: "Message is Required",
+                  minLength: {
+                    value: 10,
+                    message: "Minimum Required length is 10",
+                  },
+                  maxLength: {
+                    value: 50,
+                    message: "Maximum allowed length is 50 ",
+                  },
+				  ,
+				    value: { xyz }
+                })}
+                oninvalid={() => {
+                  trigger("message");
+                }}
+              ></textarea>
+              {errors.message && (
+                <small className="text-danger">{errors.message.message}</small>
+              )}
+
+
+<div className="form-group">
+                            <label htmlFor="password_field">Password</label>
+                            <input
+                                type="password"
+                                id="password_field"
+                                className={`form-control ${errors.message && "invalid"}`}
+                                {...register("password", {
+                                    required: "Password is Required",
+                                    minLength: {
+                                        value: 8,
+                                        message: "Password must have at least 8 characters",
+                                    },
+                                    maxLength: {
+                                        value: 50,
+                                        message: "Password cantnot contain more than 50 characters",
+                                    }, value: { xyz }
+                                })}
+                                oninvalid={() => {
+                                    trigger("password");
+                                }}
+                                name='password'
+                                value={password}
+                                onChange={onChange}
+                            />
+                            {errors.password && (
+                                <small className="text-danger">{errors.password.message}</small>
+                            )}
+                        </div>
+
+
+
+            </div><div className="form-group">
+                            <label htmlFor="password_field">Confirm Password</label>
+                            <input
+                                type="password"
+                                id="confirm_password_field"
+                                className={`form-control ${errors.message && "invalid"}`}
+                                {...register("confirm_password", {
+                                    required: true,
+                                    validate: () => {
+                                        if (watch('confirm_password') != password) {
+                                          return "Your passwords do no match";
+                                        }
+                                      },
+									value: { xyz }
+									  
+                                })}
+                                oninvalid={() => {
+                                    trigger("confirm_password");
+                                }}
+                                name='confirm_password'
+                                value={confirm_password}
+                                onChange={onChange}
+                            />
+                            {errors.confirm_password && (
+                                <small className="text-danger">{errors.confirm_password.message}</small>
+                            )}
+                        </div>
+
+
+            <input
+              type="submit"
+              className="btn btn-primary my-3"
+              value="Send message"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+///file vlaidation not empty
+const onChange = event => {
+        if (event.target.name === 'file') {
+            const file = event.target.files[0];
+            setFile(file);
+    
+            if (event.target.files.length == 0) {
+                window.alert("Please upload a file");
+                return false;
+            }
+
+            if (file.type !== "image/png" && file.type !== "image/jpg" && file.type !== "image/jpeg") {
+                window.alert("File does not support. You must use .png or .jpg ");
+                return false;
+            }
+            if (file.size > 4000000) {
+                window.alert("Please upload a file smaller than 4 MB");
+                return false;
+            }
+
+            const reader = new FileReader();
+            reader.onload = () => {
+                if (reader.readyState === 2) {
+                    setAvatarPreview(reader.result)
+                    setAvatar(reader.result)
+                }
+            }
+            reader.readAsDataURL(event.target.files[0])
+
+
+        } else {
+            setUser({ ...user, [event.target.name]: event.target.value })
+        }
+
+    }

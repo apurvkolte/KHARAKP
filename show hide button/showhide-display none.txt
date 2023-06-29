@@ -1,0 +1,17 @@
+const [list, setList] = useState({ display: "block" });
+const hide = () => {
+    if (list.display === "block") {
+        setList({ display: "none" })
+    } else {
+        setList({ display: "block" })
+    }
+}
+
+
+<div>
+    <div style={list} className="col-12 col-md-2" >
+        Show
+    </div >
+
+    <button className="mt-3 proda menuorder" onClick={hide}><i class="fa fa-bars" aria-hidden="true"></i></button>
+</div>

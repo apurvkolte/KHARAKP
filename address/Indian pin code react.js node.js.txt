@@ -1,0 +1,196 @@
+var pincodeDirectory = require('india-pincode-lookup');
+import { capitalCase } from "capital-case";
+
+const pincodeDir = pincodeDirectory.lookup(443112);
+
+onKeyUp={() => postalAddress(postalCode)}
+
+ function postalAddress(postalCode) {
+    const pincodeDir = pincodeDirectory.lookup(postalCode);
+    if (pincodeDir.length) {
+      setState(capitalCase(pincodeDir[0].stateName.toLowerCase()))
+      setCity((pincodeDir[0].taluk === 'NA' ? "" : pincodeDir[0].taluk + ", Ds: ") + pincodeDir[0].districtName)
+      setCountry("India")
+    }
+  }
+
+
+//country
+
+import { countries } from "countries-list";
+  const countriesList = Object.values(countries);
+
+ <div className="form-group">
+              <label htmlFor="country_field">Country</label>
+              <select
+                id="country_field"
+                className={`form-control ${errors.country_field && "invalid"}`}
+                {...register("country_field", { required: "Please Select Country" })}
+                oninvalid={() => {
+                  trigger("country_field");
+                }}
+                value={country}
+                defaultValue={{ label: "Select Country", value: 0 }}
+                onChange={(e) => setCountry(e.target.value)}
+                required
+              > {errors.country_field && (
+                <small className="text-danger">{errors.country_field.message}</small>
+              )}
+                <option value="">Please select a country...</option>
+                {countriesList.map((country) => (
+                  <option key={country.name} value={country.name}>
+                    {country.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+
+//state
+
+export const indianState = [
+    {
+        "key": "AN",
+        "name": "Andaman and Nicobar Islands"
+    },
+    {
+        "key": "AP",
+        "name": "Andhra Pradesh"
+    },
+    {
+        "key": "AR",
+        "name": "Arunachal Pradesh"
+    },
+    {
+        "key": "AS",
+        "name": "Assam"
+    },
+    {
+        "key": "BR",
+        "name": "Bihar"
+    },
+    {
+        "key": "CG",
+        "name": "Chandigarh"
+    },
+    {
+        "key": "CH",
+        "name": "Chhattisgarh"
+    },
+    {
+        "key": "DH",
+        "name": "Dadra and Nagar Haveli"
+    },
+    {
+        "key": "DD",
+        "name": "Daman and Diu"
+    },
+    {
+        "key": "DL",
+        "name": "Delhi"
+    },
+    {
+        "key": "GA",
+        "name": "Goa"
+    },
+    {
+        "key": "GJ",
+        "name": "Gujarat"
+    },
+    {
+        "key": "HR",
+        "name": "Haryana"
+    },
+    {
+        "key": "HP",
+        "name": "Himachal Pradesh"
+    },
+    {
+        "key": "JK",
+        "name": "Jammu and Kashmir"
+    },
+    {
+        "key": "JH",
+        "name": "Jharkhand"
+    },
+    {
+        "key": "KA",
+        "name": "Karnataka"
+    },
+    {
+        "key": "KL",
+        "name": "Kerala"
+    },
+    {
+        "key": "LD",
+        "name": "Lakshadweep"
+    },
+    {
+        "key": "MP",
+        "name": "Madhya Pradesh"
+    },
+    {
+        "key": "MH",
+        "name": "Maharashtra"
+    },
+    {
+        "key": "MN",
+        "name": "Manipur"
+    },
+    {
+        "key": "ML",
+        "name": "Meghalaya"
+    },
+    {
+        "key": "MZ",
+        "name": "Mizoram"
+    },
+    {
+        "key": "NL",
+        "name": "Nagaland"
+    },
+    {
+        "key": "OR",
+        "name": "Odisha"
+    },
+    {
+        "key": "PY",
+        "name": "Puducherry"
+    },
+    {
+        "key": "PB",
+        "name": "Punjab"
+    },
+    {
+        "key": "RJ",
+        "name": "Rajasthan"
+    },
+    {
+        "key": "SK",
+        "name": "Sikkim"
+    },
+    {
+        "key": "TN",
+        "name": "Tamil Nadu"
+    },
+    {
+        "key": "TS",
+        "name": "Telangana"
+    },
+    {
+        "key": "TR",
+        "name": "Tripura"
+    },
+    {
+        "key": "UK",
+        "name": "Uttar Pradesh"
+    },
+    {
+        "key": "UP",
+        "name": "Uttarakhand"
+    },
+    {
+        "key": "WB",
+        "name": "West Bengal"
+    }
+]

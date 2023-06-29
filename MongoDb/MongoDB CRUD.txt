@@ -1,0 +1,431 @@
+
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/mydb";
+
+//Creating a Database
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   console.log("Database created!");
+//   db.close();
+// });
+
+// Creating a Collection
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("mydata");
+//   dbo.createCollection("customers", function(err, res) {
+//     if (err) throw err;
+//     console.log("Collection created!");
+//     db.close();
+//   });
+// });
+
+
+// Insert Into Collection
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+
+//   var dbo = db.db("mydb");
+
+//   var myobj = { name: "ABC", address: "Mumbai" };
+
+//   dbo.collection("customers").insertOne(myobj, function(err, res) {
+//     if (err) throw err;
+//     console.log("1 document inserted");
+//     db.close();
+//   });
+// });
+
+
+// Find One
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("mydb");
+//   dbo.collection("customers").findOne({}, function(err, result) {
+//     if (err) throw err;
+//     console.log(result);
+//     console.log(result.name);
+//     db.close();
+//   });
+// });
+
+//Find All
+
+// var MongoClient = require('mongodb').MongoClient;
+// var url = "mongodb://localhost:27017/";
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("mydb");
+//   dbo.collection("customers").find({}).toArray(function(err, result) {
+//     if (err) throw err;
+//     console.log(result);
+//     db.close();
+//   });
+// });
+
+//Find Some  0 skip 1 show all
+// var MongoClient = require('mongodb').MongoClient;
+// var url = "mongodb://localhost:27017/";
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("mydb");
+//   dbo.collection("customers").find({}, { projection: { _id: 0, name: 1, address: 1 } }).toArray(function(err, result) {
+//     if (err) throw err;
+//     console.log(result);
+//     db.close();
+//   });
+// });
+
+//find address
+
+// var MongoClient = require('mongodb').MongoClient;
+// var url = "mongodb://localhost:27017/";
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("mydb");
+//   dbo.collection("customers").find({address:"Mumbai"}, { proj: { _id: 0, name: 1, address: 1 } }).toArray(function(err, result) {
+//     if (err) throw err;
+//     console.log(result);
+//     db.close();
+//   });
+// });
+
+// sort find asc(1) dec(-1)
+// var MongoClient = require('mongodb').MongoClient;
+// var url = "mongodb://localhost:27017/";
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("mydb");
+//   dbo.collection("customers").find().sort({name: 1}).limit(2).toArray(function(err, result) {
+//     if (err) throw err;
+//     console.log(result);
+//     db.close();
+//   });
+// });
+
+
+//filter /^ /  all , /^M/ start M
+// var MongoClient = require('mongodb').MongoClient;
+// var url = "mongodb://localhost:27017/";
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("mydb");
+// var query = { address: /^M/ };
+//   dbo.collection("customers").find(query).toArray(function(err, result) {
+//     if (err) throw err;
+//     console.log(result);
+//     db.close();
+//   });
+// });
+
+
+
+//all delete   
+
+// var MongoClient = require('mongodb').MongoClient;
+// var url = "mongodb://localhost:27017/";
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("mydb");
+//   var myquery = { address: /^ / };
+//   dbo.collection("customers").deleteMany(myquery, function(err, obj) {
+//     if (err) throw err;
+//     console.log(obj.result.n + " document(s) deleted");
+//     db.close();
+//   });
+// });
+
+//delete one
+// var MongoClient = require('mongodb').MongoClient;
+// var url = "mongodb://localhost:27017/";
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("mydb");
+//   var myquery = { address: 'Mountain 21' };
+//   dbo.collection("customers").deleteOne(myquery, function(err, obj) {
+//     if (err) throw err;
+//     console.log("1 document deleted");
+//     db.close();
+//   });
+// });
+
+
+
+//drop collection
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("mydb");
+//   dbo.collection("customers").drop(function(err, delOK) {
+//     if (err) throw err;
+//     if (delOK) console.log("Collection deleted");
+//     db.close();
+//   });
+// });
+
+
+//Update Document
+
+// var MongoClient = require('mongodb').MongoClient;
+// var url = "mongodb://127.0.0.1:27017/";
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("mydb");
+//   var myquery = { address: "Valley 345" };
+//   var newvalues = { $set: {name: "Mickey", address: "Canyon 123" } };
+//   dbo.collection("customers").updateOne(myquery, newvalues, function(err, res) {
+//     if (err) throw err;
+//     console.log("1 document updated");
+//     db.close();
+//   });
+// });
+
+
+//update many all  address start form start C
+// var MongoClient = require('mongodb').MongoClient;
+// var url = "mongodb://127.0.0.1:27017/";
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("mydb");
+//   var myquery = { address: /^C/ };
+//   var newvalues = {$set: {name: "Minnie"} };
+//   dbo.collection("customers").updateMany(myquery, newvalues, function(err, res) {
+//     if (err) throw err;
+//     console.log(res.result + " document(s) updated");
+//     db.close();
+//   });
+// });
+
+
+
+//join  
+// orders & products two table
+// key forkey & local key same
+//order datial is new result data
+
+// var MongoClient = require('mongodb').MongoClient;
+// var url = "mongodb://127.0.0.1:27017/";
+
+// MongoClient.connect(url, function(err, db) {
+//   if (err) throw err;
+//   var dbo = db.db("mydb");
+//   dbo.collection('orders').aggregate([
+//     { $lookup:
+//        {
+//          from: 'products',
+//          localField: 'product_id',
+//          foreignField: '_id',
+//          as: 'orderdetails'
+//        }
+//      }
+//     ]).toArray(function(err, res) {
+//     if (err) throw err;
+//     console.log(JSON.stringify(res));
+//     db.close();
+//   });
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+MongoDB
+
+c:\Program Files\mongoDB\5.3\bin\
+==> mongod
+cmd mongod
+
+Add c:\data\db folder
+
+Command
+
+show dbs;
+
+use mylib;
+
+db.books.insert({"name":"apurv"})
+
+show collections;
+
+db.books.find();
+
+db.books.insert({"name","apurv"})
+
+db.books.find().limit(2);
+
+db.books.deleteOne({name:"apurv"})
+
+db.books.drop();
+
+db.createColletion("books")
+
+db.books.find({name:"apurv"})
+
+db.books.find().sort({name:-1})
+
+db.books.updateOne({name:"apurv"}, $set:{name:"apurv", address:"pune"})
+
+db.books.agrregate([
+  $lookup:{
+    form:'product',
+    localfield:'pid',
+    foreign:_id,
+    as:orderdetails
+  }
+])
+
+*/
+
+
+
+
+
+
+
+
+
+
+import express from 'express';
+import { getUsers,addUsers,getUserById,editUser,deleteUser} from '../controller/user_controller.js';
+
+const route = express.Router();
+route.get('/',getUsers);
+route.post('/add',addUsers);
+route.get('/:id',getUserById);
+route.put('/:id',editUser);
+route.delete('/:id',deleteUser);
+
+export default route;
+
+
+
+
+import { request, response } from 'express';
+import User from '../model/user_schema.js' //User is DB in model
+
+
+export const getUsers = async (request, response) => {
+        try {
+                let user = await User.find();
+                response.status(201).json(user);
+                response.json(user);
+        } catch (error) {
+                response.status(409).json({ message: error.message });
+        }
+}
+
+export const addUsers = async (request, response) => {
+        const user = request.body;
+        console.log("inside")
+
+        const newUser = new User(user);
+        try {
+                await newUser.save();
+                response.status(201).json(newUser);
+                response.json(newUser);
+        } catch (error) {
+                response.status(409).json({ message: error.message });
+        }
+}
+
+export const getUserById = async (request, response) => {
+        const id = request.params.id;
+        try {
+                let user = await User.findById(id);
+                response.json(user);
+        } catch (error) {
+                response.error({ message: error.message })
+        }
+}
+
+// Save data of edited user in the database
+export const editUser = async (request, response) => {
+        let user = await User.findById(request.params.id);
+        user = request.body;
+    
+        const editUser = new User(user);
+        try{
+            await User.updateOne({_id: request.params.id}, editUser);
+            response.status(201).json(editUser);
+        } catch (error){
+            response.status(409).json({ message: error.message});     
+        }
+    }
+
+export const deleteUser = async(request, response)=>{
+    try{
+        await User.deleteOne({_id: request.params.id});
+        response.status(201).json("User Deleted successfully");
+    } catch (error){
+        response.status(409).json({ message: error.message});     
+    }
+}
+
+
+
+
+//fornt use hhok for stoe & get value
+use useEffect initiza object
+//forntend functions are
+import axios from "axios";
+
+// const url ="http://localhost:3003/users";
+const url ="http://localhost:8000/users";
+
+// export const getUsers= async()=>{
+//     return await axios.get(url);
+// }
+
+export const getUsers= async(id)=>{
+    id = id || "";
+    return await axios.get(`${url}/${id}`);
+}
+
+export const addUsers=async(user)=>{
+    return await axios.post(`${url}/add`, user);
+}
+
+//edit function
+export const editUser = async(id,user)=>{
+    return await axios.put(`${url}/${id}`, user); //user is upated data
+}
+
+export const deleteUser = async(id)=>{
+    return await axios.delete(`${url}/${id}`)
+}

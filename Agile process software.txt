@@ -1,0 +1,4588 @@
+
+wa.me+917466006929
+
+url space reomve
+str.replace(/%20/g, " ");
+
+F12 console
+
+
+// Display Money in Indian Format
+export const displayMoney = (n) => {
+    const numFormat = new Intl.NumberFormat('en-IN', {
+        style: 'currency',
+        currency: 'INR',
+    });
+
+    return numFormat.format(n).split('.', 1);
+};
+
+
+// Calculate Discount Percentage
+export const calculateDiscount = (discountedPrice, originalPrice) => {
+    const discountedPercent = (discountedPrice / originalPrice) * 100;
+
+    return Math.round(discountedPercent);
+};
+
+
+// Calculate Total Amount
+export const calculateTotal = (arr) => {
+    const total = arr.reduce((accum, val) => accum + val, 0);
+
+    return total;
+};
+
+
+ //create unique order id for order_id in indicent
+    var date = new Date();
+    var components = [
+        date.getYear(),
+        date.getMonth(),
+        date.getDate(),
+        date.getHours(),
+        date.getMinutes(),
+        date.getSeconds(),
+        date.getMilliseconds()
+    ];
+    var uuid = components.join("");
+    return uuid
+
+
+// check value in filter aary
+var check = productImages.filter(p => p.id === product.id);
+
+
+white bg  rgba(255, 255, 255, 0.863);
+
+ //get const { id, title, tagline, heroImage, finalPrice, originalPrice, path } = item;
+item={
+        id: 1,
+        tag: "hero-product",
+        tagline: "Keep the noise out, or in. You choose.",
+        heroImage: "/images/products/jbl660nc-1.png",
+        images: [
+            "/images/products/jbl660nc-1.png",
+            "/images/products/jbl660nc-2.png",
+            "/images/products/jbl660nc-3.png",
+            "/images/products/jbl660nc-4.png",
+        ],
+        brand: "JBL",
+        title: "JBL Live 660NC",
+        info: "Wireless Over-Ear NC Headphones",
+        category: "Headphones",
+        type: "Over Ear",
+        connectivity: "Wireless",
+        finalPrice: 9999,
+        originalPrice: 14999,
+        quantity: 1,
+        ratings: 1234,
+        rateCount: 5,
+        path: "/product-details/",
+    },
+
+
+
+products.slice(0, 11).map(item => (
+
+
+if(number % 2 == 0) {
+    console.log("The number is even.");
+}
+
+
+// simple default body font
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+}
+
+
+// send mail smtp
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+send();
+function send() {
+
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "trivia424@gmail.com",
+        Password: "5798030052C0638A62F27C2E62B796CAD51A",
+        To: 'trivia424@gmail.com',
+        From: "trivia424@gmail.com",
+        Subject: "This is the subject",
+        Body: "And this is the body"
+
+    }).then(
+        message => alert(message)
+    );
+}
+
+EECAE863128EF7602DCE72A1F709F6DC0BF3
+
+function getDate(){
+
+var date = new Date();
+var day = date.getDay(); 
+var month = date.getMonth(); 
+var dayOfMonth = date.getDate();
+
+var dayArray = ['Sunday','Monday','Tuesday','Wednsday','Thursday','Friday','Saturday'];
+var monthArray = ['Jan','Feb','Mar','Apr','May','Jun','Jul',"Aug",'Sep','Oct','Nov','Dec'];
+
+return dayArray[day] + " , " +  monthArray[month] + " " + dayOfMonth;
+
+}
+
+
+//question & answer chatbot search
+var result = arrayOfPossibleMessages.filter(val => val.message.includes(user.message.toLowerCase()));
+
+//scroll to chat
+     //scroll to last message
+    varr.scrollTop = varr.scrollHeight;
+
+
+
+ var messageElement = document.createElement('div');
+    messageElement.classList.add('w-50');
+    messageElement.classList.add('float-left');
+    messageElement.classList.add('shadow-sm');
+    messageElement.classList.add('rounded-pill');
+    messageElement.style.margin = '10px';
+    messageElement.style.padding = '10px';
+
+var result = arrayOfPossibleMessages.filter(val => val.message.includes(user.message.toLowerCase()));
+
+
+Ctrl+Shift+I to format the entire file or Format Selection Ctrl+K Ctrl+F to just format the selected text.
+
+//images
+https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg
+
+classNAme="overflow-auto" for scroll class
+
+
+captial input text filed in text-uppercase
+className="text-uppercase"
+
+// hide/show eye icon for passsword
+   function click() {
+        // toggle the type attribute
+        const togglePassword = document.querySelector("#togglePassword");
+        const passwordV = document.querySelector("#password_field");
+             const type = passwordV.getAttribute("type") === "password" ? "text" : "password";
+        togglePassword.className === 'fa fa-eye viewpass mr-4 text-muted' ? document.getElementById("togglePassword").className = 'fa fa-eye-slash viewpass mr-4 text-muted' : document.getElementById("togglePassword").className = 'fa fa-eye viewpass mr-4 text-muted';
+        passwordV.setAttribute("type", type);
+
+    }
+
+<input type="password" id="password_field"/>
+
+<span className="fa fa-eye viewpass mr-4 text-muted" onClick={click} id="togglePassword"></span>
+
+.viewpass{
+  float: right;
+  margin-left: -25px;
+  margin-top: -26px;
+  position: relative;
+  font-size: large;
+  z-index: 2;
+}
+
+
+
+
+
+//update & puh json value into json object
+var sales1 = [];
+if (sales && Object.keys(sales).length != 0) {
+        sales.map((value) => {
+            const check = sales1.filter(x => x.order_date === String(value.order_date).substring(0, 10))
+            if (check.length) {
+                sales1.filter(x => x.sale_price = Number(x.sale_price) + Number(value.sale_price))
+            } else {
+                let data = { "sale_price": Number(value.sale_price), "order_date": String(value.order_date).substring(0, 10) }
+                sales1.push(data)
+            }
+        })
+    }
+
+
+
+
+// CHECK gSTN GST validate or not
+const validator = (s) => {
+        try {
+            const m = s.match(/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/);
+            return m ? !!new RegExp(m[2], m[3])
+                : false;
+        } catch (e) {
+            return false
+        }
+    }
+
+validator("27AABCW8929J2ZP")
+
+
+
+//
+    const gstnHandller = () => {
+        if (applyGstn) {
+            if (applyGstn.length === 15) {
+                if (validator(applyGstn)) {
+                    if (applyGstn === applyGstn1) {
+                        alert.show("You have already added this GSTN Number");
+                    } else {
+                        setApplyGstn1(applyGstn)
+                        alert.info("GSTN Number added successfully");
+                    }
+                } else {
+                    alert.error("Invalid GSTN Number");
+                }
+            } else {
+                alert.error("Invalid GSTN Number");
+            }
+        } else {
+            alert.error("Please Enter GSTN Number");
+        }
+    }
+
+//check oject is empty or not
+if(Boolean(obj.lenght))
+if(JSON.stringify(user) !== '{}' && user !== undefined)
+if(orderRecord && Object.keys(orderRecord).length != 0)
+
+const urlEncrypt = require('url-encrypt');
+
+const encryptor = urlEncrypt();
+  encryptor.config({
+    /*
+     * default secret is empty string
+     */
+    secretKey: 'some-secret-key',
+
+    /*
+    * query parameters prefixes (default is "es1_")
+    * This can be useful to avoid matching the given URL parameters 
+    * with the package additional query parameters.
+    */
+    prefix: 'psx_',
+
+    /*
+     * Expiration date after given seconds 
+     * default is 900 seconds = 15 minutes
+     */
+    expiredAfterSeconds: 900,
+
+    /*
+     * Signature encoding algorithm
+     * default is sha256
+     * more info about supported algorithms could be found here: 
+     * https://nodejs.org/api/crypto.html
+     */
+    algorithm: 'sha256',
+
+    /*
+    * This parameter describes time control between separated systems, using different machines.
+    * for example, the time of one server may be later than the time of another server 
+    * In this case, you can adjust the differences by this parameter
+    */
+    oversight: 30
+  });
+  const url = encryptor.encrypt("http://localhost:3000/#/product/3");
+  console.log("url", url)
+  console.log("check", encryptor.verify(url))
+
+
+
+
+
+
+
+const url = "Mw==";
+const encodedURL = encodeURIComponent(url);
+console.log(encodedURL);
+console.log(decodeURIComponent(encodedURL));
+
+
+
+
+encrypt abd decript url
+Buffer.from('Hélló wórld!!', 'binary').toString('base64')
+Buffer.from('SOlsbPMgd/NybGQhIQ==', 'base64').toString('binary')
+
+
+// const a = 2;
+// const b = Buffer.from(`${a}`, 'binary').toString('base64')
+// const c = Buffer.from(`"${b}"`, 'base64').toString('binary')
+// console.log("b", b);
+// console.log("c", ((c)));
+
+// unique id genrator url
+new Date().getTime().toString(36) + Math.random().toString(36).slice(2)
+
+import { MemoryRouter } from 'react-router'
+
+<MemoryRouter>
+  <App/>
+</MemoryRouter>
+
+//Get all unique values in a JavaScript array common
+function onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
+  }
+const unique = arr.filter(onlyUnique);
+
+
+// Date cen be more than last 7 days
+(new Date() - new Date(order.order_date)) / 86400000 > 7
+
+///multiple file
+ if (req.files.length) {
+        for (i = 1; i <= req.files.length; i++) {
+          sql1 = `select * from banner where id=${i};`;
+          sql2 = `insert into banner(id, url) values(NULL,"${req.files[i - 1].originalname}");`;
+          sql = `update banner set url='${req.files[i - 1].originalname}' where id=${i};`;
+          const rows1 = await query(sql1);
+
+          if (!rows1.length) {
+            //No record in table then insert
+            const rows2 = await query(sql2);
+          } else {
+            //dele from dir 
+            if (req.files[i - 1].originalname !== rows1[0].url) {
+              try {
+                fs.unlinkSync('uploads/banner/' + rows1[0].url);
+              } catch (err) {
+                console.error(err)
+                next()
+              }
+
+              //record found then update
+              const rows = await query(sql);
+            }
+
+          }
+
+        }
+
+      }
+
+// Delete records from database older than 1 hour doesn't delete all records
+delete from orders WHERE order_date < DATE_SUB( CURDATE( ) , INTERVAL 2 HOUR )
+
+
+//dcrpted has file ture
+(Get-FileHash D:\indicent\indicent\frontend\src\components\order\OrderDetails.js).Hash -eq "9BDFFBC57DA8A7DECB1E43EAC503917B9DDA27CBF8DC0BF293E2E9FB33490AE0"
+
+//create hash values of files 
+Get-FileHash -Algorithm SHA256 D:\indicent\indicent\frontend\src\components\order\OrderDetails.js
+
+//delete all files before 1 month
+const fs = require('fs');
+const path = require('path');
+const rimraf = require('rimraf');
+const deleteAllFiles = () => {
+    var uploadsDir = './mysqlbackup';
+
+    fs.readdir(uploadsDir, function (err, files) {
+        files.forEach(function (file, index) {
+            fs.stat(path.join(uploadsDir, file), function (err, stat) {
+                var endTime, now;
+                if (err) {
+                    return console.error(err);
+                }
+                now = new Date().getTime();
+                endTime = new Date(stat.ctime).getTime() + 2500000000;
+                if (now > endTime) {
+                    console.log(now);
+                    return rimraf(path.join(uploadsDir, file), function (err) {
+                        if (err) {
+                            return console.error(err);
+                        }
+                        console.log('successfully deleted');
+                    });
+                }
+            });
+        });
+    });
+
+}
+
+module.exports = deleteAllFiles;
+
+
+
+// setter & getter in javascript
+exports.order = {
+
+    // data property
+    firstName: 'Monika',
+
+    // accessor property(getter)
+    get getName() {
+        return this.firstName;
+    },
+
+    //accessor property(setter)
+    set changeName(newName) {
+        this.firstName = newName;
+    }
+};
+
+const { order } = require('./order')
+
+// change(set) object property using a setter
+order.changeName = "Monika Patil"
+
+
+// accessing data property
+console.log(order.firstName); // Monica
+
+// accessing getter methods
+console.log(order.getName); // Monica
+
+
+
+send http post response 
+var request = require('request');
+
+request.post(
+    'http://www.yoursite.com/formpage',
+    { json: { key: 'value' } },
+    function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            console.log(body);
+        }
+    }
+);
+
+
+
+What is Node.js?
+Since Node.js is event-driven,
+it’s scalable and
+brings phenomenal efficiencies to the project. 
+Its asynchronous nature equips
+it to handle concurrent requests without blocking the I/O operations.
+Most development teams prefer Node.js 
+to use JavaScript on both clients and server-side.
+
+import {isMobile} from 'react-device-detect';
+//check mobile view or not
+
+// page is not refresh data react // detect page refresh on react [duplicate]
+const { navigate} = useNavigate();
+  useEffect(() => {
+    if (performance.navigation.type === 1) {
+      console.log("This page is reloaded");
+      // here you can navigate 
+    } else {
+      console.log("This page is not reloaded");
+    }
+
+// center d-inline-flex p-2
+
+//get a value from json object
+var obj = JSON.parse(yourJSONString);
+var mm = obj.mm;
+
+no link undefine =void(0)
+<a href="javascript:void(0)">Link</a>
+
+//send form
+ const body = JSON.stringify({
+            merchant_id: merchant_id,
+            order_id: order_id,
+            currency: currency,
+            redirect_url: redirect_url,
+            cancel_url: cancel_url,
+            amount: amount,
+            language: language
+        })
+
+
+
+https://www.cutout.pro/remove-background  image bg chnages
+https://www.autodraw.com/  icon draw text
+
+import 'bootstrap/dist/css/bootstrap.css'
+form enquiry
+ <div className="row justify-content-center" data-aos="fade-up">
+                                <div className="info-wrap">
+                                    <div className="row">
+                                        <div className="col-lg-3 info">
+                                            <i className="icofont-phone"></i>
+                                            <h4>Call:</h4>
+                                            <p>+91 8421060192<br /> </p>
+                                        </div>
+                                        <div className="col-lg-3 info mt-3 mt-lg-0">
+                                            <i className="icofont-google-map"></i>
+                                            <h4>Find Us:</h4>
+                                            <p className="para-content">
+                                                2nd and 3rd Floor,<br /> Meera Building,
+                                                Durga<br /> Mata Colony, Behind <br />Shivar
+                                                Garden Restaurant,<br /> Pimple Saudagar,
+                                                Pune, Maharashtra 411027, India</p>
+                                        </div>
+                                        <div className="col-lg-3 info mt-3 mt-lg-0">
+                                            <i className="icofont-envelope"></i>
+                                            <h4>Email:</h4>
+                                            <p>info@weblinkservices.net<br />sales@weblinkservices.net</p>
+                                        </div>
+                                        <div className="col-lg-3 info mt-3 mt-lg-0">
+                                            <i className="ri-time-fill fs-22"  ></i>
+                                            <h4>Office Time:</h4>
+                                            <p>Mon – Sat :<br /> 9:30AM – 6:30PM <br />Sun : Closed</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+<ul className="list-unstyled list-group list-group-horizontal">
+            <a className="text-light bg-muted" href="mailto:sales@indicent.co.in"> <li className="inline-block mr-3"><i class="fa fa-envelope-o" aria-hidden="true"></i> sales@indicent.co.in</li></a>
+            <a className="text-light bg-muted" target="_blank" href="https://api.whatsapp.com/send?phone=919922401440&lang=en&text=Hii...! Welcome to Industry Central."><li className="inline-block mr-3"><i class="fa fa-whatsapp" aria-hidden="true"></i> Contact</li></a>
+            <a className="text-light bg-muted" href="#"> <li className="inline-block mr-3">Bulk Order</li></a>
+          </ul>
+
+top pGE function scrollTop() {
+    const body = document.querySelector('#root');
+
+    body.scrollIntoView({
+      behavior: 'smooth'
+    }, 500)
+  }
+
+
+<ul className="pl-0">
+                            {category.map(cat => (
+                              <li style={{ cursor: 'pointer', listStyleType: 'none' }}>
+                                <Checkbox key={cat.category} value={categoryName} color="success"  onChange={() => setCategoryName(cat.category)} defaultChecked={cat.category === categoryName ? true : false} />
+                                {cat.category}
+                              </li>
+                            ))}
+                          </ul>
+
+remove spaces, country code and begging zero from contact number
+var value = "+91 99 16 489165";
+var number = value.replace(/\D/g, '').slice(-10);
+
+header lin
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#999;
+}
+
+
+ const review = {
+    user: req.user.id,
+    product_id: productId,
+    name: req.user.name,
+    rating: Number(rating),
+    comment,
+  };
+
+
+pre loc
+<Link to={{pathname: '/nextpath', state: { prevPath: location.pathname }}}>Example Link</Link>
+
+
+JavaScript (ES6) code snippets
+v1.8.0  req short
+
+sms message
+1 twilio sms
+https://www.youtube.com/watch?v=f9jE5ywz8cs
+https://www.twilio.com/try-twilio
+https://www.twilio.com/docs/sms/quickstart/node
+https://www.twilio.com/docs/libraries/node
+
+2. fast2sms
+https://www.youtube.com/watch?v=k0HaX2YXBXE
+https://www.fast2sms.com/
+https://www.npmjs.com/package/fast-two-sms
+https://www.npmjs.com/package/fast2sms
+
+3. https://www.youtube.com/watch?v=_E457tcq5KY&list=PLgoMUJ31M9-sC25bZeK4e04c9zWDiITrH&index=5
+https://d7networks.com/
+https://npm.io/package/@datafire/d7networks
+
+
+
+
+//opne file data in brower pdf
+const { data } = await axios.get(`/api/v1/invoice/${id}`, { responseType: 'blob' })
+window.open(URL.createObjectURL(data))
+
+.\ngrok config add-authtoken 2GIofch2gLP7r8vMZgtBhhFQTug_2J8X6tmm32Yqyyfo44gVK
+./ngrok authtoken <token>
+./ngrok http 80
+
+background-color: #282c34;  react logo bg
+
+https://github.com/mehulmpt/razorpay-payments-tutorial
+https://www.youtube.com/watch?v=QtsvGEB7n0s&t=622s
+https://www.youtube.com/watch?v=QtsvGEB7n0s
+
+send data link
+<Link to="/me/update/myaddress" state={{ data: 1 }} className="btn btn-danger  address-btn  mb-4 d-flex justify-content-center py-1 px-2">
+              Manage a delivery address
+            </Link>
+
+ navigate('/me/update/myaddress', { state: location.state });
+
+location.state.data=1
+
+
+
+
+unorders list
+<ul className="list-unstyled list-group list-group-horizontal py-2">
+            <li className="ml-3 text-uppercase inline-block mr-3">Coffee</li>
+            <li className="text-uppercase inline-block mr-3">Coffee</li>
+            <li className="text-uppercase inline-block mr-3">Coffee</li>
+          </ul>
+
+
+(number).toLocaleString('en-IN', {minimumFractionDigits:2, maximumFractionDigits:2}); // 1,29,00.00
+(number).toLocaleString('en-IN', {maximumFractionDigits:2}); // 1,29,00
+Math.round(2.5);
+col-md-auto
+
+const myPromise = new Promise(function(myResolve, myReject) {
+  setTimeout(function(){ myResolve("I love JavaScript"); }, 300);
+});
+
+
+console.log(1)
+function funccall(callback){
+    
+    setTimeout((value)=>{
+        console.log('funccall');
+        callback()
+    },0)
+}
+function main(){
+    console.log(2)
+}
+funccall(main)
+
+
+
+
+get no mili 1971 form date new Date().getTime()
+
+
+Date fomate
+new Date().toLocaleDateString('en-US')
+"7/2/2021"
+
+npm cache clean --force  
+
+a href target="blank" rel="noreferrer"
+
+npm install @mui/icons-material
+
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/x-data-grid
+
+window.open('/bill/action.pdf')
+
+
+discount del price = original_price + (tax_price+(product discount on tax_price))
+
+
+const schedule = require('node-schedule');
+const job = schedule.scheduleJob({hour: 14, minute: 30, dayOfWeek: 0}, function(){
+  console.log('Time for tea!');
+});
+
+
+//gtet mysql backup
+const mysqldump = require('mysqldump');
+// or const mysqldump = require('mysqldump')
+
+// dump the result straight to a file
+const mysqlbackup = async () => {
+    // mysqldump({
+    //     connection: {
+    //         host: "localhost",
+    //         user: "root",
+    //         password: "root",
+    //         database: "shop",
+    //     },
+    //     dumpToFile: `./mysqlbackup/dump${new Date().toISOString().replace(/:/g, '-')}.sql`,
+    // });
+
+    // dump the result straight to a compressed file
+    mysqldump({
+        connection: {
+            host: "localhost",
+            user: "root",
+            password: "root",
+            database: "shop",
+        },
+        dumpToFile: `./mysqlbackup/dump${new Date().toISOString().substring(0, 10).replace(/:/g, '-')}.sql.gz`,
+        compressFile: true,
+    });
+
+}
+
+module.exports = mysqlbackup;
+
+
+//res.download() express download files
+
+//match.params.id in v6
+import { Link, useParams } from "react-router-dom";
+const params = useParams();
+params.id
+
+
+// histroy
+import { Link, useNavigate } from "react-router-dom";
+const navigate = useNavigate();
+navigate('/home',{replace:true});
+  // navigate(-1/1/-2);
+
+
+import { useHistory, useLocation } from 'react-router-dom';
+history.push(location.pathname);
+
+//location
+import { useLocation, useMatch } from "react-router-dom";
+const location = useLocation();
+
+
+if null take 0 mysql 
+select IFNULL(avg(rating),0)  from review where product_id=3;
+select IFNULL(Salary,0) 
+
+check mobile no
+mobile.match(/^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[789]\d{9}$/g)
+
+
+
+// scroll top on page
+useEffect(() => {
+    const body = document.querySelector('#root');
+
+    body.scrollIntoView({
+        behavior: 'smooth'
+    }, 500)
+
+}, []);
+
+
+// a link jump to page react
+const ref = useRef(null);
+
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+  };
+
+ <button onClick={handleClick}>Scroll to element</button>
+ <div ref={ref}>Some content here</div>
+
+
+
+//multiple select product
+select * from product where product_code=(select DISTINCT product_code from product where product_id=1);
+
+
+//delete all folder in linux
+rm -rf folder_name
+
+
+use static app folder ablove staring conig ttha load increamse perfromance time images
+
+exports.capitalizeFirstLetter = (str) => {
+    const arr = str.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+    const str2 = arr.join(" ").replace(/'/g, "\\'").replace(/"/g, '\\"').replace(/`/g, "\\`").trim();
+    return str2;	
+}
+
+.upperCase{
+  text-transform:capitalize;
+}
+
+/////////////////////////////////////////////////////////////////////////
+//selcte size color result product 6GB/8GB
+//select * from products where product_code=(select DISTINCT product_code from products where id=${req.params.id});
+//var arr = [];
+  if (productProperties) {
+    productProperties.map((item) => {
+      arr.push(item.properties1)
+      arr.push(item.properties2)
+      arr.push(item.properties3)
+    })
+  }
+
+  {product.product_code ? (
+                    <div>
+                      {
+                        arr[0] &&
+                        <div>
+                          <h6>Select {arr[0]}</h6>
+                          <ul id="menu">
+                            <div className="selected">
+                              {arr1.map((ele, i = 0) => (
+                                (arr1[i] && (<Link to={`/product/${arrID[i]}`}><li className={`${arrID[i] == product.id ? 'list-active' : ""}`}>{arr1[i++]}</li></Link>))
+                              ))}
+                            </div>
+                          </ul><br /><br />
+                        </div>
+                      }
+
+                      {
+                        arr[1] &&
+                        <div>
+                          <h6>Select {arr[1]}</h6>
+                          <ul id="menu">
+                            <div className="selected">
+                              {arr2.map((ele, i = 0) => (
+                                (arr2[i] && (<Link to={`/product/${arrID[i]}`}><li className={`${arrID[i] == product.id ? 'list-active' : ""}`}>{arr2[i++]}</li></Link>))
+                              ))}
+                            </div>
+                          </ul><br /><br />
+                        </div>
+                      }
+
+                      {
+                        arr[2] &&
+                        <div>
+                          <h6>Select {arr[2]}</h6>
+                          <ul id="menu">
+                            <div className="selected">
+                              {arr3.map((ele, i = 0) => (
+                                (arr3[i] && (<Link to={`/product/${arrID[i]}`}><li className={`${arrID[i] == product.id ? 'list-active' : ""}`}>{arr3[i++]}</li></Link>))
+                              ))}
+                            </div>
+                          </ul>
+                        </div>
+                      }
+
+
+                      <br /><hr />
+                    </div>
+                  ) : ("")}
+//end
+//css
+ul#menu li {
+  display: inline;
+  float: left;
+  border: 1px solid #333;
+  border-radius: 2px;
+  margin-top: 10px;
+  font-family: Roboto, sans-serif !important;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 5px;
+  float: left;
+  margin: 0 10px 10px 0;
+  display: block;
+  padding: 5px 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+ul#menu li a:hover {
+  color: #e42326;
+  text-decoration: none;
+}
+
+.selected a{
+  color: #323232;
+  text-decoration: none;
+}
+
+ul#menu li a:active {
+  color: white;
+  background: #333;
+  text-decoration: none;
+}
+
+ul#menu li:active {
+  color: white;
+  background: #333;
+  text-decoration: none;
+}
+
+.list-active{
+  color: white;
+  background: #333;
+  text-decoration: none;
+}
+//end////////////////////////////////////////////////////////////////////
+
+
+
+
+return get
+this.props.productField
+ this.props.history.location.state = productDetails
+
+const productDetails1 = JSON.stringify(history.location.state);
+
+//if nodemon not run then run below command
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+npm install --save-dev nodemon
+export var a = "";
+
+https://codesandbox.io/
+codepen
+
+//copy object
+Object.assign(newObj, originalObj);
+
+var can=""
+export const cancelReason=() => {
+  return can
+}
+
+
+send req request to server string
+const formData = new FormData();
+            formData.set('name', "name");
+            var object = {};
+            formData.forEach((value, key) => object[key] = value);
+            var json = object
+            dispatch(cancelOrder(dialog.id, json));
+
+
+<Route path="/404" component={NotFoundPage} />
+                    <Redirect to="/404" />
+
+throw new Error('database failed to connect');
+ if (err) throw err;
+
+"@stripe/react-stripe-js": "^1.8.1",
+    "@stripe/stripe-js": "^1.30.0",
+
+
+https://www.w3schools.com/tags/ref_httpmessages.asp#:~:text=When%20a%20browser%20requests%20a,something%20called%20HTTP%20status%20messages.
+
+Deep cleaning of the object with:
+Object.keys(object).forEach(key => delete object[key]);
+
+find value in object
+let obj = arr.find(data => data.name === 'Krunal');
+
+console.log(obj);
+
+
+IN MySQL after deleting the product & the user should not be used auto increment id bzse it will chances to assign data (order, review) to others in tables row
+Date.now() is unique primary key but used Begint large storage & performance low & sting also slow performance indexing than int
+
+TINYINT 255 (1 bytes)
+SMALLINT 65535 (2 bytes)
+MEDIUMINT 16777215 ((3 bytes))
+INT 4294967295  (4 bytes)
+BIGINT 264-1 (8 bytes)
+
+var date = new Date();
+var components = [
+    date.getYear(),
+    date.getMonth(),
+    date.getDate(),
+    date.getHours(),
+    date.getMinutes(),
+    date.getSeconds(),
+    date.getMilliseconds()
+];
+
+var id = components.join("");
+
+mobile no validation india /^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[789]\d{9}|(\d[ -]?){10}\d$/
+
+ value: /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/,
+
+https://medium.com/
+https://muffinman.io/
+
+//mysql node
+
+const mysql = require("mysql2");
+
+var db_config = {
+    host: "localhost",
+    user: "root",
+    password: "root",
+    database: "shop",
+    port: 3306,
+    connectTimeout: 10000,
+    multipleStatements: true,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0,
+    supportBigNumbers: true,
+    flags: '-FOUND_ROWS,IGNORE_SPACE,CONNECT_WITH_DB,INTERACTIVE,LOCAL_FILES,MULTI_RESULTS,MULTI_STATEMENTS,PROTOCOL_41,PS_MULTI_RESULTS,RESERVED,SECURE_CONNECTION,TRANSACTIONS'
+};
+
+var connection;
+function handleDisconnect() {
+    connection = mysql.createConnection(db_config);
+    connection.connect(function (err) {
+        if (err) {
+            console.log('error when connecting to db:', err);
+            setTimeout(handleDisconnect, 2000);
+        }
+    });
+    connection.on('error', function (err) {
+        console.log('db error', err);
+        if (err.code === 'PROTOCOL_CONNECTION_LOST') {
+            handleDisconnect();
+        } else {
+            throw err;
+        }
+    });
+}
+
+handleDisconnect();
+module.exports = connection;
+
+////
+
+
+
+response: '535 Incorrect authentication data'
+Login to CPanel > Tweak Settings > All>  "Restrict outgoing SMTP to root, exim, and mailman (FKA SMTP Tweak)" <== disable it. 
+
+flipcart button arrow slide
+ position: absolute;
+    top: calc(50% - 52px);
+    width: 47px;
+    height: 104px;
+    background-color: hsla(0,0%,100%,.98);
+    box-shadow: 5 1px 5px 0rgba(0,0,0,.11);
+    transition: opacity .1s ease-in;
+
+
+npm i bootstrap@4.5.0
+
+server error log
+tail cd usr/local/apache/logs/access_log
+tail cd usr/local/apache/logs/error_log
+
+
+const mysql = require("mysql2");
+const mysql2Timeout = require('mysql2-timeout-additions');
+const MAX_QUERY_EXECUTION_TIME_SECONDS = 9
+
+const connection = mysql.createConnection({
+    host: "localhost",
+    user: "indicentecom_indicentecom",
+    password: "qTI5,8%w^dcD",
+    database: "indicentecom_shop",
+    connectTimeout: 10000,
+    multipleStatements: true,
+    waitForConnections: true,
+    connectionLimit: 10000,
+    queueLimit: 0
+});
+
+const promisePool = connection.promise();
+mysql2Timeout.addTimeoutToPromisePool({
+    pool: promisePool,
+    seconds: MAX_QUERY_EXECUTION_TIME_SECONDS
+});
+
+module.exports = connection;
+
+
+
+BrowserRouter replace by HashRouter  to resfresh ulr server page  
+
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');   .css react file add
+
+const os = require('os');
+console.log(os.hostname());
+console.log("Express server listening on port %d", app.address().port)
+
+
+https://picsum.photos/1700/750
+
+
+//Install node js application on Whm linux server
+wget https://nodejs.org/dist/v14.18.1/node-v14.18.1-linux-x64.tar.xz
+
+// Extract the archive
+tar xvf node-v14.18.1-linux-x64.tar.xz
+
+//Rename Node.js’s directory to make your life easier
+mv node-v14.18.1-linux-x64 node
+
+//Install Node.js’s and npm’s binaries
+mkdir ~/bin
+cp node/bin/node ~bin
+cd~ bin
+ln -s ../node/lib/node_modules/npm/bin/npm-cli.js npm
+
+node -v
+
+
+/opt/cpanel/ea-nodejs16/bin/node app.js
+
+.htaccess
+
+RewriteEngine On
+
+### WWW & HTTPS
+
+# ensure www.
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ensure https
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+mysql special character encoding error 
+ALTER TABLE products CONVERT TO CHARACTER SET utf8;
+
+// export data excel downlaod in react
+import { CSVLink } from 'react-csv';
+const csvData = JSON.parse(JSON.stringify(coupons ? coupons : []));
+
+ const csvData = [
+        ["firstname", "lastname", "email"],
+        ["Ahmed", "Tomi", "ah@smthing.co.com"],
+        ["Raed", "Labes", "rl@smthing.co.com"],
+        ["Yezzi", "Min l3b", "ymin@cocococo.com"]
+    ];
+
+
+<h5 style={{ display: 'inline' }} className="marginleft mt-5 px-md-2">
+<CSVLink className='menuorder' data={csvData}filename={"coupons.csv"} target="_blank" >
+Download</CSVLink></h5>
+
+///////////////////////////////
+
+disable button
+disabled={loading ? true : false}
+///apply proocode check
+
+ const getApplyCoupon = () => {
+        if (applyCoupon) {
+            if (order_code) {
+                var cc = 1
+                coupons.map((coupon) => {
+                    if (coupon.coupon_code === applyCoupon) {
+                        cc = 0;
+                        if (coupon.coupon_code === applyCoupon) {
+                            if (coupon.minValue <= itemsPrice) {
+                                const x = new Date().toISOString().split('T')[0];
+                                const y = coupon.lastDate.split('T')[0];
+                                if (x <= y) {
+                                    console.log("cashback", coupon.cashback);
+                                    console.log("minValue", coupon.minValue);
+                                    console.log("description", coupon.description);
+                                    setRedeem(coupon.cashback);
+                                    setCoupon_code(coupon.coupon_code);
+                                    alert.info(<div style={{ textTransform: 'initial' }}>Voila..! {coupon.coupon_code} has been applied successfully.
+                                        <br />Proceed to pay now to get cashback RS. {coupon.cashback}</div>);
+
+                                    <small className="text-danger">{coupon.description}</small>;
+
+                                } else {
+                                    alert.error("Promo code has expired.");
+                                }
+                            } else {
+                                alert.error(`This promo code required minimum price RS ${coupon.minValue}`);
+                            }
+                        }
+                    }
+                })
+                if (cc) {
+                    alert.error("Promo code is invalid.");
+                }
+
+            } else {
+                setOrder_code(1);
+                alert.error("You already applied this promotion");
+            }
+        } else {
+            alert.error("Promo code is empty");
+        }
+    }
+
+//up
+if (orders) {
+            orders.map((or) => {
+                if (or.coupon_code === applyCoupon) {
+                    setOrder_code(0);
+                }
+            })
+        }
+
+
+
+
+//for update address postal pin code regular expression
+ pattern="([0-9]{6}|[0-9]{3}\s[0-9]{3})"
+
+ <input
+                type="text"
+                id="postal_code_field"
+                className="form-control"
+                pattern="([0-9]{6}|[0-9]{3}\s[0-9]{3})"
+                value={postalCode}
+                onChange={(e) => setPostalCode(e.target.value)}
+                required
+              /> 
+            </div>
+
+omly date print String(user.date).substring(0, 10)
+
+parseInt() convert string to integer
+
+import 'font-awesome/css/font-awesome.min.css';
+
+form avlidation   value: { cashback }
+
+Expiry date not past form current taking
+min={new Date().toISOString().split('T')[0]} 
+
+
+
+ {productDetails &&
+                    productDetails.map((field) => (
+                      <h1>{field.title}</h1>
+                    ))}
+
+
+<a onClick={() => {window.location.href="/something"}}>Something</a>
+
+
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
+//this fo class
+
+function ==>history.location.state   //(props)
+class ==>  this.props.history.location.state 
+
+if value cannot change use defaultValue  in input field
+
+
+
+
+//delete from array
+const people = [
+  { id: 1, name: 'serdar' },
+  { id: 5, name: 'alex' },
+  { id: 300, name: 'brittany' }
+];
+const idToRemove = 5;
+const filteredPeople = people.filter((item) => item.id !== idToRemove);
+
+https://stackoverflow.com/questions/3396088/how-do-i-remove-an-object-from-an-array-with-javascript
+
+
+// [
+//   { id: 1, name: 'serdar' },
+//   { id: 300, name: 'brittany' }
+
+
+
+ required={false}
+
+
+ALTER TABLE products AUTO_INCREMENT=1;
+
+
+
+convert object to array in react
+
+var myMap = new Map().set(1,"hey").set(2,"you"),
+  mapData = JSON.stringify([...myMap]),
+   values = JSON.parse(mapData).map(d => d[1]);
+console.log("mapData:",mapData);
+console.log("values:",values);
+
+window.location.reload();  //refesg react page
+
+
+//React-router - How to pass data between pages in React?
+
+<Link to={{
+  pathname: '/yourPage',
+  state: [{id: 1, name: 'Ford', color: 'red'}]
+}}> Your Page </Link>
+and then access the data with this.props.location.state
+
+
+ <Link to={{
+                                pathname: "/me/update/myaddress",
+                                state: 1
+                            }} className="btn btn-primary btn-block my-5">
+                                Manage Addresses
+                            </Link>
+//history.location.state
+
+
+
+
+//Get all products => /api/v1/products?keyword=apple
+exports.getProducts = catchAsyncErrors(async (req, res, next) => {
+  const resPerPage = 8;
+  let productsCount;
+  let products;
+  let productImages = [];
+  let filteredProductsCount;
+  var imagesData = [];
+
+  const query = util.promisify(connection.query).bind(connection);
+  let result = async function () {
+    try {
+      const find = req.query.keyword || "";
+      const category = req.query.category;
+      const queryStr = req.query.page;
+      const currentPage = Number(queryStr) || 1;
+      const skip = resPerPage * (currentPage - 1);
+      const ratings = req.query.ratings.gte;
+      const discountPriceLTE = req.query.discountPrice.lte;
+      const discountPriceGTE = req.query.discountPrice.gte;
+      const sort = req.query.sort;
+
+      var sortValue = '';
+      if (sort) {
+        if (sort === 'DescTop') {
+          sortValue = 'top Desc';
+        }
+        if (sort === 'Asc') {
+          sortValue = 'sale_price Asc';
+        }
+        if (sort === 'Desc') {
+          sortValue = 'sale_price Desc';
+        }
+      }
+
+      // console.log("find", find);
+      // console.log("category", category);
+      // console.log("ratings", ratings);
+      // console.log("discountPriceGTE", discountPriceGTE);
+      // console.log("discountPriceLTE", discountPriceLTE);
+      // console.log("sort", sort);
+      // console.log("sortValue", sortValue);
+
+      if (find || category || ratings > 0 || discountPriceGTE > 1) {
+        if (category) {
+          if (find || ratings > 0) {
+            var sql = `SELECT * FROM products WHERE (name LIKE '%${find}%' or description Like '%${find}%')
+              AND category="${category}" AND sale_price BETWEEN ${discountPriceGTE} AND ${discountPriceLTE}
+              AND ratings >=${ratings} order by ${sortValue ? sortValue : "id"} limit ${resPerPage} offset ${skip} `;
+            var rows = await query(sql);
+          } else {
+            var sql = `SELECT * FROM products WHERE category="${category}" order by ${sortValue ? sortValue : "id"};`;
+            var rows = await query(sql);
+          }
+        } else {
+          var sql = `SELECT * FROM products WHERE (name LIKE '%${find}%' or description Like '%${find}%')
+              AND sale_price BETWEEN ${discountPriceGTE} AND ${discountPriceLTE}
+              AND ratings >=${ratings} order by ${sortValue ? sortValue : "id"} limit ${resPerPage} offset ${skip} ; `;
+          var rows = await query(sql);
+        }
+      } else {
+        var sql = `SELECT * FROM products WHERE name LIKE '%${find}%'or description Like '%${find}%' limit ${resPerPage} offset ${skip}`;
+        var rows = await query(sql);
+      }
+
+      var sql2 = `select * from images;`;
+      var rows2 = await query(sql2);
+      productImages = rows2;
+      // console.log("sql", sql);
+      // console.log(productImages);
+
+      productImages.map((path) => {
+        // imagesData.push(fs.readFileSync(path.path));
+        // imagesData.push({
+        //   id: path.id,
+        //   product_id: path.product_id,
+        //   imageName: path.imageName,
+        //   path: path.path,
+        //   content: fs.readFileSync(path.path),
+        // });
+      });
+
+      // console.log(imagesData);
+
+      productsCount = rows2.length;
+      products = rows;
+      filteredProductsCount = products.length;
+    } catch (err) {
+      console.log(err);
+      return next(new ErrorHandler(err.message, 404));
+    } finally {
+      return [products, productsCount, filteredProductsCount, productImages];
+    }
+  };
+  result()
+    .then(
+      (value = async () => {
+        res.status(200).json({
+          success: true,
+          count: products.length,
+          productsCount,
+          resPerPage,
+          filteredProductsCount,
+          products,
+          productImages,
+          imagesData,
+        });
+      })
+    )
+    .catch((error) => {
+      console.log("All products are not showing :-", error.message);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+vertical line
+border-left: 6px solid green;
+
+scroll
+ div.scroll {
+                margin:4px, 4px;
+                padding:4px;
+                background-color: green;
+                width: 500px;
+                height: 110px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                text-align:justify;
+            }
+
+
+get current url  const currentURL = window.location.href;
+
+    console.log("ASC", sort.sort(function (a, b) { return a - b }));
+    console.log("DESC", sort.sort(function (a, b) { return b - a }));
+
+text.includes("world"); contain of string elements
+
+encodeURIComponent() differs from encodeURI() as follows:
+
+const set1 = ";,/?:@&=+$";  // Reserved Characters
+const set2 = "-_.!~*'()";   // Unescaped Characters
+const set3 = "#";           // Number Sign
+const set4 = "ABC abc 123"; // Alphanumeric Characters + Space
+
+console.log(encodeURI(set1)); // ;,/?:@&=+$
+console.log(encodeURI(set2)); // -_.!~*'()
+console.log(encodeURI(set3)); // #
+console.log(encodeURI(set4)); // ABC%20abc%20123 (the space gets encoded as %20)
+
+console.log(encodeURIComponent(set1)); // %3B%2C%2F%3F%3A%40%26%3D%2B%24
+console.log(encodeURIComponent(set2)); // -_.!~*'()
+console.log(encodeURIComponent(set3)); // %23
+console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (the space gets encoded as %20)
+
+
+str.trim();
+
+use to remove the before & after text space
+
+
+// apply new line in bullet
+text.split('\n').map(str => <div>{`\u25FE ${str}`}</div>
+
+
+how to check object empty in node
+Object.entries(coupon).length === 0)
+Object.keys(coupon).length !== 0
+
+
+import { ErrorMessage } from '@hookform/error-message';
+<ErrorMessage errors={errors} name="coupon_field" />
+ <ErrorMessage
+                                    errors={errors}
+                                    name="coupon_field"
+                                    render={({ message }) => <p>{message}</p>}
+                                />
+
+
+
+ <input
+                                        type="text"
+                                        id="coupon_field"
+                                        className='form-control'
+                                        value={coupon}
+                                        onChange={(e) => setCoupon(e.target.value)}
+                                        pattern=".{4,17}"
+                                        title="The length of coupon code should not be more than 17 characters"
+                                        // oninvalid="alert('You must fill out the form!');"
+                                        required
+                                    />
+
+
+
+
+
+access, adduser, audit, bin, bugs, cache, ci, completion,  
+    config, dedupe, deprecate, diff, dist-tag, docs, doctor,   
+    edit, exec, explain, explore, find-dupes, fund, get, help, 
+    hook, init, install, install-ci-test, install-test, link,  
+    ll, login, logout, ls, org, outdated, owner, pack, ping,   
+    pkg, prefix, profile, prune, publish, rebuild, repo,       
+    restart, root, run-script, search, set, set-script,        
+    shrinkwrap, star, stars, start, stop, team, test, token,   
+    uninstall, unpublish, unstar, update, version, view, whoami
+
+
+
+apply coupon code promo
+function coupongenerator() {
+var coupon = “”;
+var possible = “abcdefghijklmnopqrstuvwxyz0123456789”;
+for (var i = 0; i < {custom code length in here}; i++) {
+coupon += possible.charAt(Math.floor(Math.random() * possible.length));
+}
+return coupon;
+}
+module.exports = coupongenerator;
+
+
+
+
+
+
+
+
+
+
+<div className="col-lg-4 col-md-6 footer-newsletter entries">
+                <h4>ENQUIRY FORM</h4>
+                <div className="entries en-from">
+                                    <div className="blog-comments" data-aos="fade-up">
+                                        <div className="reply-form">
+                                            <form name="myform11" onsubmit="validateCaptcha()" >
+                                            <div className="row enquiryForm">
+                                                    <div className="col-md-5 form-group">
+                                                        <input name="Name" type="text" className="form-control in-from" id="Name" placeholder="Name:" />
+                                                    </div>
+                                                    <div className="col-md-7 form-group">
+                                                        <input type="number" name="Mobile" id="Mobile" className="form-control in-from" placeholder="Phone:" />
+                                                    </div>
+                                                    </div>
+                                                    <div className="row enquiryForm">
+                                                    <div className="col form-group">
+                                                    <input type="email" name="Email" id="Email" className="form-control in-from" placeholder="Email:" />
+                                                    </div>
+                                                    </div>
+                                                    
+                                                    <div className="row enquiryForm">
+                                                    <div className="col form-group" >
+                                                        <textarea name="Address" id="Address" className="form-control" placeholder="Message : "></textarea>
+                                                    </div>
+                                                    </div>
+                                                <div className="row ">
+                                                    <div className="col-md-4 ">
+                                                    <button type="submit" className="btn btn-danger in-from" >Submit</button>
+                                                    </div>
+                                                    <div className="col-md-4">
+                                                        <button type="reset" className="btn btn-danger in-from" >Reset&nbsp;</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+  "homepage": "/demo/build/",
+
+for html bullet in  text area new line
+text..split('\n').map(str => <p>{`\u2022 ${str}`}</p>)
+
+ping google.com
+nslookup google.com
+google  216.58.196.68
+weblink 148.72.210.79
+whasapp 31.13.79.53
+
+localStorage.setItem('shippingInfo', JSON.stringify(data))
+shippingInfo.address1  //get
+localStorage.removeItem("mytime"); //remove
+shippingInfo.city
+
+////set discount
+value={getDiscount(original_price, discount)}
+                    onChange={(e) => setSale_price(e.target.value)}
+
+//export const getDiscount = (price, discount) => {
+    const discountPrice = (price - ((discount / 100.0) * price));
+    return discountPrice
+}
+//////
+
+  <label for="datemin">Enter a date after 2000-01-01:</label>
+  <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+
+  <label for="quantity">Quantity (between 1 and 5):</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5"><br><br>
+
+
+
+
+<form action="/action_page.php">
+  <label for="pwd">Password:</label>
+  <input type="password" id="pwd" name="pwd"
+  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+  <input type="submit">
+</form>
+
+https://www.w3schools.com/tags/att_input_pattern.asp
+
+
+regular expression 6 character digits alpha numerix
+^[a-zA-Z0-9]{6,}$
+
+
+//react toggle button
+<button
+                            id="register_button"
+                            type="submit"
+                            className="btn btn-block py-3"
+                            disabled={loading ? true : false}
+                            data-toggle="modal"
+                        data-target="#ratingModal" 
+                        >
+                            REGISTER
+                        </button>
+                        <div
+                        className="modal fade"
+                        id="ratingModal"
+                        tabIndex="-1"
+                        role="dialog"
+                        aria-labelledby="ratingModalLabel"
+                        aria-hidden="true"
+                    >
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h5 className="modal-title" id="ratingModalLabel">
+                                    Getting a verification code send to your email
+                                    </h5>
+                                    <button
+                                        type="button"
+                                        className="close"
+                                        data-dismiss="modal"
+                                        aria-label="Close"
+                                        data-close
+                                    >
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div className="modal-body">
+                                    <div className="form-group">
+                                        <label htmlFor="name_field">Enter Verification Code ...</label>
+                                        <input
+                                            type='text'
+                                            name="review"
+                                            id="review"
+                                            className="form-control mt-3"
+                                            // value={categoryName}
+                                            // onChange={(e => setCategoryName(e.target.value))}
+                                            required
+                                        ></input>
+                                        <button
+                                            className="btn my-3 float-right review-btn px-4 text-white"
+                                            // onClick={categoryHandler}
+                                            data-dismiss="modal"
+                                            type="submit"
+                                        >
+                                            Submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+///react toggle button
+
+
+
+mobile no validation reg express /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/
+
+var test = 12.520;
+console.log(Number(test).toFixed(2));
+
+
+rotated button move cursor
+#search_btn:hover {
+    background-color: #bb0a12;
+    color: white;
+    background: linear-gradient(to top bottom, #cc2e06 50%, #bb0a12 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: all 0.3s ease-out;
+    transform: rotate(360deg);
+}
+
+
+reg lar expresiion for pin code postal regluar /^\d{3}\s?\d{3}$/,
+adress /^([A-Za-z0-9'\.\-\s\,]{9,255})$/
+
+<div class="d-flex justify-content-center">...</div>
+
+replace mysql query error
+const name = req.body.name.replace(/'/g, "\\'").replace(/"/g, '\\"').replace(/`/g, "\\`");
+
+no new line for heading tag
+h1
+style={{display: "inline"}}
+
+onchange input text edit
+<input
+                                            type='text'
+                                            name="review"
+                                            id="review"
+                                            className="form-control mt-3"
+                                            value={categoryName}
+                                            onChange={(e=>setCategoryName(e.target.value))}
+                                            required
+                                        ></input>
+
+//update button value agter click
+<button
+                        type="button"
+                        name={cat.category}
+                        onFocus={(e) => {
+                            setCategoryName(e.target.name)
+                        }}
+
+                        data-toggle="modal"
+                        data-target="#ratingModal" className="btn btn-primary">
+                        <i className="fa fa-pencil"></i>
+                    </button>
+
+
+
+//get button value
+<div className="keyboardRow roundBorder" value={"example"}
+ onClick={e => this.handleInput(e, "value")} >
+
+handleInput(e) {
+    console.log(e.target.value);
+}
+
+
+
+
+https://fontawesome.com/v4/icons/#file-type
+
+var sql = `SELECT * FROM products WHERE (name LIKE '%${find}%' or description Like '%${find}%')
+              AND sale_price BETWEEN ${discountPriceGTE} AND ${discountPriceLTE}
+              AND ratings >=${ratings} limit ${resPerPage} offset ${skip};`;
+
+
+confirm password
+<div className="form-group">
+<label htmlFor="password_field">Confirm Password</label>
+                            <input
+                                type="password"
+                                id="confirm_password_field"
+                                className={`form-control ${errors.message && "invalid"}`}
+                                {...register("confirm_password", {
+                                    required: true,
+                                    validate: () => {
+                                        if (watch('confirm_password') != password) {
+                                            return "Your passwords do no match";
+                                        }
+                                    }
+                                })}
+                                oninvalid={() => {
+                                    trigger("confirm_password");
+                                }}
+                                name='confirm_password'
+                                value={confirm_password}
+                                onChange={onChange}
+                            />
+                            {errors.confirm_password && (
+                                <small className="text-danger">{errors.confirm_password.message}</small>
+                            )}
+                        </div>
+
+                            
+
+
+
+emial pattrn == pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+
+<form>
+<input id="email" type="text" name="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" required placeholder="Enter you Email">
+<br>
+<input type="submit" value="Submit The Form">
+</form>
+
+
+<link href="https://db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember" rel="stylesheet"
+    type="text/css" />
+
+
+https://www.npmjs.com/package/react-material-ui-form-validator
+https://www.npmjs.com/package/react-validation
+
+
+// error handell
+//Error Handler Class
+class ErrorHandler extends Error{
+    constructor(message, statusCode){
+        super(message);
+        this.statusCode=statusCode  
+        Error.captureStackTrace(this, this.constructor)
+
+    }
+}
+
+    ==>catch{}  return next(new ErrorHandler(err.message, 404));
+    
+
+//empty req.body if form not use then json
+ // var object = {};
+        // formData.forEach((value, key) => object[key] = value);
+        // var json = object
+        // console.log(json)
+
+
+
+
+
+
+ 
+////uploadinf files
+
+const [file, setFile] = useState()
+ submitHandler==>for (let i = 0; i < file.length; i++) {
+            formData.append(`file`, file[i])
+          }
+onchage=> const onChange = event => {
+        const file = event.target.files;
+        setFile(file);
+
+        if (event.target.name === 'file') {
+            const reader = new FileReader();
+            reader.onload = () => {
+                if (reader.readyState === 2) {
+                    setAvatarPreview(reader.result)
+                    setAvatar(reader.result)
+                }
+            }
+            reader.readAsDataURL(event.target.files[0])
+        } else {
+            setUser({ ...user, [event.target.name]: event.target.value })
+        }
+    }
+
+//register.js
+input
+                                        type='file'
+                                        name='file'
+                                        className='custom-file-input'
+                                        id='customFile'
+                                        accept="image/*"
+                                        onChange={onChange}
+                                    />
+//user Action
+router.route('/register').post(upload.single('file'), registerUser);
+ const config = {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        }
+        const { data } = await axios.post('/api/v1/register', userData,config)
+
+//authController
+req.file.path
+req.file.filename
+
+
+//multer
+const multer = require('multer');
+const fs = require("fs");
+
+    const storage = multer.diskStorage({
+      destination: function (req, file, cb) {
+        if (!fs.existsSync("./backend/uploads/")) {
+          fs.mkdirSync("./backend/uploads/")
+        }
+        cb(null, './backend/uploads/');
+      },
+      filename: function (req, file, cb) {
+        cb(null, new Date().toISOString().replace(/:/g, '-') + " " + file.originalname);
+      }
+    });
+
+    const fileFilter = (req, file, cb) => {
+      // reject a file
+      if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+        cb(null, true);
+      } else {
+        cb(null, false);
+      }
+    };
+
+exports.upload = multer({
+  storage: storage,
+  limits: {
+    fileSize: 1024 * 1024 * 5
+  },
+  fileFilter: fileFilter
+});
+
+
+
+
+
+/////
+
+
+
+FileList {0: File, length: 1}
+0: File
+lastModified: 1650451616373
+lastModifiedDate: Wed Apr 20 2022 16:16:56 GMT+0530 (India Standard Time)
+[[Prototype]]: Object
+name: "Bill_Gates_2017_(cropped).jpg"
+size: 1265579
+type: "image/jpeg"
+webkitRelativePath: ""
+[[Prototype]]: File
+length: 1
+[[Prototype]]: FileList
+
+
+event.target.files[0]
+
+
+mysql syntax error
+replace ' by \' and " by \"
+  
+const name = req.body.name.replace(/'/g, "\\'").replace(/"/g, '\\"').replace(/`/g, "\\`");
+
+
+The "g" that you are talking about at the end of your regular expression is called a "modifier". The "g" represents the "global modifier". This means that your replace will replace all copies of the matched string with the replacement string you provide.
+
+A list of useful modifiers:
+
+g - Global replace. Replace all instances of the matched string in the provided text.
+i - Case insensitive replace. Replace all instances of the matched string, ignoring differences in case.
+m - Multi-line replace. The regular expression should be tested for matches over multiple lines.
+You can combine modifiers, such as g and i together, to get a global case insensitive search.
+
+
+
+"" not --. ''  in mysql like
+insert into products(id,name,original_price,discount,sale_price,description,ratings,category,
+    seller,stock,numOfReviews,date) values(NULL, 'Display & Graphics: 39.6 cm (15.6") diagonal, FHD, micro-edge, anti-glare,Brightness: 250 nits, 141 ppi |Graphics: AMD Radeon Graphics
+Operating System & Pre-installed Software: Windows 11 Home 64 Single', 25,3,
+    56,"ffftgg", NULL,"gtggtgg", "ggggg", 
+    26, NULL,NULL);
+
+
+//multiple file upload
+  for (let i = 0; i < file.length; i++) {
+      formData.append(`file`, file[i])
+  }
+ 
+
+ const url = req.protocol + '://' + req.get('host')
+  console.log("url",url);
+
+
+for uniques id genrate (new Date()).getTime().toString(36) + Math.random().toString(36).slice(2)
+
+const { uuid } = require('uuidv4');
+console.log(uuid());
+// => '11bf5b37-e0b8-42e0-8dcf-dc8c4aefc000'
+
+
+fs.readFileSync( path, options )
+
+const data = fs.readFileSync('./input.txt',
+            {encoding:'utf8', flag:'r'});
+
+
+
+console.dir(req.headers['content-type']);
+
+
+// uploading an image of more than 1mb. most product images are more than 1mb
+// app.use(express.json({limit: '50mb'}));
+// app.use(bodyparser.json({limit: '50mb'}));
+// app.use(bodyparser.urlencoded({limit: '50mb', extended: true, parameterLimit:50000}));
+// app.use(fileUpload())
+
+
+static image file 
+app.use('/', express.static(__dirname+'/uploads/product'))
+
+
+// read file content
+var path = "index.html"
+
+const readFileAsync = fs.readFileSync(path, 'utf8');
+// console.log(readFileAsync)
+
+
+
+Create a new folder
+Use fs.mkdir() or fs.mkdirSync() to create a new folder.
+
+JS
+copy
+const fs = require('fs')
+
+const folderName = '/Users/joe/test'
+
+try {
+  if (!fs.existsSync(folderName)) {
+    fs.mkdirSync(folderName)
+  }
+} catch (err) {
+  console.error(err)
+}
+
+
+
+
+
+
+//araay push return multiple value
+var filePath = [];
+      var imageName = [];
+      var imagesLinks = {
+        productImage: Object.values(req.files).map(file => {
+          filePath.push((file.path).replace(/\\/g, "\\\\"));
+          imageName.push(file.filename)
+
+        })
+      }
+
+      if (filePath.length === imageName.length) {
+        for (let i = 0; i < imageName.length; i++) {
+          const sql12 = `update images set imageName="${imageName[i]}", path="${filePath[i]}" 
+          where product_id=${req.params.id} and id=${row1[i].id};`;
+          const rows1 = await query(sql12);
+          productImages = rows1;
+        }
+      }
+/////////////////////////
+
+
+
+
+/// image upload in local folder copy get path
+
+
+const express = require("express");
+const conn = require('./connection');
+const bodyParser = require("body-parser");
+var app = express();
+
+app.use(bodyParser.json());
+
+conn.connect((err) => {
+  if (err) throw err;
+  if (!err) {
+    console.log("Datbases connected successfully...!!!");
+  } else {
+    console.log("Connection Failed :", err.message);
+  }
+})
+
+app.listen(3000, () => {
+  console.log(`Server started on PORT: 3000`);
+});
+
+app.use('/upload', express.static('uploads'));  //no need url upload as static
+app.use('/index', (req, res) => {
+  console.log("index");
+  res.send("index")
+})
+
+// console.log(__dirname);
+
+
+const router = express.Router();
+const multer = require('multer');
+
+    const storage = multer.diskStorage({
+      destination: function (req, file, cb) {
+        cb(null, './uploads/');
+      },
+      filename: function (req, file, cb) {
+        cb(null, new Date().toISOString().replace(/:/g, '-') + " " + file.originalname);
+      }
+    });
+
+    const fileFilter = (req, file, cb) => {
+      // reject a file
+      if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+        cb(null, true);
+      } else {
+        cb(null, false);
+      }
+    };
+
+const upload = multer({
+  storage: storage,
+  limits: {
+    fileSize: 1024 * 1024 * 5
+  },
+  fileFilter: fileFilter
+});
+
+app.use("/", router);
+// router.post('/upload', upload.single('productImages'), (req, res) => {
+router.post('/upload', upload.array('productImages'), (req, res) => {
+  res.status(200).json({
+    success: true,
+    productImage: Object.values(req.files).map(e=>e.path),
+    // productImage: req.file.path
+  });
+});
+
+//read/fetch images 
+const fs = require("fs");
+router.get('/image', (req, res) => {
+  fs.readFile(__dirname+'/uploads/2022-04-11T08-33-50.393Z rule1.jpg',
+    function (err, content) {
+        // Serving the image
+        res.end(content);
+    });
+});
+
+//delete image
+router.delete('/delete', (req, res)=>{
+  try {
+    fs.unlinkSync(__dirname+'/uploads/6.jpg');
+    //file removed
+  } catch(err) {
+    console.error(err)
+  }
+  res.status(200).json({sucess:true})
+})
+
+//upadte image
+router.post('/update', upload.single('newFile'), (req, res) => {
+  try {
+    fs.unlinkSync(__dirname+'/uploads/'+req.body.name);
+    //file removed
+  } catch(err) {
+    console.error(err)
+  }
+  res.status(200).json({
+    success: true,
+    newFile: req.file.path
+  });
+});
+
+
+
+const id = 1;
+const name = "rohan";
+// var sql = `create table company (id int, name varchar(50))`;
+var sql = `insert into company values('${id}','${name}')`;
+
+// conn.query(sql, function (err, result) {
+//   if (err) throw err;
+//   console.log("Result : ", result);
+// });
+
+
+
+////////////////////////////////////////////////////////////////
+
+
+
+
+
+Server is running...
+IncomingMessage {
+  _readableState: [ReadableState],
+  _events: [Object: null prototype],
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  socket: [Socket],
+  httpVersionMajor: 1,
+  httpVersionMinor: 1,
+  httpVersion: '1.1',
+  complete: false,
+  headers: [Object],
+  rawHeaders: [Array],
+  trailers: {},
+  rawTrailers: [],
+  aborted: false,
+  upgrade: false,
+  url: '/',
+  method: 'GET',
+  statusCode: null,
+  statusMessage: null,
+  client: [Socket],
+  _consuming: false,
+  _dumped: false,
+  [Symbol(kCapture)]: false,
+  [Symbol(RequestTimeout)]: undefined
+}
+ServerResponse {
+  _events: [Object: null prototype],
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  outputData: [],
+  outputSize: 0,
+  writable: true,
+  destroyed: false,
+  _last: false,
+  chunkedEncoding: false,
+  shouldKeepAlive: true,
+  _defaultKeepAlive: true,
+  useChunkedEncodingByDefault: true,
+  sendDate: true,
+  _removedConnection: false,
+  _removedContLen: false,
+  _removedTE: false,
+  _contentLength: null,
+  _hasBody: true,
+  _trailer: '',
+  finished: false,
+  _headerSent: false,
+  socket: [Socket],
+  _header: null,
+  _keepAliveTimeout: 5000,
+  _onPendingData: [Function: bound updateOutgoingData],
+  _sent100: false,
+  _expect_continue: false,
+  [Symbol(kCapture)]: false,
+  [Symbol(kNeedDrain)]: false,
+  [Symbol(corked)]: 0,
+  [Symbol(kOutHeaders)]: null
+}
+
+
+
+
+//callback async
+// const fs=require('fs');
+
+// fs.readFile(__filename, function cb(err, data){
+//     console.log("File data is", data);
+// });
+
+// console.log(`Test`);
+
+
+
+
+
+deploy
+"homepage": "https://weblinkservices.net/demo/dep/",
+
+// local storage
+const [items, setItems] = useState([]);
+
+useEffect(() => {
+  localStorage.setItem('items', JSON.stringify(items));
+}, [items]);
+
+
+//get
+const [items, setItems] = useState([]);
+
+useEffect(() => {
+  const items = JSON.parse(localStorage.getItem('items'));
+  if (items) {
+   setItems(items);
+  }
+}, []);
+
+
+// promise
+const promise = new Promise((resolve, reject) => {  
+    let condition;
+    
+    if(condition is met) {    
+        resolve('Promise is resolved successfully.');  
+    } else {    
+        reject('Promise is rejected');  
+    }
+});
+
+//promise 2
+function addName (time, name){
+  return new Promise ((resolve, reject) => {
+    if(name){
+      setTimeout(()=>{
+        console.log(name)
+        resolve();
+      },time)
+    }else{
+      reject('No such name');
+    }
+  })
+}
+
+
+
+// async awiat
+const fetchData = async () => {
+  try {
+    const quotes = await fetch("https://type.fit/api/quotes");
+    const response = await quotes.json();
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+fetchData();
+
+cross origin error
+
+(async (a=1, ...b)=>({...b, a, [a]: '${a}'}))()
+output
+Promise {
+  { '1': '${a}', a: 1 },
+  [Symbol(async_id_symbol)]: 268,
+  [Symbol(trigger_async_id_symbol)]: 5,
+  [Symbol(destroyed)]: { destroyed: false }
+}
+Operator	Description
+=	Equal to
+!=	Not equal to
+<>	Not equal to
+>	Greater than
+<	Less than
+<=	Less than or equal to
+>=	Greater than or equal to
+BETWEEN x AND y	Falls between the two values x and y
+
+
+
+
+Number(8) && 1  // return 8 otherwise 1
+
+.classname{
+ height : auto;
+Width: 100%;
+}
+
+
+search tect in mysql
+SELECT * FROM * WHERE * LIKE '%stuff%'
+
+ Array.from(Object.keys(keyword)).forEach(function(key){
+            console.log(key + ":" + keyword[key]);
+          });
+       
+
+parseInt(str) converts a string to a number.
+
+date node mysql format
+new Date().toISOString().slice(0, 19).replace('T', ' ');
+
+console.log(values,values);
+
+official new/coding font
+font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji;
+
+
+
+ var hash = crypto.createHash('md5').update(password).digest('hex');
+var crypto = require('crypto');
+var name = 'braitsch';
+var hash = crypto.createHash('md5').update(name).digest('hex');
+console.log(hash); // 9b74c9897bac770ffc029102a200c5de
+
+callback //
+var myCallback = function(data) {
+    console.log('got data: '+data);
+  };
+  
+  var usingItNow = function(callback) {
+    callback('get it?');
+  };
+
+  usingItNow(myCallback);
+
+
+
+ {
+    id: 2,
+    name: 'abc',
+    email: 'trivia12@gmail.com',
+    mobile: '9876543210',
+    password: 'c3f3c4ffb150f5c87cec3164662e03dd',
+    role: 'user',
+    date: 2022-02-01T12:14:36.000Z,
+    public_id: 'avatars/iqthyo7ohx6gcrpgzdup',
+    url: 'https://res.cloudinary.com/weblink/image/upload/v1638947879/avatars/iqthyo7ohx6gcrpgzdup.jpg'
+  }
+
+
+
+rows ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  info: 'Rows matched: 1  Changed: 1  Warnings: 0',
+  serverStatus: 2,
+  warningStatus: 0,
+  changedRows: 1
+}
+
+req//
+<ref *2> IncomingMessage {
+  _readableState: ReadableState {
+    objectMode: false,
+    highWaterMark: 16384,
+    buffer: BufferList { head: null, tail: null, length: 0 },
+    length: 0,
+    pipes: [],
+    flowing: true,
+    ended: true,pr
+    endEmitted: true,
+    reading: false,
+    sync: false,
+    needReadable: false,
+    emittedReadable: false,
+    readableListening: false,
+    resumeScheduled: false,
+    errorEmitted: false,
+    emitClose: true,
+    autoDestroy: false,
+    destroyed: false,
+    errored: null,
+    closed: false,
+    closeEmitted: false,
+    defaultEncoding: 'utf8',
+    awaitDrainWriters: null,
+    multiAwaitDrain: false,
+    readingMore: false,
+    dataEmitted: true,
+    decoder: null,
+    encoding: null,
+    [Symbol(kPaused)]: false
+  },
+  _events: [Object: null prototype] { end: [Function: clearRequestTimeout] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  socket: <ref *1> Socket {
+    connecting: false,
+    _hadError: false,
+    _parent: null,
+    _host: null,
+    _readableState: ReadableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      buffer: BufferList { head: null, tail: null, length: 0 },
+      length: 0,
+      pipes: [],
+      flowing: true,
+      ended: false,
+      endEmitted: false,
+      reading: true,
+      sync: false,
+      needReadable: true,
+      emittedReadable: false,
+      readableListening: false,
+      resumeScheduled: false,
+      errorEmitted: false,
+      emitClose: false,
+      autoDestroy: false,
+      destroyed: false,
+      errored: null,
+      closed: false,
+      closeEmitted: false,
+      defaultEncoding: 'utf8',
+      awaitDrainWriters: null,
+      multiAwaitDrain: false,
+      readingMore: false,
+      dataEmitted: false,
+      decoder: null,
+      encoding: null,
+      [Symbol(kPaused)]: false
+    },
+    _events: [Object: null prototype] {
+      end: [Array],
+      timeout: [Function: socketOnTimeout],
+      data: [Function: bound socketOnData],
+      error: [Function: socketOnError],
+      close: [Array],
+      drain: [Function: bound socketOnDrain],
+      resume: [Function: onSocketResume],
+      pause: [Function: onSocketPause]
+    },
+    _eventsCount: 8,
+    _maxListeners: undefined,
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: false,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      buffered: [],
+      bufferedIndex: 0,
+      allBuffers: true,
+      allNoop: true,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: false,
+      autoDestroy: false,
+      errored: null,
+      closed: false,
+      closeEmitted: false
+    },
+    allowHalfOpen: true,
+    _sockname: null,
+    _pendingData: null,
+    _pendingEncoding: '',
+    server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      keepAliveTimeout: 5000,
+      maxHeadersCount: null,
+      headersTimeout: 60000,
+      requestTimeout: 0,
+      _connectionKey: '6::::4000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 21
+    },
+    _server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      keepAliveTimeout: 5000,
+      maxHeadersCount: null,
+      headersTimeout: 60000,
+      requestTimeout: 0,
+      _connectionKey: '6::::4000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 21
+    },
+    parser: HTTPParser {
+      '0': [Function: bound setRequestTimeout],
+      '1': [Function: parserOnHeaders],
+      '2': [Function: parserOnHeadersComplete],
+      '3': [Function: parserOnBody],
+      '4': [Function: parserOnMessageComplete],
+      '5': [Function: bound onParserExecute],
+      '6': [Function: bound onParserTimeout],
+      _headers: [],
+      _url: '',
+      socket: [Circular *1],
+      incoming: [Circular *2],
+      outgoing: null,
+      maxHeaderPairs: 2000,
+      _consumed: true,
+      onIncoming: [Function: bound parserOnIncoming],
+      [Symbol(resource_symbol)]: [HTTPServerAsyncResource]
+    },
+    on: [Function: socketListenerWrap],
+    addListener: [Function: socketListenerWrap],
+    prependListener: [Function: socketListenerWrap],
+    _paused: false,
+    _httpMessage: ServerResponse {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: true,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: null,
+      _hasBody: true,
+      _trailer: '',
+      finished: false,
+      _headerSent: false,
+      socket: [Circular *1],
+      _header: null,
+      _keepAliveTimeout: 5000,
+      _onPendingData: [Function: bound updateOutgoingData],
+      _sent100: false,
+      _expect_continue: false,
+      req: [Circular *2],
+      locals: [Object: null prototype] {},
+      [Symbol(kCapture)]: false,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    [Symbol(async_id_symbol)]: 121,
+    [Symbol(kHandle)]: TCP {
+      reading: true,
+      onconnection: null,
+      _consumed: true,
+      [Symbol(owner_symbol)]: [Circular *1]
+    },
+    [Symbol(kSetNoDelay)]: false,
+    [Symbol(lastWriteQueueSize)]: 0,
+    [Symbol(timeout)]: null,
+    [Symbol(kBuffer)]: null,
+    [Symbol(kBufferCb)]: null,
+    [Symbol(kBufferGen)]: null,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesRead)]: 0,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(RequestTimeout)]: undefined
+  },
+  httpVersionMajor: 1,
+  httpVersionMinor: 1,
+  httpVersion: '1.1',
+  complete: true,
+  headers: {
+    'content-type': 'application/json',
+    'user-agent': 'PostmanRuntime/7.29.0',
+    accept: '*/*',
+    'postman-token': 'f1dfe160-13bc-4ca0-9d46-4f0de3f21aac',
+    host: 'localhost:4000',
+    'accept-encoding': 'gzip, deflate, br',
+    connection: 'keep-alive',
+    'content-length': '48',
+    cookie: 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjY1ZGRmMjE3NWM1NTMzZmZhYmQ3ZiIsImlhdCI6MTY0MjY2MDc0NywiZXhwIjoxNjQzMjY1NTQ3fQ.W5m8NilH1L9AEPcWbLHqG_92NxNR4GKIUjOxYEVWdNM'
+  },
+  rawHeaders: [
+    'Content-Type',
+    'application/json',
+    'User-Agent',
+    'PostmanRuntime/7.29.0',
+    'Accept',
+    '*/*',
+    'Postman-Token',
+    'f1dfe160-13bc-4ca0-9d46-4f0de3f21aac',
+    'Host',
+    'localhost:4000',
+    'Accept-Encoding',
+    'gzip, deflate, br',
+    'Connection',
+    'keep-alive',
+    'Content-Length',
+    '48',
+    'Cookie',
+    'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjY1ZGRmMjE3NWM1NTMzZmZhYmQ3ZiIsImlhdCI6MTY0MjY2MDc0NywiZXhwIjoxNjQzMjY1NTQ3fQ.W5m8NilH1L9AEPcWbLHqG_92NxNR4GKIUjOxYEVWdNM'
+  ],
+  trailers: {},
+  rawTrailers: [],
+  aborted: false,
+  upgrade: false,
+  url: '/admin/product/4',
+  method: 'PUT',
+  statusCode: null,
+  statusMessage: null,
+  client: <ref *1> Socket {
+    connecting: false,
+    _hadError: false,
+    _parent: null,
+    _host: null,
+    _readableState: ReadableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      buffer: BufferList { head: null, tail: null, length: 0 },
+      length: 0,
+      pipes: [],
+      flowing: true,
+      ended: false,
+      endEmitted: false,
+      reading: true,
+      sync: false,
+      needReadable: true,
+      emittedReadable: false,
+      readableListening: false,
+      resumeScheduled: false,
+      errorEmitted: false,
+      emitClose: false,
+      autoDestroy: false,
+      destroyed: false,
+      errored: null,
+      closed: false,
+      closeEmitted: false,
+      defaultEncoding: 'utf8',
+      awaitDrainWriters: null,
+      multiAwaitDrain: false,
+      readingMore: false,
+      dataEmitted: false,
+      decoder: null,
+      encoding: null,
+      [Symbol(kPaused)]: false
+    },
+    _events: [Object: null prototype] {
+      end: [Array],
+      timeout: [Function: socketOnTimeout],
+      data: [Function: bound socketOnData],
+      error: [Function: socketOnError],
+      close: [Array],
+      drain: [Function: bound socketOnDrain],
+      resume: [Function: onSocketResume],
+      pause: [Function: onSocketPause]
+    },
+    _eventsCount: 8,
+    _maxListeners: undefined,
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: false,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      buffered: [],
+      bufferedIndex: 0,
+      allBuffers: true,
+      allNoop: true,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: false,
+      autoDestroy: false,
+      errored: null,
+      closed: false,
+      closeEmitted: false
+    },
+    allowHalfOpen: true,
+    _sockname: null,
+    _pendingData: null,
+    _pendingEncoding: '',
+    server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      keepAliveTimeout: 5000,
+      maxHeadersCount: null,
+      headersTimeout: 60000,
+      requestTimeout: 0,
+      _connectionKey: '6::::4000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 21
+    },
+    _server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      keepAliveTimeout: 5000,
+      maxHeadersCount: null,
+      headersTimeout: 60000,
+      requestTimeout: 0,
+      _connectionKey: '6::::4000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 21
+    },
+    parser: HTTPParser {
+      '0': [Function: bound setRequestTimeout],
+      '1': [Function: parserOnHeaders],
+      '2': [Function: parserOnHeadersComplete],
+      '3': [Function: parserOnBody],
+      '4': [Function: parserOnMessageComplete],
+      '5': [Function: bound onParserExecute],
+      '6': [Function: bound onParserTimeout],
+      _headers: [],
+      _url: '',
+      socket: [Circular *1],
+      incoming: [Circular *2],
+      outgoing: null,
+      maxHeaderPairs: 2000,
+      _consumed: true,
+      onIncoming: [Function: bound parserOnIncoming],
+      [Symbol(resource_symbol)]: [HTTPServerAsyncResource]
+    },
+    on: [Function: socketListenerWrap],
+    addListener: [Function: socketListenerWrap],
+    prependListener: [Function: socketListenerWrap],
+    _paused: false,
+    _httpMessage: ServerResponse {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: true,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: null,
+      _hasBody: true,
+      _trailer: '',
+      finished: false,
+      _headerSent: false,
+      socket: [Circular *1],
+      _header: null,
+      _keepAliveTimeout: 5000,
+      _onPendingData: [Function: bound updateOutgoingData],
+      _sent100: false,
+      _expect_continue: false,
+      req: [Circular *2],
+      locals: [Object: null prototype] {},
+      [Symbol(kCapture)]: false,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    [Symbol(async_id_symbol)]: 121,
+    [Symbol(kHandle)]: TCP {
+      reading: true,
+      onconnection: null,
+      _consumed: true,
+      [Symbol(owner_symbol)]: [Circular *1]
+    },
+    [Symbol(kSetNoDelay)]: false,
+    [Symbol(lastWriteQueueSize)]: 0,
+    [Symbol(timeout)]: null,
+    [Symbol(kBuffer)]: null,
+    [Symbol(kBufferCb)]: null,
+    [Symbol(kBufferGen)]: null,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesRead)]: 0,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(RequestTimeout)]: undefined
+  },
+  _consuming: true,
+  _dumped: false,
+  next: [Function: next],
+  baseUrl: '/api/v1',
+  originalUrl: '/api/v1/admin/product/4',
+  _parsedUrl: Url {
+    protocol: null,
+    slashes: null,
+    auth: null,
+    host: null,
+    port: null,
+    hostname: null,
+    hash: null,
+    search: null,
+    query: null,
+    pathname: '/admin/product/4',
+    path: '/admin/product/4',
+    href: '/admin/product/4',
+    _raw: '/admin/product/4'
+  },
+  params: { id: '4' },
+  query: {},
+  res: <ref *3> ServerResponse {
+    _events: [Object: null prototype] { finish: [Function: bound resOnFinish] },
+    _eventsCount: 1,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: false,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: true,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    _contentLength: null,
+    _hasBody: true,
+    _trailer: '',
+    finished: false,
+    _headerSent: false,
+    socket: <ref *1> Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _readableState: [ReadableState],
+      _events: [Object: null prototype],
+      _eventsCount: 8,
+      _maxListeners: undefined,
+      _writableState: [WritableState],
+      allowHalfOpen: true,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: [Server],
+      _server: [Server],
+      parser: [HTTPParser],
+      on: [Function: socketListenerWrap],
+      addListener: [Function: socketListenerWrap],
+      prependListener: [Function: socketListenerWrap],
+      _paused: false,
+      _httpMessage: [Circular *3],
+      [Symbol(async_id_symbol)]: 121,
+      [Symbol(kHandle)]: [TCP],
+      [Symbol(kSetNoDelay)]: false,
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: null,
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(RequestTimeout)]: undefined
+    },
+    _header: null,
+    _keepAliveTimeout: 5000,
+    _onPendingData: [Function: bound updateOutgoingData],
+    _sent100: false,
+    _expect_continue: false,
+    req: [Circular *2],
+    locals: [Object: null prototype] {},
+    [Symbol(kCapture)]: false,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kOutHeaders)]: [Object: null prototype] { 'x-powered-by': [Array] }
+  },
+  body: { stock: 150, name: 'Memory Card' },
+  _body: true,
+  length: undefined,
+  secret: undefined,
+  cookies: {
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjY1ZGRmMjE3NWM1NTMzZmZhYmQ3ZiIsImlhdCI6MTY0MjY2MDc0NywiZXhwIjoxNjQzMjY1NTQ3fQ.W5m8NilH1L9AEPcWbLHqG_92NxNR4GKIUjOxYEVWdNM'
+  },
+  signedCookies: [Object: null prototype] {},
+  route: Route {
+    path: '/admin/product/:id',
+    stack: [ [Layer], [Layer], [Layer], [Layer], [Layer], [Layer] ],
+    methods: { put: true, delete: true }
+  },
+  user: {
+    avatar: {
+      public_id: 'avatars/iqthyo7ohx6gcrpgzdup',
+      url: 'https://res.cloudinary.com/weblink/image/upload/v1638947879/avatars/iqthyo7ohx6gcrpgzdup.jpg'
+    },
+    _id: new ObjectId("61665ddf2175c5533ffabd7f"),
+    name: 'NCC',
+    email: 'trivia@gmail.com',
+    role: 'admin',
+    createdAt: 2021-10-13T04:17:35.433Z,
+    __v: 0
+  },
+  [Symbol(kCapture)]: false,
+  [Symbol(RequestTimeout)]: undefined
+}
+
+
+
+
+const query = util.promisify(connection.query).bind(connection);
+let result = async function() {
+  try {
+    const rows = await query('SELECT * FROM products');
+    productsCount = rows.length
+    product= rows
+  }catch(err) {
+    console.log(err.message); 
+  } finally {
+    // return [product,productsCount];
+}
+}
+result()
+.then(value => {
+    console.log(product)
+}).catch(error => {
+                console.log(error)
+            });
+
+
+
+
+alter table products modify date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
+
+//callback
+
+function greeting(name) {
+  alert('Hello ' + name);
+}
+
+function processUserInput(callback) {
+  var name = prompt('Please enter your name.');
+  callback(name);
+}
+
+processUserInput(greeting);
+
+//////
+
+
+//form css
+input[type], input[type=submit], input[type=reset] {
+  width: 100%;
+  transition: width 0.4s ease-in-out;
+  background-color: #f1f1f1;
+  border: none;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+*****************************************************************************************
+use shop;
+
+desc users;
+desc address;
+desc products;
+desc images;
+desc review;
+desc orders;
+
+create table users(id int(11) PRIMARY KEY AUTO_INCREMENT, name varchar(50), email varchar(50), mobile int(11), password varchar(50), role varchar(50), 
+date datetime, public_id varchar(50), url varchar(50), CONSTRAINT contacts_unique  UNIQUE (mobile, email));
+
+create table address(id int(11) PRIMARY KEY AUTO_INCREMENT, user_id int(11), address varchar(50), city varchar(50), country varchar(50),
+phoneNo int(11), postalCode int(11));
+
+create table products(id int(11) PRIMARY KEY AUTO_INCREMENT, name varchar(50), original_price double, discount int(2), sale_price double,
+description varchar(255), ratings double, categories varchar(50), seller varchar(50), stock int(11), numOfReview int(11), date datetime);
+
+create table images(id int(11) PRIMARY KEY AUTO_INCREMENT, product_id int(11), public_id varchar(50), url varchar(50));
+
+create table review(id int(11) PRIMARY KEY AUTO_INCREMENT, user_id int(11), product_id int(11), name varchar(50), rating int(11), 
+comments varchar(255));
+
+create table orders(id int(11) PRIMARY KEY AUTO_INCREMENT, user_id int(11), product_id int(11), address_id int(11),
+order_date datetime, delivered_date datetime, orderStatus varchar(50), paidAt datetime, paymentStatus varchar(50), 
+shippingPrice double, taxPrice double, totalPrice double, quantity int(11));
+
+
+**************************************
+
+
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+https://codeburst.io/sending-an-email-using-nodemailer-gmail-7cfa0712a799
+https://reactdemo.hasthemes.com/wokiee/
+
+
+
+https://www.wrappixel.com/templates/materialpro-react-redux-admin/  best for buy
+cloudinary oject eturn
+{
+    "asset_id": "f7575f0b1a95a7ea3f5d71621298bf9b",
+    "public_id": "gbyz0wvbcb5abv4ttz7a",
+    "version": 1641539055,
+    "version_id": "fe4b7f53d8fe9e602a8fe02c71eacd65",
+    "signature": "13561c2e4b05af03bc19434dc5f15d507dca550d",
+    "width": 476,
+    "height": 605,
+    "format": "png",
+    "resource_type": "image",
+    "created_at": "2022-01-07T07:04:15Z",
+    "tags": [],
+    "bytes": 24559,
+    "type": "upload",
+    "etag": "99f810ac082c39f0ebabc106949bdd91",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/kolte/image/upload/v1641539055/gbyz0wvbcb5abv4ttz7a.png",
+    "secure_url": "https://res.cloudinary.com/kolte/image/upload/v1641539055/gbyz0wvbcb5abv4ttz7a.png",
+    "original_filename": "41ac6a36fc0d2b2a2122185bc05e2626",
+    "api_key": "698368936413995"
+}
+
+
+https://github.com/mdbootstrap/mdb-react-ui-kit  ui react
+
+//error
+Right now you don't have authentication, so you don't have any user yet.
+
+Simply go to product model and comment the user field and then uncomment it after authentication.
+
+
+anti virous
+E-FBAAA9FB69
+E-CE0DFF1905
+https://www.wappalyzer.com/ website technology craete langauge
+
+https://babeljs.io/
+
+https://github.com/ghulamabbas2/shopit
+
+Mongo db connect 
+
+Follow below steps:
+1] Go to https://www.mongodb.com/cloud/atlas
+2] login to your mongodb atlas account
+3] Click on network access
+
+i] if you have already added ip address, then here you can see ip access list
+a] click on delete 
+
+ii] if you have not already added ip address, then just follow below steps:
+
+4] click on add ip address
+5] select 'add current ip address' or if you want you can also select 'allow access from anywhere'
+6] type in comment if you want
+7] click on confirm button
+8] this will show pending loader, wait until it shows active status
+9] now restart your server on terminal by typing 'npm start'
+
+-- That's it!
+
+
+
+https://git-scm.com/download/win
+ES7 React/Redux/GraphQL/React-Native snippets rfc
+
+npm audit fix --force
+
+npm cache clean --force
+Then:
+
+npm install -g npm@latest --force
+Then (once again):
+
+npm cache clean --force
+And finally was able to run this (installing Angular project) without the errors I was seeing regarding EPERM:
+
+ng new myProject
+
+
+
+
+
+
+
+[10:24 AM, 7/16/2021] ??: upload product image to server & loading categories wise product, calculate product price in cart model, add product to cart show on screen, remove product from cart and checkout page protection
+[12:11 PM, 7/16/2021] ??: https://code-projects.org/
+https://www.kashipara.com/project/
+https://codezips.com/
+https://opensource.google/
+https://www.makeuseof.com/tag/top-10-professional-sample-code-websites-for-programmers/
+[12:13 PM, 7/16/2021] ??: https://www.udemy.com/course/mern-ecommerce/
+[12:25 PM, 7/16/2021] ??: https://www.udemy.com/course/gatsby-ecommerce-shopify/
+[12:27 PM, 7/16/2021] ??: https://www.udemy.com/course/react-node-ecommerce/   nott
+[12:29 PM, 7/16/2021] ??: https://www.udemy.com/course/spring-boot-e-commerce-ultimate/   java spring
+[12:32 PM, 7/16/2021] ??: https://www.udemy.com/course/build-ecommerce-website-like-amazon-react-node-mongodb/
+[12:55 PM, 7/16/2021] ??: https://www.udemy.com/course/mern-stack-ecommerce-site-using-react-redux-nodejs/  5star best
+[1:53 PM, 7/16/2021] ??: Udemy
+
+Id - premnankani2@gmail.com
+
+pass - 223330
+[2:12 PM, 7/16/2021] ??: https://www.udemy.com/course/react-for-busy-developers-learn-by-doing-ecommerce/  only study not poj
+[2:28 PM, 7/16/2021] ??: https://www.udemy.com/course/building-a-production-e-commerce-with-react-redux/ only ui s
+[4:29 PM, 7/16/2021] ??: https://webscript.info/rizwan/mern-stack-project-ecommerce-website-source-code-5f59262dd2124
+[4:32 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=MklgIlmzoQ8&list=PLB_Wd4-5SGAYsxD4JGaVdXll3PnoyI-AM&index=35
+[4:35 PM, 7/16/2021] ??: mern stack
+[4:47 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=vMtpdnMKSYc 1500 for jap jervel
+[4:59 PM, 7/16/2021] ??: HEROCO   deployee MEARN
+[5:00 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=_CT1Drn4JXk
+[5:07 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=HggSXt1Hzfk
+[5:07 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=W1Kttu53qTg
+[5:10 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=377AQ0y6LPA ecomm mean
+[5:15 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=J7l5ZIXY5EQ&list=PLL4mtmkTOEwTeq8BRFWUkceeZUDylhDoF mean best
+[5:20 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=0divhP3pEsg
+[5:21 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=jcOKU9f86XE chat
+[5:23 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=zDWEUtSE6S8
+[5:26 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=kXfRQ0NiyLI
+[5:28 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=7QseojHf30k&list=PLB_Wd4-5SGAYsxD4JGaVdXll3PnoyI-AM&index=48 flipcart clone
+[5:29 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=h01cuxhteOA chat
+[5:31 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=6AI-gFM8gco  Best buy um source code
+[5:43 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=6AI-gFM8gco  /amaz
+[5:43 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=-oZEz8L1-k4&list=PLuHGmgpyHfRw6vj1vd_Pf0Zjd2muTvjI5&index=59 /amz
+[5:44 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=UTA2XWPj97Q
+[5:44 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=F-i0d67PVkE&list=PLB97yPrFwo5hvTwXlJuE4zBKPA2eIw9c0
+[5:46 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=35BSnmTbjlE
+[5:48 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=TRCDsB9i3bI /amza 3 oprtion
+[5:49 PM, 7/16/2021] ??: https://github.com/basir/amazona
+[5:51 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=j10ZTzgYNPs c new
+[5:53 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=BX-JZXAqJA4&list=PLNHw_0qv1zy_8Zu2kbn9YpcA9LV8fT9B-&index=9 amzaon 5
+[6:09 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=ZuRjGpmlNAA food
+[6:10 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=OmnHKAVr2qs&list=RDCMUCFyXA9x8lpL3EYWeYhj4C4Q&index=27 new diiif
+[6:11 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=shun4H-LVN8&list=RDCMUCOo2cQaNYpPolc5__yMkFbw&start_radio=1&rv=shun4H-LVN8&t=1 amzac 5 hindi
+
+
+
+
+https://code-projects.org/
+https://www.kashipara.com/project/
+https://codezips.com/
+https://opensource.google/
+https://www.makeuseof.com/tag/top-10-professional-sample-code-websites-for-programmers/
+
+https://github.com/google-developer-training/pwa-ecommerce-demo
+https://www.kashipara.com/ projects online
+https://sourceforge.net/projects/b2b-project/files/latest/download
+
+//HQL
+
+package com.MavenProj.hql;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.MavenProj.Student;
+
+
+public class HQL {
+	public static void main(String[] args) {
+		SessionFactory factory = new Configuration().configure("Hibernate.cfg.xml").buildSessionFactory();
+		Session s=factory.openSession();
+		String query="from Student where name=:x";
+
+		Query q= s.createQuery(query);
+		//q.uniqueResult();
+		q.setParameter("x", "Rahul");
+		
+		
+		q.list();
+		List<Student> list=q.list();
+		for(Student student:list) {
+			System.out.println(student.getName());
+		}
+		
+		System.out.println("---------DELETED ----------------------------------------------------------");	
+		Transaction tx=s.beginTransaction();
+//		Query q1= s.createQuery("delete from Student where id =:i");
+//		q1.setParameter("i", 4);
+//		int i =q1.executeUpdate();
+//		System.out.println("Deleted"+i);
+		
+		System.out.println("---------UPDATE ----------------------------------------------------------");	
+		
+		Query q2= s.createQuery("update Student set name=:n where id =:i" );
+		q2.setParameter("i", 2);
+		q2.setParameter("n", "Nikhil");
+		int e =q2.executeUpdate();
+		System.out.println("Updated"+e);
+		
+		tx.commit();
+		s.close();
+		factory.close();
+	}
+}
+
+//End HQL
+
+
+
+
+https://material.io/design/color/the-color-system.html
+
+
+
+
+
+
+https://github.com/louisjuliendo/ECommerceServletJSP
+https://github.com/shivamvk/E-Commerce
+
+
+buy java project
+e commerce ecomm\
+https://learncodewithdurgesh.com/course/ecommerce-project-using-java-servlet-jsp-hibernate-mysql/163/
+https://learncodewithdurgesh.com/course/ecommerce-project-using-java-servlet-jsp-hibernate-mysql/
+
+
+https://material-ui.com/customization/color/ color
+
+https://www.flaticon.com/ icon
+https://www.figma.com/ bg 
+
+google atg ana https://help.crisp.chat/en/article/how-to-send-events-from-crisp-to-google-analytics-via-gtm-me6m5m/
+
+java project https://www.youtube.com/watch?v=h3i9gCDME9w
+chate https://www.youtube.com/watch?v=cA9q0k3vIO0&t=5s
+fb message https://www.youtube.com/watch?v=H0Npe2p0IFU
+
+javascript file
+FileReader.readAsArrayBuffer(): Reads the contents of the specified input file. The result attribute contains an ArrayBuffer representing the file’s data.
+FileReader.readAsBinaryString(): Reads the contents of the specified input file. The result attribute contains the raw binary data from the file as a string.
+FileReader.readAsDataURL(): Reads the contents of the specified input file. The result attribute contains a URL representing the file’s data.
+FileReader.readAsText(): Reads the contents of the specified input file. The result attribute contains the contents of the file as a text string. This method can take encoding version as the second argument(if required). The default encoding is UTF-8.
+
+
+https://www.youtube.com/watch?v=X2kM0qls2Gg email send by other
+
+
+https://www.javaguides.net/
+
+https://www.javaguides.net/2021/02/java-free-e-commerce-open-source-projects.html java project
+
+https://www.javaguides.net/2021/02/java-free-e-commerce-open-source-projects.html 
+https://github.com/RameshMF/adyen-java-react-ecommerce-example. ract java ecmo
+
+
+https://www.kashipara.com/
+http://hibernate.org/dtd/
+<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.4.5.Final</version>
+</dependency>
+
+
+https://github.com/shopizer-ecommerce/shopizer ecomm
+http://projects.adsingh.net/ JAVAPROJECTS
+"C:\Users\Ayesha Bagwan\eclipse\jee-2021-06\eclipse\eclipse.exe"
+
+doc api index
+
+https://docs.oracle.com/en/java/javase/16/index.html
+
+https://docs.oracle.com/javase/8/docs/
+
+
+https://docs.oracle.com/en/java/javase/16/docs/api/index.html
+
+https://docs.oracle.com/javase/8/docs/api/index.html
+
+databases 
+https://www.oracle.com/database/technologies/xe-prior-releases.html
+
+
+ecomme 
+flex-direction: column;
+    background-color: #2A2F3A;   ---dark gey
+    border-color: rgba(190, 190 ,190, 0.5);
+
+
+Grey color- 
+#2A2F3A
+rgb(238, 238, 238) / #eeeeee / #EEEEEE
+
+amzoon background-color: #131A22;
+background-color: #232F3E;
+
+----------------------
+login btn #fb375fe0
+cart btn #ec0808
+
+
+
+------------
+
+color: rgb(120, 144, 156);    best gey for ecome
+    background-color: rgb(238, 238, 238);
+    background-image: linear-gradient(
+90deg, currentcolor, currentcolor 100%, transparent 100%);
+
+git repositey -- git bash
+
+1. git init
+2. git add.
+3. git commit -m myapp
+4. git status
+5. git remote add origin http:..URL
+6. git push origin master   -or
+7.git push -f origin master  -force
+
+
+img less than 1mb if more
+app.use(express.json({ limit: "50mb" })); 
+app.use(express.urlencoded({ limit: "50mb", extended: true }));
+
+
+
+UnhandledPromiseRejectionWarning---catchAsyncErrors()--
+{module.exports = func => (req, res, next) =>
+    Promise.resolve(func(req, res, next))
+        .catch(next)}
+
+
+
+npm run seeder
+
+npm run dev
+npm eun prod
+
+DB_LOCAL_URI = mongodb://localhost:27017/mystore
+
+node -v
+npm -v
+npm install -g create-react-app
+npm install
+npx create-react-app my-app
+cd my-app
+npm start
+npm run build
+npm text
+
+shift alt + F 
+
+npm install bootstrap reactstrap
+npm install redux    {import}
+
+
+npm install axio redux-thunk
+npm init --yes
+node index
+npm install reduct-logger
+
+npm init or npm i
+npm install
+
+
+/nodemon
+npm i -g nodemon
+nodemon index.js
+
+npm -install --save-dev nodemon
+npm uninstall nodemon
+
+npm install express
+npm install mongoose --save
+
+npm install macha --save
+
+
+*************STATUS CODE**************************
+
+100 	- Information process
+200 	- Ok, Success Code
+
+300/301 - Code redirect/Resoruce move
+400/404 - User client error code/ Not fount
+500 	- Internal server error, Service error code
+
+***************************************************
+
+
+
+
+
+
+
+
+
+https://www.wappalyzer.com/ website technology craete langauge
+
+https://babeljs.io/
+
+https://github.com/ghulamabbas2/shopit
+
+Mongo db connect 
+
+Follow below steps:
+1] Go to https://www.mongodb.com/cloud/atlas
+2] login to your mongodb atlas account
+3] Click on network access
+
+i] if you have already added ip address, then here you can see ip access list
+a] click on delete 
+
+ii] if you have not already added ip address, then just follow below steps:
+
+4] click on add ip address
+5] select 'add current ip address' or if you want you can also select 'allow access from anywhere'
+6] type in comment if you want
+7] click on confirm button
+8] this will show pending loader, wait until it shows active status
+9] now restart your server on terminal by typing 'npm start'
+
+-- That's it!
+
+
+
+https://git-scm.com/download/win
+ES7 React/Redux/GraphQL/React-Native snippets rfc
+
+npm audit fix --force
+
+npm cache clean --force
+Then:
+
+npm install -g npm@latest --force
+Then (once again):
+
+npm cache clean --force
+And finally was able to run this (installing Angular project) without the errors I was seeing regarding EPERM:
+
+ng new myProject
+
+
+
+
+
+
+
+[10:24 AM, 7/16/2021] ??: upload product image to server & loading categories wise product, calculate product price in cart model, add product to cart show on screen, remove product from cart and checkout page protection
+[12:11 PM, 7/16/2021] ??: https://code-projects.org/
+https://www.kashipara.com/project/
+https://codezips.com/
+https://opensource.google/
+https://www.makeuseof.com/tag/top-10-professional-sample-code-websites-for-programmers/
+[12:13 PM, 7/16/2021] ??: https://www.udemy.com/course/mern-ecommerce/
+[12:25 PM, 7/16/2021] ??: https://www.udemy.com/course/gatsby-ecommerce-shopify/
+[12:27 PM, 7/16/2021] ??: https://www.udemy.com/course/react-node-ecommerce/   nott
+[12:29 PM, 7/16/2021] ??: https://www.udemy.com/course/spring-boot-e-commerce-ultimate/   java spring
+[12:32 PM, 7/16/2021] ??: https://www.udemy.com/course/build-ecommerce-website-like-amazon-react-node-mongodb/
+[12:55 PM, 7/16/2021] ??: https://www.udemy.com/course/mern-stack-ecommerce-site-using-react-redux-nodejs/  5star best
+[1:53 PM, 7/16/2021] ??: Udemy
+
+Id - premnankani2@gmail.com
+
+pass - 223330
+[2:12 PM, 7/16/2021] ??: https://www.udemy.com/course/react-for-busy-developers-learn-by-doing-ecommerce/  only study not poj
+[2:28 PM, 7/16/2021] ??: https://www.udemy.com/course/building-a-production-e-commerce-with-react-redux/ only ui s
+[4:29 PM, 7/16/2021] ??: https://webscript.info/rizwan/mern-stack-project-ecommerce-website-source-code-5f59262dd2124
+[4:32 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=MklgIlmzoQ8&list=PLB_Wd4-5SGAYsxD4JGaVdXll3PnoyI-AM&index=35
+[4:35 PM, 7/16/2021] ??: mern stack
+[4:47 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=vMtpdnMKSYc 1500 for jap jervel
+[4:59 PM, 7/16/2021] ??: HEROCO   deployee MEARN
+[5:00 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=_CT1Drn4JXk
+[5:07 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=HggSXt1Hzfk
+[5:07 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=W1Kttu53qTg
+[5:10 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=377AQ0y6LPA ecomm mean
+[5:15 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=J7l5ZIXY5EQ&list=PLL4mtmkTOEwTeq8BRFWUkceeZUDylhDoF mean best
+[5:20 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=0divhP3pEsg
+[5:21 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=jcOKU9f86XE chat
+[5:23 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=zDWEUtSE6S8
+[5:26 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=kXfRQ0NiyLI
+[5:28 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=7QseojHf30k&list=PLB_Wd4-5SGAYsxD4JGaVdXll3PnoyI-AM&index=48 flipcart clone
+[5:29 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=h01cuxhteOA chat
+[5:31 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=6AI-gFM8gco  Best buy um source code
+[5:43 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=6AI-gFM8gco  /amaz
+[5:43 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=-oZEz8L1-k4&list=PLuHGmgpyHfRw6vj1vd_Pf0Zjd2muTvjI5&index=59 /amz
+[5:44 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=UTA2XWPj97Q
+[5:44 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=F-i0d67PVkE&list=PLB97yPrFwo5hvTwXlJuE4zBKPA2eIw9c0
+[5:46 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=35BSnmTbjlE
+[5:48 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=TRCDsB9i3bI /amza 3 oprtion
+[5:49 PM, 7/16/2021] ??: https://github.com/basir/amazona
+[5:51 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=j10ZTzgYNPs c new
+[5:53 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=BX-JZXAqJA4&list=PLNHw_0qv1zy_8Zu2kbn9YpcA9LV8fT9B-&index=9 amzaon 5
+[6:09 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=ZuRjGpmlNAA food
+[6:10 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=OmnHKAVr2qs&list=RDCMUCFyXA9x8lpL3EYWeYhj4C4Q&index=27 new diiif
+[6:11 PM, 7/16/2021] ??: https://www.youtube.com/watch?v=shun4H-LVN8&list=RDCMUCOo2cQaNYpPolc5__yMkFbw&start_radio=1&rv=shun4H-LVN8&t=1 amzac 5 hindi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://hackerthemes.com/bootstrap-cheatsheet/ bootrap class
+
+
+                            <h1 class="text-uppercase text-muted">Products</h1>
+
+https://www.emailjs.com/ recat mail
+
+https://www.youtube.com/watch?v=-rcRf7yswfM mail
+
+<div class="row justify-content-center">
+
+heading #d2042d
+heading sub #000094
+
+https://fontawesome.com/v4.7/icons/
+
+
+.site-footer-home2 {
+    background-color: transparent;
+    background-image: linear-gradient(
+160deg
+,#002cae 62%,#04b6f1 100%);
+    padding: 154px 0 10px 0;
+    position: relative;
+}
+
+https://icofont.com/icons
+
+https://create.wa.link/
+vipin sir
+https://api.whatsapp.com/send?phone=918421060192
+
+
+https://create.wa.link/  whatapp link
+
+best contact grey light #b4b2b5
+
+#6c757d  ----#d2042d---#b4b2b5
+
+20c997   #e84835
+
+https://www.w3schools.com/howto/howto_js_popup_chat.asp chat
+
+https://www.omkarsoft.com/team/  team
+team desc https://www.scnsoft.com/management-team
+team
+https://www.bluleadz.com/about-us
+
+seo keyword  http://www.digidicemedia.com/?gclid=Cj0KCQjw8IaGBhCHARIsAGIRRYp5VWxZ8_K_LiWAs3D0QQ6m-PJtNEUEbOfz9_kVKG5ycE3PJo56PfEaAkrBEALw_wcB
+counter 10+ Years of Experience 500+ Happy Customers 12+ Countrices we served 94% Repeat business
+bg index col grey balck background-image: linear-gradient( 
+0deg
+, #6d6a6a 0%, #060606 50%, #6d6a6a 100%); 
+https://www.touchmediaads.com/ contact fox
+icon
+http://kptechnosys.com/
+  
+chat
+
+chate best https://www.skovian.com/solutions/web-development-company-in-pune/
+Chat  by tawk.to  ccomapny
+http://www.sndktech.com/
+https://creativecrows.com/
+https://www.micropediaglobal.com/
+https://www.aarnasystems.com/
+https://www.skovian.com/solutions/web-development-company-in-pune/
+https://engistack.com/web-development?gclid=Cj0KCQjw8IaGBhCHARIsAGIRRYockcFOTNJcpA1lG8zQ50yaYAhwUHrWJ5cwQbxgIh8UHPIJZQ3glzsaAs9XEALw_wcB
+
+https://somnathjadhav.com/web-design-company-pune/ googe review star
+Img rad {max-height: 400px;
+    margin: -30px -30px 20px -30px;
+    overflow: hidden;
+    box-shadow: 1px 1px 6px #2437b1;
+    border-radius: 7%;}
+
+
+https://weblinkservices.net/demo/arihant/ menu folw nav
+weblink demo
+https://weblinkservices.net/demo/7monkey/
+https://weblinkservices.net/demo/amrut/
+https://weblinkservices.net/demo/arihant/
+https://weblinkservices.net/demo/bakers/
+https://weblinkservices.net/demo/bodke/
+https://weblinkservices.net/demo/bodke/
+https://weblinkservices.net/demo/brissun/
+https://weblinkservices.net/demo/kulswamini/
+https://weblinkservices.net/demo/shiva/
+https://weblinkservices.net/demo/vaibhav/
+https://weblinkservices.net/demo/varadraj/
+https://weblinkservices.net/demo/yash/
+
+
+
+https://www.freepik.com/
+https://unsplash.com/
+https://www.pexels.com/
+
+justify-content-center center colum row
+
+ind #00000091
+
+
+img  border-radius: 50px 0px 0px 50px;
+
+#dbe5efe8 icon
+
+#6d6a6a aboutus grey
+
+heading col #0000ffad
+
+http://weblinkservices.slnet 
+
+weblinkser&15082013
+
+
+https://ip-148-72-210-79.ip.secureserver.net:8443/login_up.php
+
+
+https://148.72.210.79:8443/login_up.php
+
+
+
+https://weblinkservices.net/demo/weblink/
+
+
+
+
+
+designwlspl@gmail.com
+
+Password - W#bL!nk&^%D@BD@dy
+
+
+
+60072320 
+
+https://templatemo.com/
+
+
+img:hover {
+    transform: none;
+    -webkit-transition: none;
+    box-shadow: 1px 1px 6px #2437b1;
+    border-radius: 7%;
+}
+
+https://digitalbandage.in/# buttion up down
+
+http://www.sndktech.com/   client parner technoloy
+
+
+#092D5F
+#1a1a1a
+
+background-color: #EFEFF4;
+
+
+heading 
+text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em darkblue;
+
+color white; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
+
+https://www.youtube.com/watch?v=-UOkri_WNWQ
+https://www.youtube.com/watch?v=oxqVnWPg0So
+
+
+
+
+    color: white;
+    1:53 PM 6/3/2021  
+    line-height: 2rem;
+
+
+<select onchange="myFunction()">
+
+https://freefrontend.com/bootstrap-forms/ phone vritgy code
+
+https://codepen.io/vrvarma/pen/bGwGKqZ  for counter
+https://bbbootstrap.com/snippets/awesome-counter-font-awesome-icons-61939810 counter UI only
+
+
+   /// #e83e8c
+text bag # dc3545   pink red/// rgb(0 123 255 / 50%); milertty   //// #e83e8c pinr best bg
+
+
+
+background-image: linear-gradient(
+0deg
+, #000000 0%, #242323 50%, #000000 100%);
+
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
+
+https://codepen.io/vrvarma/pen/bGwGKqZ counter scroll
+
+
+
+
+
+<tr>
+                              <div class="row">
+                                <td><label><h6>Select Plan Staring Date :-</h6></label></td>
+                                <div class="col form-group">
+                                  <td><input name="sdate" type="Date" id="sdate"  min="" class="form-control"  placeholder=""></td>
+                                </div>
+                              </div>
+                            </tr>
+
+                            <tr>
+                              <div class="row">
+                                <td><label><h6>Select Plan Ending Date :-</h6></label></td>
+                                <div class="col form-group">
+                                  <td><input name="edate" type="Date" id="edate" class="form-control" placeholder=""></td>
+                                </div>
+                              </div>
+                            </tr>
+
+
+
+
+
+Website Designing company in Bangalore
+
+
+style="text-align: justify; text-justify: inter-word";  line-height: 1.5; >
+
+
+
+
+style=" background: url(assets/img/arrow.jpg);
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 25.2%;
+    margin-left: 0%;"     arrow up down
+
+
+009688 abou color
+
+
+ri-ancient-pavilion-line
+ri-keynote-line
+
+* https://github.com/Remix-Design/RemixIcon
+https://remixicon.com  icon
+
+
+https://primer.style/octicons/   svg
+https://icons.getbootstrap.com/
+
+
+ &nbsp; (non-breaking space)
+
+<span class="ri-home-4-line">&nbsp; </span>  home icon
+
+https://digitalspider.in/best-digital-marketing-agency-in-bangalore/    abou featuresd
+
+
+http://manansh.com/?gclid=EAIaIQobChMI6bDanr3r8AIVWHRgCh1ivw00EAAYAiAAEgLw-_D_BwE servics box
+
+https://www.ccasociety.com/service/web-designing?gclid=EAIaIQobChMI6bDanr3r8AIVWHRgCh1ivw00EAMYASAAEgL7f_D_BwE testominal
+
+1. Wireframes
+UI Design
+2. UI/UX
+Mock-ups/Design
+3. Mock-ups/Design
+Software Development
+4. Software Development
+QA & Testing
+5. QA & Testing
+Handover
+6. Handover
+
+feayures https://www.webomindapps.com/
+
+https://www.webomindapps.com/  arrow avison misoomn and blavk bg
+
+https://www.metromindz.com/product   mboile bution hdooter
+
+
+https://www.webshark.in/  heading bar flow
+
+https://digitalspider.in/   
+
+
+4:34 PM 5/22/2021
+ /* filter: grayscale(100%);*/
+}
+
+
+grey lite text xol color: #aaaaaa;
+
+
+transform: scale(1.1);
+    -webkit-transition: 1s;
+
+
+.clients .client-logo:hover img {
+  filter: none;
+  transform: scale(1.1);
+}
+
+
+https://www.omkarsoft.com/   project
+
+
+
+
+Web link servies provides Web Designing. SEO,  Domain Registration & Web Hosting
+
+
+.services img:hover {
+  transform: scale(1.1);
+  -webkit-transition: 1s;
+} zoom slowly
+
+
+
+
+header bag 	  trnas
+
+
+background-color: #DF9926 !important;
+
+#DF9926 !important   rep #1bbd36
+#17a2b8
+
+https://unsplash.com/    imgaes dwn
+https://freshdesignweb.com/
+
+https://freshdesignweb.com/category/website-templates/
+
+text     font-family: Gordita,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+    font-size: 18px;
+    background: #fff;
+
+font-family: 'Faster One', cursive;  
+
+https://codepen.io/chris_cook/pen/MJwpPj   jquryheder chane  
+
+
+https://www.youtube.com/watch?v=9FPFogHkgOc shortcuts
+
+https://codepen.io/
+
+https://codepen.io/manishjanky/pen/eRNKLL  capcha
+
+#e60000
+
+
+
+style="background: linear-gradient(90deg, #4997ce 0%, #3854a3 100%);"  bg clor
+
+
+menu bg #342e39 with color whit
+
+#ebeceb  bg color body 
+
+chery red    6:30 PM 5/27/202112:41 AM 1/1/2016orange orangered
+
+grow color:  #66e3c4   #00d09c; #11dbcf
+
+submit bttion bg #FAFBFC   a link #E4F0F8
+
+#e80368 pinlk
+
+
+17a2b8   wihtetxt bg color backbone
+
+blue  #2196f3
+
+
+          <img src="assets/img/ecommerce-website.png" alt="Girl in a jacket" width="100%">
+
+
+
+red bg grey match cyan 
+
+.bg {
+      color: #D2042D;
+    background-color: #adb5bd; font-style: italic;
+    }
+
+
+#cdff76 back bg with
+
+
+
+
+https://www.zoominfo.com/c/web-link-services-pvt-ltd/363054945
+
+https://in.linkedin.com/company/web-link-services-pvt-ltd
+
+https://www.zaubacorp.com/company/WEB-LINK-SERVICES-PRIVATE-LIMITED/U74999PN2016PTC166484
+
+https://www.indiamart.com/weblink-services/aboutus.html
+
+https://www.justdial.com/Pune/Web-Link-Services-Near-New-English-School-Kalewadi/020PXX20-XX20-140104134559-K3W2_BZDET
+
+https://www.facebook.com/WebLinkServicesPvtLtd/
+
+
+
+
+
+Web Link Services is a complete Software & Web solutions company, we offer our services to different parts 
+of the world. Moreover We provides SEO, Bulk SMS Marketing Campaigns Company, Website Designing, Customize, Web Design, Customize Internet Marketing,  Web Promotion, Portal Promotion, Hosting Server, Domain, Email Marketing , Multi Language Website, Local Business Promotion, International Marketing, Google Promotion, Website Maintenance, Website Redesigning, SEO Consultant Services, Bulk SMS Campaign Company in pcmc, Offered by Weblink Services, Pune. 
+
+Web Link Services provides guidance to clients seeking the right choices 
+in the fast-moving field of media technologies. The personal attention that we provide to our clients is the key to 
+our understanding of your digital media needs and to our solutions which are consistent with your business goals.
+
+
+SEO, Search Engine Optimization, Website Designing, Customize 
+Web Design, Internet Marketing, Web Promotion, Portal Promotion, Hosting Server,
+ Domain, Email Server, Multi Language Website, Local Business Promotion, International Marketing,
+ Google Promotion, Website Maintenance, Website Redesigning, SEO Consultant Services, Bulk SMS Campaign, 
+Mass Mail Marketing, and Customize Internet Marketing
+
+We provides website development, SEO, Bulk SMS Marketing Campaigns Company, Website Designing, Customize, Web Design, Internet Marketing, Web Promotion, Portal Promotion, Hosting Server,
+ Domain, Email Server, Multi Language Website, Local Business Promotion, International Marketing,
+ Google Promotion, Website Maintenance, Website Redesigning, SEO Consultant Services, Bulk SMS Campaign, 
+Mass Mail Marketing, and Customize Internet Marketing
+Bulk SMS Marketing Campaigns Company in pune, Bulk SMS Marketing Campaigns Company
+ in Pimpri Chinchwad, Bulk SMS Marketing Campaigns Company in pcmc, Email Marketing 
+campaigns Company, Email Marketing campaigns Company in Pune, Email Marketing 
+campaigns Company in Pimpri Chinchwad, Email Marketing campaigns Company in pcmc,  Offered by Weblink Services, Pune.
+
+
+best red appy now #c60c30
+
+
+lite button color #efefef
+
+#35aedc
+
+color: #1bbd36; style 145 line
+chery red #D2042D
+header bg #f5f5f5
+
+style="text-align: justify; text-justify: inter-word;"
+
+https://www.w3schools.com/colors/colors_picker.asp
+like
+
+https://www.radicaltechnologies.co.in/
+
+
+red and grey
+
+red works well with yellow, white, tawny-orange, green, blue and black.
+
+Tomato red works well with cyan, mint green, sand, creamy-white, and grey. 
+
+Cherry red works well with azure, grey, light-orange, sandy, pale-yellow, and beige
+
+
+main peoele
+file:///E:/Backup/inspiring/index.html
+
+
+
+
+/captcaha
+
+ <script>
+    var code;
+function createCaptcha() {
+  //clear the contents of captcha div first 
+  document.getElementById('captcha').innerHTML = "";
+  var charsArray =
+  "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
+  var lengthOtp = 6;
+  var captcha = [];
+  for (var i = 0; i < lengthOtp; i++) {
+    //below code will not allow Repetition of Characters
+    var index = Math.floor(Math.random() * charsArray.length + 1); //get the next character from the array
+    if (captcha.indexOf(charsArray[index]) == -1)
+      captcha.push(charsArray[index]);
+    else i--;
+  }
+  var canv = document.createElement("canvas");
+  canv.id = "captcha";
+  canv.width = 100;
+  canv.height = 50;
+  var ctx = canv.getContext("2d");
+  ctx.font = "25px Georgia";
+  ctx.strokeText(captcha.join(""), 0, 30);
+  //storing captcha so that can validate you can save it somewhere else according to your specific requirements
+  code = captcha.join("");
+  document.getElementById("captcha").appendChild(canv); // adds the canvas to the body element
+}
+function validateCaptcha() {
+  event.preventDefault();
+  debugger
+  if (document.getElementById("cpatchaTextBox").value == code) {
+    return true;
+  }else{
+    alert("Invalid Captcha. try Again");
+    createCaptcha();
+  }
+
+ 
+}
+
+  </script>
+</head>
+
+<body onload="createCaptcha()">
+
+ <form name="myform" action="" onsubmit="validateCaptcha()">
+
+//captvcah end
+https://www.geeksforgeeks.org/form-validation-using-html-javascript/
+* URL: https://bootstrapmade.com/php-email-form/
+
+//mail by javacript
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Optimal Web : Contact Form With JS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- contact1 -->
+  <section class="w3l-simple-contact-form1">
+    <div class="contact-form section-gap">
+      <div class="wrapper">
+        <div class="text-center">
+        <h1 style="font-size: 40px; " >Contact Us</h1>
+      </div>
+        <div class="contact-form" style="max-width: 450px; margin: 0 auto;">
+          <div class="form-mid">
+            <form action="javascript:sendmail()" method="post">
+              <div class="field">
+                <input type="text" class="form-control" name="Name" id="Name" placeholder="Name" required="">
+              </div>
+              <div class="field">
+                <input type="email" class="form-control" name="Sender" id="Sender" placeholder="Email"
+                  required="">
+              </div>
+              <div class="field">
+                <input type="text" class="form-control" name="Subject" id="Subject" placeholder="Subject"
+                  required="">
+              </div>
+              <textarea name="Message" class="form-control" id="Message" placeholder="Message"
+                required=""></textarea>
+              <button type="submit" class="btn btn-contact">Send Message</button>
+              <!-- <input type="button" class="btn btn-contact" onclick="sendmail();"  value="Send Message"> -->
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /contact1 -->
+  
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+ 
+<script>  
+
+     function sendmail(){
+    
+      var name = $('#Name').val();
+      var email = $('#Sender').val();
+      var subject = $('#Subject').val();
+      var message = $('#Message').val();
+
+      // var body = $('#body').val();
+
+      var Body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
+      //console.log(name, phone, email, message);
+
+      Email.send({
+        SecureToken:"ee3340e3-5297-431f-bcde-c5a766523166",
+        To: 'designwlspl@gmail.com',
+        From: "designwlspl@gmail.com",
+        Subject: "New message on contact from "+name,
+        Body: Body
+      }).then(
+        message =>{
+          //console.log (message);
+          if(message=='OK'){
+          alert('Your mail has been send. Thank you for connecting.');
+          }
+          else{
+            console.error (message);
+            alert('There is error at sending message. ')
+            
+          }
+
+        }
+      );
+
+
+
+    }
+
+
+    </script>
+ </script>
+
+</body>
+</html>
+
+// end mail by javascript
+
+
+//mail send samll
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+ 
+<script>  
+
+     function sendmail(){
+    
+      
+      Email.send({
+        SecureToken:"ee3340e3-5297-431f-bcde-c5a766523166",
+        To: 'designwlspl@gmail.com',
+        From: "designwlspl@gmail.com",
+        Subject: "New message on contact from ",
+        Body: 'hi'
+      }).then(
+        message =>{
+          //console.log (message);
+          if(message=='OK'){
+          alert('Your mail has been send. Thank you for connecting.');
+          }
+          else{
+            console.error (message);
+            alert('There is error at sending message. ')
+            
+          }
+
+        }
+      );
+
+
+
+    }
+
+
+    </script>
+//end small amil javascript
+
+
+//mail by javacrip emial start
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Optimal Web : Contact Form With JS</title>
+</head>
+
+<body>
+  <!-- contact1 -->
+  <section class="w3l-simple-contact-form1">
+    <div class="contact-form section-gap">
+      <div class="wrapper">
+        <div class="text-center">
+        <h1 style="font-size: 40px; " >Contact Us</h1>
+      </div>
+        <div class="contact-form" style="max-width: 450px; margin: 0 auto;">
+          <div class="form-mid">
+            <form action="javascript:sendmail()" id="form" method="post">
+              <div class="field">
+                <input type="text" class="form-control" name="Name" id="Name" placeholder="Name" required="">
+              </div>
+              <div class="field">
+                <input type="email" class="form-control" name="Sender" id="Sender" placeholder="Email"
+                  required="">
+              </div>
+              <div class="field">
+                <input type="text" class="form-control" name="Subject" id="Subject" placeholder="Subject"
+                  required="">
+              </div>
+
+              <div class="field">
+                <input type="file" class="form-control" name="file1" id="file1" 
+                  required>
+              </div>
+              <textarea name="Message" class="form-control" id="Message" placeholder="Message"
+                required=""></textarea>
+              <button type="submit" id="output" class="btn btn-contact">Send Message</button>
+              <!-- <input type="button" class="btn btn-contact" onclick="sendmail();"  value="Send Message"> -->
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /contact1 -->
+  
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+ 
+<script> 
+
+     function sendmail(){
+    
+      var name = $('#Name').val();
+      var email = $('#Sender').val();
+      var subject = $('#Subject').val();
+      var message = $('#Message').val();
+      // var file =$('file1').files[0].name;
+
+      var filename= document.getElementById('file1').files[0].name;
+      //var Link='https://drive.google.com/file/d/16gOW-fUTVC2UB9mZ8GB6sokkBFFGCA0B/view?usp=sharing';
+
+    
+    // document.getElementById('file1')
+    //   .addEventListener('change', function() {
+      
+    //   var fr = new FileReader();
+    //   fr.onload=function(){
+        
+    //     document.getElementById('output')
+    //                     .textContent=fr.result;
+
+      
+         
+     
+    
+    //     //path =fr.result;
+    //     }
+    
+      
+    //    fr.readAsText(this.files[0]);
+    // })
+
+          
+
+//           var path = $('#output').val();
+
+//       var url = document.querySelector('url');
+
+//       window.addEventListener('load', function() {
+//   document.querySelector('input[type="file1"]').addEventListener('change', function() {
+//       if (this.files && this.files[0]) {
+          
+//           url.onload = () => {
+//               URL.revokeObjectURL(img.src);  // no longer needed, free memory
+//           }
+
+//           url.src = URL.createObjectURL(this.files[0]); // set src to blob url
+//       }
+//   });
+// });
+          
+     
+     var file = document.getElementById('file1').files[0];
+   var reader = new FileReader();
+   reader.readAsBinaryString(file);
+   reader.onload = function () {
+  var dataUri = "data:" + file.type + ";base64," + btoa(reader.result);
+   //var d=file.toDataURL("file:///D:/apurv/weblink/sample-the-seeker-resume.pdf")
+  
+ 
+    
+  // how to access
+   // function p(path){}
+    
+
+
+
+      // var body = $('#body').val();
+
+      var Body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
+      //'<br> Link: '+Link;
+      
+      
+      Email.send({
+    SecureToken : "3f608d66-7018-4ed1-a97e-fd1dfd5284db",
+    To : 'weblinkservices2013@gmail.com',
+    From : "weblinkservices2013@gmail.com",
+    Subject : message,
+    Body : Body,
+    Attachments : [
+  {
+    name : filename,
+    // data : window.btoa(unescape(encodeURIComponent(path)))
+     //data : window.btoa(unescape(encodeURIComponent("https://drive.google.com/file/d/13SA7tN8qI8gNo9G1hWeTwit3V-lO-EqG/view?usp=sharing")))
+    
+    
+   data:dataUri
+     
+    
+     //data: window.btoa(unescape(encodeURIComponent(reader.readAsDataURL(file))))
+    
+  }]
+
+}).then(
+        message =>{
+          //console.log (message);
+          if(message=='OK'){
+          alert('Your mail has been send. Thank you for connecting.');
+          }
+          else{
+            console.error (message);
+            alert('There is error at sending message. ')
+            
+          }
+
+        }
+   );
+
+};
+   reader.onerror = function() {
+       console.log('there are some problems');
+   };
+       
+      
+
+
+    }
+
+    </script>
+
+</body>
+</html>
+//end email by javacript
+
+
+tempolate
+
+
+https://bootstrapmade.com/demo/Moderna/
+
+https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/ 
+https://bootstrapmade.com/green-free-one-page-bootstrap-template/
+https://bootstrapmade.com/demo/Green/
+https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+https://bootstrapmade.com/groovin-free-bootstrap-theme/
+https://bootstrapmade.com/day-multipurpose-html-template-for-free/
+https://bootstrapmade.com/company-free-html-bootstrap-template/
+
+
+
+https://bootstrapmade.com/demo/Company/  all
+https://bootstrapmade.com/demo/Groovin/ inmage slide
+https://bootstrapmade.com/demo/Moderna/ footer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
