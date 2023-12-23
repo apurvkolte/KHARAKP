@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      figure.zoom {
+        & img:hover {
+          opacity: 0;
+        }
+        img {
+          transition: opacity 0.5s;
+          display: block;
+          width: 100%;
+        }
+        background-position: 50% 50%;
+        position: relative;
+        width: 500px;
+        overflow: hidden;
+        cursor: zoom-in;
+      }
+    </style>
+    <script>
+      function zoom(e) {
+        var zoomer = e.currentTarget;
+        let offsetX;
+        let offsetY;
+        let x;
+        let y;
+        e.offsetX ? (offsetX = e.offsetX) : (offsetX = e.touches?.pageX);
+        e.offsetY ? (offsetY = e.offsetY) : (offsetX = e.touches?.pageX);
+        x = (offsetX / zoomer.offsetWidth) * 100;
+        y = (offsetY / zoomer.offsetHeight) * 100;
+        zoomer.style.backgroundPosition = x + "% " + y + "%";
+
+        /* x = event.offsetX/zoomer.offsetWidth*100
+  y = event.offsetY/zoomer.offsetHeight*100
+  zoomer.style.backgroundPosition = x + '% ' + y + '%'; */
+      }
+    </script>
+  </head>
+  <body>
+    <figure
+      class="zoom"
+      style="
+        background-image: url(https://res.cloudinary.com/active-bridge/image/upload/slide1.jpg);
+      "
+      onmousemove="zoom(event)"
+    >
+      <img
+        src="https://res.cloudinary.com/active-bridge/image/upload/slide1.jpg"
+        height="100%"
+        width="100%"
+      />
+    </figure>
+  </body>
+</html>

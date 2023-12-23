@@ -1,0 +1,67 @@
+
+const mysql = require("mysql2");
+const mysqlbackup = require('./mysqldump');
+
+var connection;
+function handleDisconnect() {
+    connection = mysql.createPool({
+        host: "localhost",
+        user: "root",
+        password: "root",
+        database: "durasign",
+        multipleStatements: true,
+        waitForConnections: true,
+        connectionLimit: 100,
+    });
+    connection.getConnection(function (err) {
+        if (err) {
+            console.log('error when connecting to db:', err);
+            setTimeout(handleDisconnect, 2000);
+            mysqlbackup()
+        }
+    });
+    connection.on('error', function (err) {
+        console.log('db error', err);
+        if (err.code === 'PROTOCOL_CONNECTION_LOST') {
+            handleDisconnect();
+            mysqlbackup()
+        } else {
+            throw err;
+        }
+    });
+}
+
+handleDisconnect();
+
+module.exports = connection;
+
+
+
+
+
+
+const util = require('util');
+const connection = require('../config/connection');
+const query = util.promisify(connection.query).bind(connection);
+
+let result = async function () {
+    try {
+        const rows = await query(sql_stmt);
+    } catch (err) {
+        console.log(err.message);
+        return res.status(400).send({ message: 'Operation could not be completed' });
+    } finally {
+        await util.promisify(connection.end).bind(connection);
+    }
+}
+
+result()
+    .then(value => {
+        res.status(200).json({
+            success: true,
+            order
+        })
+    }).catch(error => {
+        console.log("Operation could not be completed:-", error.message);
+        return res.status(400).send({ message: 'Operation could not be completed' });
+    });

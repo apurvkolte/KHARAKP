@@ -1,0 +1,232 @@
+.bg-color-light {
+    background-color: #f6f8fa;
+    background-color: #f9f9f9;
+    background-color: #ffffff;
+    background-color: #f7f7f7;
+    background-color: #faf5f2;
+    background-color: #dedac2;
+    background-color: #f6f6f5;
+    background-color: #fef6f4;
+    background-color: #f3f2f0;
+    background-color: #f5f5f7;
+    background-color: #f8f9fa;
+    background-color: #f4ede4;
+    background-color: #f4f0e7;
+    background-color: #f6efe8;
+    background-color: #f5f4f5;
+    background-color: #4a154b;
+    background-color: #F5F5F5;
+    background-color: #FFF;
+    background-color: #F3F3F3;
+    background-color: #f6f9fd;
+    background-color: #dee0dd;
+    background-color: #f2f2f2;
+    /* text-color: #ecb22e; with bg #4a154b */
+}
+
+.bg-color-dark {
+    background-color: #dfdad4;
+    background-color: #dbdbdb;
+    background-color: #e6d4bc;
+    background-color: #e8e8e8;
+    background-color: #e8e8e8;
+    background-color: #eaedef;
+    background-color: #bebcbf;
+    background-color: #5e5e5e;
+    background-color: #fff7c3;
+    background-color: #fff1e3;
+    background-color: #d7c9bc;
+    background-color: #eab29e;
+    background-color: #EDF1FF;
+    background-color: #252b60;
+}
+
+.bg-sidebar {
+    background-color: #1e2a41;
+    background-color: #232f3e;
+    background-color: #282D3C;
+    background-color: #353535;
+    background-color: #343148;
+    background-color: #131921;
+    background-color: #1c1d22;
+    background-color: hsl(223, 15%, 24%);
+    background-color: #434857;
+    background-color: #06171f;
+    background-color: #33373b;
+    background-color: #54585b;
+    background-color: #202124;
+    background-color: #2a2a2a;
+    background-color: #202c33;
+    background-color: #111b21;
+    background-color: #2a3942;
+    background-color: #1f1f1f;
+    background-color: #181818;
+    background-color: #464646;
+    background-color: #a3a3a3;
+    background-color: #1b1b1b;
+    background-color: #a3a3a3;
+    background-color: #343434;
+    background-color: #a3a3a3;
+    background-color: #4e4e4e;
+    background-color: #333;
+    background-color: #0a0a23;
+    background-color: #d0d0d5;
+    background-color: #24292e;
+    background-color: #1f2428;
+    background-color: #86858d;
+    background-color: #7d848c;
+    background-color: red;
+}
+
+.bg-sidebar-sub {
+    background-color: #eef0f2;
+    background-color: #d4d6da;
+}
+
+.bg-user {
+    background-color: #1966dd;
+    background-color: #d42a23;
+    background-color: #2f79ab;
+    background-color: #4169e1;
+    background-color: #fa9c23;
+    background-color: #06a4cc;
+    background-color: #28a745;
+    --fb-color: #3b5998;
+    --google-color: #a61c00;
+    --twitter-color: #1da1f2;
+}
+
+.admin-menu {
+    color: white;
+    background-color: #955251;
+    background-color: #B565A7;
+    background-color: #009B77;
+    background-color: #DD4124;
+    background-color: #D65076;
+    background-color: #45B8AC;
+    background-color: #EFC050;
+    background-color: #5B5EA6;
+    background-color: #9B2335;
+    background-color: #BC243C;
+    background-color: #C3447A;
+    background-color: #B55A30;
+    background-color: #0072B5;
+    background-color: #00A170;
+    background-color: #D2386C;
+    background-color: #34568B;
+    background-color: #9E1030;
+    background-color: #00539C;
+    background-color: #578CA9;
+}
+
+.admin-menu1 {
+    color: black;
+    background-color: #55B4B0;
+    background-color: #A0DAA9;
+    background-color: #E15D44;
+    background-color: #7FCDCD;
+    background-color: #98B4D4;
+    background-color: #F5DF4D;
+}
+
+:root {
+    --black-color: #000000;
+    --bg-color: #141414;
+    --bg-color1: #15171e;
+    --bg-color-2: #161819;
+    --bg-color-3: #222;
+
+    --text-color: #161819;
+    --text-color1: #a9afc3;
+    --text-color2: rgba(255, 255, 255, 0.84);
+    --text-muted: #6c757d;
+}
+
+
+/* Brands color */
+.google {
+    background-color: #4285F4;
+    background-color: #FBBC05;
+    background-color: #34A853;
+    background-color: #EA4335;
+}
+
+.facebook {
+    background-color: #3B5998;
+    background-color: #8B9DC3;
+    background-color: #DFE3EE;
+    background-color: #F7F7F7;
+    background-color: #FFFFFF;
+}
+
+.instagram {
+    background-color: white;
+    padding: 4px;
+    color: #f62247;
+}
+
+.twitter {
+    background-color: #55ACEE;
+    background-color: #292F33;
+    background-color: #66757F;
+    background-color: #CCD6DD;
+    background-color: #E1E8ED;
+    background-color: #FFFFFF;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.microsoft {
+    background-color: #F65314;
+    background-color: #7CBB00;
+    background-color: #00A1F1;
+    background-color: #FFBB00;
+}
+
+.intel {
+    background-color: #0F7DC2;
+}
+
+.instagram {
+    background-color: #3F729B;
+}
+
+.ibm {
+    background-color: #006699;
+}
+
+.yahoo {
+    background-color: #7B0099;
+}
+
+.amazon {
+    background-color: #FF9900;
+    background-color: #146EB4;
+}
+
+
+.netflix {
+    background-color: #221F1F;
+    background-color: #E50914;
+    background-color: #F5F5F1;
+}
+
+.coca-cola {
+    background-color: #ED1C16;
+}
+
+.pepsi {
+    background-color: #E32934;
+    background-color: #004883;
+}
+
+.ikra {
+    background-color: #FFCC00;
+    background-color: #003399;
+}
+
+.android {
+    background-color: #A4C639;
+}

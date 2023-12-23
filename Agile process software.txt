@@ -251,10 +251,12 @@ validator("27AABCW8929J2ZP")
         }
     }
 
-//check oject is empty or not
+//check objectis empty or not
 if(Boolean(obj.lenght))
 if(JSON.stringify(user) !== '{}' && user !== undefined)
 if(orderRecord && Object.keys(orderRecord).length != 0)
+
+Object.keys(obj).length === 0
 
 const urlEncrypt = require('url-encrypt');
 
@@ -548,7 +550,9 @@ form enquiry
             <a className="text-light bg-muted" href="mailto:sales@indicent.co.in"> <li className="inline-block mr-3"><i class="fa fa-envelope-o" aria-hidden="true"></i> sales@indicent.co.in</li></a>
             <a className="text-light bg-muted" target="_blank" href="https://api.whatsapp.com/send?phone=919922401440&lang=en&text=Hii...! Welcome to Industry Central."><li className="inline-block mr-3"><i class="fa fa-whatsapp" aria-hidden="true"></i> Contact</li></a>
             <a className="text-light bg-muted" href="#"> <li className="inline-block mr-3">Bulk Order</li></a>
-          </ul>
+
+<p><a href="tel:+4733378901">+47 333 78 901</a></p>          
+</ul>
 
 top pGE function scrollTop() {
     const body = document.querySelector('#root');
@@ -770,6 +774,10 @@ select IFNULL(Salary,0)
 check mobile no
 mobile.match(/^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[789]\d{9}$/g)
 
+
+var mobile="9766222430"
+
+const mob= mobile.match(/^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[789]\d{9}$/g)
 
 
 // scroll top on page

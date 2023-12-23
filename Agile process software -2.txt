@@ -1,5 +1,1061 @@
 
 
+
+
+
+https://reactjsexample.com/ template react
+
+
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+
+
+
+
+
+//// pagination //////
+npm i react-paginate
+import React, { useEffect, useState } from 'react';
+import ReactDOM from 'react-dom';
+import ReactPaginate from 'react-paginate';
+
+// Example items, to simulate fetching from another resources.
+const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+
+function Items({ currentItems }) {
+  return (
+    <>
+      {currentItems &&
+        currentItems.map((item) => (
+          <div>
+            <h3>Item #{item}</h3>
+          </div>
+        ))}
+    </>
+  );
+}
+
+function PaginatedItems({ itemsPerPage }) {
+  // Here we use item offsets; we could also use page offsets
+  // following the API or data you're working with.
+  const [itemOffset, setItemOffset] = useState(0);
+
+  // Simulate fetching items from another resources.
+  // (This could be items from props; or items loaded in a local state
+  // from an API endpoint with useEffect and useState)
+  const endOffset = itemOffset + itemsPerPage;
+  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+  const currentItems = items.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(items.length / itemsPerPage);
+
+  // Invoke when user click to request another page.
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % items.length;
+    console.log(
+      `User requested page number ${event.selected}, which is offset ${newOffset}`
+    );
+    setItemOffset(newOffset);
+  };
+
+  return (
+    <>
+      <Items currentItems={currentItems} />
+      <ReactPaginate
+         breakLabel="..."
+                    nextLabel="Next"
+                    onPageChange={handlePageClick}
+                    pageRangeDisplayed={5}
+                    pageCount={pageCount}
+                    previousLabel="Prev"
+                    renderOnZeroPageCount={null}
+                    breakClassName={'page-item'}
+                    breakLinkClassName={'page-link'}
+                    containerClassName={'pagination'}
+                    pageClassName={'page-item'}
+                    pageLinkClassName={'page-link'}
+                    previousClassName={'page-item'}
+                    previousLinkClassName={'page-link'}
+                    nextClassName={'page-item'}
+                    nextLinkClassName={'page-link'}
+                    activeClassName={'active'}
+      />
+    </>
+  );
+}
+
+// Add a <div id="container"> to your HTML to see the component rendered.
+ReactDOM.render(
+  <PaginatedItems itemsPerPage={4} />,
+  document.getElementById('container')
+);
+
+//css
+.pagination {
+  display: flex;
+  padding-left: 0;
+  clear: both;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  font-size: 11px;
+  margin-top: 42px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+
+///////////////////////////
+
+
+
+// check react version on client side on cosole web 
+window.__REACT_DEVTOOLS_GLOBAL_HOOK__.renderers.get(1).version
+
+
+
+// error
+ return res.status(400).send({ message: 'properties could not be identified' });
+
+
+import { getToken } from "next-auth/jwt"
+
+const secret = process.env.NEXTAUTH_SECRET
+
+export default async function handler(req, res) {
+  // if using `NEXTAUTH_SECRET` env variable, we detect it, and you won't actually need to `secret`
+  // const token = await getToken({ req })
+  const token = await getToken({ req, secret })
+  console.log("JSON Web Token", token)
+  res.end()
+}
+
+
+
+
+
+
+
+
+//next.js 
+import { useSession } from "next-auth/react";
+const { data: session } = useSession();
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import { useRouter } from 'next/router'
+const router = useRouter()
+ const id = router.query.id;
+
+router.push
+
+
+// first exe
+setTimeout(() => {
+  console.log("1");
+}, 0);
+Promise.resolve("hello").then(() => console.log("2"));
+console.log("3");
+
+result 3, 2, 1
+two statements are asynchronous which will be executed later
+Promise is native in ES6 and it will be moved to Job queue which has high priority 
+than callback queue WebAPI the callback function in the execution order
+
+
+
+
+
+new.target.name=> refers to the constructor (points to the class definition of class which is initialized
+
+console.log(0.1 + 0.2 === 0.3); // false baces 0.1+0.2=0.3000004
+
+
+
+let user1 = {
+  name: "John",
+  age: 27,
+};
+let user2 = user1;
+user2.age = 30;
+
+console.log(user1.age, user2.age); // 30, 30
+
+
+
+
+
+
+// check array is not otherwise object
+Array.isArray([0,1]); // true
+[0,1] instanceof Array
+[0,1].constructor === Array
+
+
+console.log(new Date().toLocaleTimeString()); //"11:25:08 AM"
+
+
+imediat function invoke
+void (function (dt) {
+  console.log(dt.toLocaleTimeString());
+})(new Date());
+
+
+//SpeechRecognition (Asynchronous Speech Recognition or Speech-to-Text)
+window.SpeechRecognition =
+  window.webkitSpeechRecognition || window.SpeechRecognition; // webkitSpeechRecognition for Chrome and SpeechRecognition for FF
+const recognition = new window.SpeechRecognition();
+recognition.onresult = (event) => {
+  // SpeechRecognitionEvent type
+  const speechToText = event.results[0][0].transcript;
+  console.log(speechToText);
+};
+recognition.start();
+
+
+//SpeechSynthesis (Text-to-Speech)
+if ("speechSynthesis" in window) {
+  var speech = new SpeechSynthesisUtterance("Hello World!");
+  speech.lang = "en-US";
+  window.speechSynthesis.speak(speech);
+}
+
+
+
+
+
+
+"john".toUpperCase()
+
+
+// diable right click
+<body oncontextmenu="return false;"></body>
+
+
+
+// check condition
+// Verbose approach
+if (
+  input === "first" ||
+  input === 1 ||
+  input === "second" ||
+  input === 2
+) {
+  someFunction();
+}
+// Shortcut
+if (["first", 1, "second", 2].indexOf(input) !== -1) {
+  someFunction();
+}
+
+
+
+// unique id
+Date.now()
+String(Date.now()).slice(3,13)
+
+
+// copy of textear button
+let textarea = document.querySelector("button").onclick = function(){
+    textarea.select();
+    document.execCommand('copy');
+}
+
+
+// json representation of objects
+console.dir(obj);
+
+// table format
+console.table(obj)
+
+
+// console css change
+console.log(
+  "%c The text has blue color, with large font and red background",
+  "color: blue; font-size: x-large; background: red"
+);
+
+
+
+
+const user = { name: "John", id: 1, city: "Delhi" };
+console.log( "Hello %s, your details %o are available in the object form", "John", user ); 
+// Hello John, your details {name: "John", id: 1, city: "Delhi"} are available in object
+
+var newArray = new Array(5).fill("0");
+console.log(newArray); // ["0", "0", "0", "0", "0"]
+
+
+// do  empty array
+array.length = 0; 
+array.length = 2; [0,1]
+
+//convert array to object
+const object ={...array}
+
+
+
+//convere object to aaray
+const zoo = {
+  lion: '🦁',
+  panda: '🐼',
+};
+
+Object.keys(zoo);
+// ['lion', 'panda']
+
+Object.values(zoo);
+// ['🦁', '🐼']
+
+Object.entries(zoo);
+// [ ['lion', '🦁'], ['panda', '🐼'] ]
+
+
+// get new array extract from object
+const countries = [
+  { name: "India", capital: "Delhi" },
+  { name: "US", capital: "Washington" },
+  { name: "Russia", capital: "Moscow" },
+  { name: "Singapore", capital: "Singapore" },
+  { name: "China", capital: "Beijing" },
+  { name: "France", capital: "Paris" },
+];
+
+const cityNames = Array.from(countries, ({ capital }) => capital);
+console.log(cityNames); // ['Delhi, 'Washington', 'Moscow', 'Singapore', 'Beijing', 'Paris']
+
+
+
+
+
+// alis name of variable
+const obj = { x: 1 };
+// Grabs obj.x as as { otherName }
+const { x: otherName } = obj;
+
+console.log(otherName)
+
+
+
+// unique remove dulicat of aary
+console.log([...new Set([1, 2, 4, 4, 3])]); // [1, 2, 4, 3]
+
+
+
+
+// remove new line from string
+message.replace( /[\r\n]+/gm, "" ))
+
+
+"Hello".repeat(4); // 'HelloHelloHelloHello'
+
+
+
+//two array combine
+array1.concat(array2, array3, ..., arrayX)
+
+
+if ( ~i & 1 ) {
+    // Even
+}
+
+
+
+
+
+// error handler in js
+try {
+  if (2 > 1)
+    throw new Error("Oops! You don't have enough balance");
+} catch (e) {
+  console.log(e.name + ": " + e.message);
+}
+
+
+
+
+
+
+//check origin form attackers
+//Listener on http://www.some-receiver.com/
+window.addEventListener("message", function(message){
+    if(/^http://www\.some-sender\.com$/.test(message.origin)){
+         console.log('You received the data from valid sender', message.data);
+   }
+});
+
+
+
+// for ... of statement
+for (let value of arrayIterable) {
+value
+}
+
+
+
+// swap element
+var x = 10,
+  y = 20;
+
+[x, y] = [y, x];
+console.log(x); // 20
+console.log(y); // 10
+
+
+
+
+
+
+var [one, two, three] = ["JAN", "FEB", "MARCH"];
+console.log(one); // "JAN"
+
+//destructuring assignment
+var { name, age } = { name: "John", age: 32 };
+console.log(name); // John
+console.log(age); // 32
+
+
+
+//const varibale can be re assign it not immutable
+const userList = [];
+userList.push("John"); // Can mutate even though it can't re-assign
+console.log(userList); // ['John']
+
+
+
+a.b.c.greeting = "welcome";
+a.b.c.age = 32;
+
+//by using with statement but performance issue
+with (a.b.c) {
+  greeting = "welcome";
+  age = 32;
+}
+
+
+
+
+
+
+// set the cursor to wait
+ window.document.body.style.cursor = "wait";
+
+
+
+
+// comapre axcat two arrays
+const arrayFirst = [1, 2, 3, 4, 5];
+const arraySecond = [1, 2, 3, 4, 5];
+console.log(
+  arrayFirst.length === arraySecond.length &&
+    arrayFirst.every((value, index) => value === arraySecond[index])
+); // true
+
+
+// if sort then comapre
+const arrayFirst = [2, 3, 1, 4, 5];
+const arraySecond = [1, 2, 3, 4, 5];
+console.log(
+  arrayFirst.length === arraySecond.length &&
+    arrayFirst.sort().every((value, index) => value === arraySecond[index])
+); //true
+
+//sort array
+[11,60].sort((a, b) => a - b)
+
+
+
+
+Obfuscator is difficult for humans to understand. It is something similar to encryption, but a machine can understand the code and execute it
+https://obfuscator.io/#code
+
+de obfuscator
+https://obf-io.deobfuscate.io/
+
+
+
+
+// typescript get only string type of paramerte
+function greeting(name: string): string {
+  return "Hello, " + name;
+}
+
+
+console.log(greeting("Sudheer"));
+
+
+
+
+
+//minmum max value inaaray
+Math.min.apply(null, arr)
+
+or
+
+var marks = [50, 20, 70, 60, 45, 30];
+function findMin(arr) {
+  var length = arr.length;
+  var min = Infinity;
+  while (length--) {
+    if (arr[length] < min) {
+      min = arr[length];
+    }
+  }
+  return min;
+}
+
+function findMax(arr) {
+  var length = arr.length;
+  var max = -Infinity;
+  while (length--) {
+    if (arr[length] > max) {
+      max = arr[length];
+    }
+  }
+  return max;
+}
+
+console.log(findMin(marks));
+console.log(findMax(marks));
+
+
+
+// Accessor getter & setter in javascript
+
+
+
+//error
+try {
+  greeting("Welcome");
+} catch (err) {
+  console.log(err.name + "<br>" + err.message);
+}
+
+
+
+
+
+var user = {
+  firstName: "John",
+  lastName: "Abraham",
+  language: "en",
+  get lang() {
+    return this.language;
+  },
+  set lang(lang) {
+    this.language = lang;
+  },
+};
+console.log(user.lang); // getter access lang as en
+user.lang = "fr";
+console.log(user.lang); // setter used to set lang as fr
+
+
+
+// print the page
+<input type="button" value="Print" onclick="window.print()" />
+
+
+
+String represent of object are
+uneval(a)
+toString()
+JSON.toStringify()
+
+
+Object.seal() =. oject cannt deleted or add but you can chnage
+const object = {
+  property: "Welcome JS world",
+};
+Object.seal(object);
+object.property = "Welcome to object world";
+console.log(Object.isSealed(object)); // true
+delete object.property; // You cannot delete when sealed
+console.log(object.property); //Welcome to object world
+
+
+
+
+
+Object.assign() method which is used to copy the values and properties from one or more source objects to a target object.
+Object.assign(target, ...sources);
+
+
+Object.assign() is used for cloning an object.
+Object.assign() is used to merge objects with the same properties.
+
+const target = { a: 1, b: 2 };
+const source = { b: 3, c: 4 };
+const returnedTarget = Object.assign(target, source);
+console.log(target); // { a: 1, b: 3, c: 4 }
+
+console.log(returnedTarget); // { a: 1, b: 3, c: 4 }
+As observed in the above code, there is a common property(b) from source to target so it's value has been overwritten.
+
+
+
+
+//check two value are equal
+Object.is("hello", "hello"); // true
+Object.is([], []); // false
+
+
+
+
+<noscript> tag use to detect javascript is disbale for page
+<noscript>
+    <a href="next_page.html?noJS=true">JavaScript is disabled in the page. Please click Next Page</a>
+</noscript>
+
+
+
+//first leatter each work capital
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substring(1).toLowerCase();
+  });
+}
+toTitleCase("good morning john"); // Good Morning John
+
+
+
+
+//dettect browser lange 
+var language =
+  (navigator.languages && navigator.languages[0]) || // Chrome / Firefox
+  navigator.language || // All browsers
+  navigator.userLanguage; // IE <= 10
+
+console.log(language);
+
+
+
+
+
+freeze() method after applying object that never add, remove value of peoprties
+it use to make object immutable
+//Object.freeze({
+  prop: 100,
+});
+
+
+
+
+//condition operator
+function traceValue(someParam) {
+  return condition1
+    ? value1
+    : condition2
+    ? value2
+    : condition3
+    ? value3
+    : value4;
+}
+
+// The above conditional operator is equivalent to:
+
+function traceValue(someParam) {
+  if (condition1) {
+    return value1;
+  } else if (condition2) {
+    return value2;
+  } else if (condition3) {
+    return value3;
+  } else {
+    return value4;
+  }
+}
+
+
+
+
+
+
+//get size of windows
+var width =
+  window.innerWidth ||
+  document.documentElement.clientWidth ||
+  document.body.clientWidth;
+
+
+
+
+
+new Date().toLocaleString("en-GB", { timeZone: "UTC" }); 
+new Date().toLocaleString()
+//29/06/2019, 09:56:00
+
+
+
+
+//detect mobile broser use or not
+window.mobilecheck = function () {
+  var mobileCheck = false;
+  (function (a) {
+    if (
+      /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
+        a
+      ) ||
+      /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(
+        a.substr(0, 4)
+      )
+    )
+      mobileCheck = true;
+  })(navigator.userAgent || navigator.vendor || window.opera);
+  return mobileCheck;
+};
+
+
+function detectmob() {
+  if (
+    navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/iPod/i) ||
+    navigator.userAgent.match(/BlackBerry/i) ||
+    navigator.userAgent.match(/Windows Phone/i)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+
+
+
+//regular expression
+Brackets: 
+These are used to find a range of characters. For example, below are some use cases,
+[abc]: Used to find any of the characters between the brackets(a,b,c)
+[0-9]: Used to find any of the digits between the brackets
+(a|b): Used to find any of the alternatives separated with |
+
+
+Metacharacters: 
+These are characters with a special meaning For example, below are some use cases,
+\d: Used to find a digit
+\s: Used to find a whitespace character
+\b: Used to find a match at the beginning or ending of a word
+
+
+Quantifiers: 
+
+These are useful to define quantities For example, below are some use cases,.
+n+: Used to find matches for any string that contains at least one n
+n*: Used to find matches for any string that contains zero or more occurrences of n
+n?: Used to find matches for any string that contains zero or one occurrences of n
+
+
+
+
+
+
+
+var v1 = {};
+var v2 = "";
+var v3 = 0;
+var v4 = false;
+var v5 = [];
+var v6 = /()/;
+var v7 = function () {};
+
+
+
+
+
+
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, "0");
+var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+var yyyy = today.getFullYear();
+
+today = mm + "/" + dd + "/" + yyyy;
+document.write(today);
+
+
+
+
+
+
+document.getElementsByTagName('body')[0].style.background = "black";
+document.getElementsByClassName('Box-body')[0].style.color='grey'
+document.getElementsByClassName('Box-body')[0].style.background='black'
+
+
+const number= 1234.562;
+const currencyFormatter = Intl.NumberFormat("en-IN", {
+  style: "currency",
+  currency: "INR",
+  maximumFractionDigits: 3,
+});
+
+currencyFormatter .format(number);
+
+(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(123456.789));
+
+
+https://duckduckgo.com/?t=hp&va=a
+
+
+ Toastify({
+    text: message,
+    duration: 2000,
+    gravity: 'top',
+    position: 'right',
+    style: {
+      background: theme === 'dark' ? 'black' : 'white',
+      color: theme === 'dark' ? 'white' : 'black',
+    },
+  }).showToast();
+}
+
+
+
+
+new Date().toLocaleTimeString()
+'5:14:20 pm'
+
+<a href="javascript:void(0);">something</a>
+    <Link href="javascript:void(0)"><a>
+
+//show image images
+import { Gallery, Item } from 'react-photoswipe-gallery'
+import 'photoswipe/dist/photoswipe.css'
+<Gallery>
+    <Item
+        original={`/images/advertise/${item.image}`}
+        thumbnail={`/images/advertise/${item.image}`}
+        width="724"
+        height="568"
+    >
+        {({ ref, open }) => (
+            <img
+                className="img-whp"
+                src={`/images/advertise/${item.image}`}
+                ref={ref} onClick={open}
+                alt="properties identity"
+            />
+        )}
+    </Item>
+</Gallery>
+
+
+
+Copy schema & data from one table to another table:
+  create table table1 SELECT * FROM table2
+insert into table2 select * from table1;
+
+
+
+
+Error: error:0308010C:digital envelope routines::unsupported
+"scripts": {
+  "start": "react-scripts --openssl-legacy-provider start",
+  "build": "react-scripts --openssl-legacy-provider build",
+}
+
+ babel-preset-react-app is part of the create-react-app project, which is not maintained anymore. It is thus unlikely that this bug will ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to your devDependencies to work around this error. This will make this message go away.
+
+npm install --save-dev @babel/plugin-proposal-private-property-in-object --legacy-peer-deps
+
+./node_modules/bootstrap/dist/js/bootstrap.js Module not found: Can't resolve 'jquery' in 'D:\indicent\indicent\frontend\node_modules\bootstrap\dist\js'
+npm install jquery --save
+
+
+
+
+//Full screen table view
+var elem = document.getElementById("myDashboard");
+  function openFullscreen() {
+    if (elem?.requestFullscreen) {
+      elem.requestFullscreen();
+      document.getElementById('myDashboard').style.backgroundColor = "#f7f7f7";
+      document.getElementById("myDashboard").style.overflow = 'auto'
+
+    } else if (elem?.webkitRequestFullscreen) { /* Safari */
+      elem.webkitRequestFullscreen();
+      document.getElementById('myDashboard').style.backgroundColor = "#f7f7f7";
+      document.getElementById("myDashboard").style.overflow = 'auto'
+
+    } else if (elem?.msRequestFullscreen) { /* IE11 */
+      elem.msRequestFullscreen();
+      document.getElementById('myDashboard').style.backgroundColor = "#f7f7f7";
+      document.getElementById("myDashboard").style.overflow = 'auto'
+    }
+  }
+
+      <button onClick={() => openFullscreen()}><i class="fa fa-th" aria-hidden="true"></i></button>
+
+
+  <div className="row" id="myDashboard">
+//Table
+</div>
+*************************************
+
+
+input pdf image
+
+<input type="file" name="foo" accept=
+"application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint,
+text/plain, application/pdf, image/*">
+
+leave or exist page run
+return () => {
+            updateStockCheck1()
+        }
+
+
+ res.status(401).json({
+      error: new Error('Invalid request!')
+    });
+
+
+
+ STATUS_CODES: {
+    '100': 'Continue',
+    '101': 'Switching Protocols',
+    '102': 'Processing',
+    '103': 'Early Hints',
+    '200': 'OK',
+    '201': 'Created',
+    '202': 'Accepted',
+    '203': 'Non-Authoritative Information',
+    '204': 'No Content',
+    '205': 'Reset Content',
+    '206': 'Partial Content',
+    '207': 'Multi-Status',
+    '208': 'Already Reported',
+    '226': 'IM Used',
+    '300': 'Multiple Choices',
+    '301': 'Moved Permanently',
+    '302': 'Found',
+    '303': 'See Other',
+    '304': 'Not Modified',
+    '305': 'Use Proxy',
+    '307': 'Temporary Redirect',
+    '308': 'Permanent Redirect',
+    '400': 'Bad Request',
+    '401': 'Unauthorized',
+    '402': 'Payment Required',
+    '403': 'Forbidden',
+    '404': 'Not Found',
+    '405': 'Method Not Allowed',
+    '406': 'Not Acceptable',
+    '407': 'Proxy Authentication Required',
+    '408': 'Request Timeout',
+    '409': 'Conflict',
+    '410': 'Gone',
+    '411': 'Length Required',
+    '412': 'Precondition Failed',
+    '413': 'Payload Too Large',
+    '414': 'URI Too Long',
+    '415': 'Unsupported Media Type',
+    '416': 'Range Not Satisfiable',
+    '417': 'Expectation Failed',
+    '418': "I'm a Teapot",
+    '421': 'Misdirected Request',
+    '422': 'Unprocessable Entity',
+    '423': 'Locked',
+    '424': 'Failed Dependency',
+    '425': 'Too Early',
+    '426': 'Upgrade Required',
+    '428': 'Precondition Required',
+    '429': 'Too Many Requests',
+    '431': 'Request Header Fields Too Large',
+    '451': 'Unavailable For Legal Reasons',
+    '500': 'Internal Server Error',
+    '501': 'Not Implemented',
+    '502': 'Bad Gateway',
+    '503': 'Service Unavailable',
+    '504': 'Gateway Timeout',
+    '505': 'HTTP Version Not Supported',
+    '506': 'Variant Also Negotiates',
+    '507': 'Insufficient Storage',
+    '508': 'Loop Detected',
+    '509': 'Bandwidth Limit Exceeded',
+    '510': 'Not Extended',
+    '511': 'Network Authentication Required'
+  },
+
+
+
+const greeting = 'https://youtu.be/zYIVjDFmYLE';
+
+const greeting1 = 'https://www.youtube.com/watch?v=zYIVjDFmYLE';
+
+if(greeting1.includes('?v=')){
+  console.log(greeting1.split('?v=')[1]);
+  
+}else{
+  console.log(greeting.split('.be/')[1]);
+  
+}
+
+
+
+if(greeting.includes('<iframe src="')){
+  console.log(greeting.split('<iframe src="')[1]);
+  var a =greeting.split('<iframe src="')[1];
+   console.log(a.split('" width="')[0]);
+  
+}
+
+
+
+
+*****************************************************
+//User Access Routing in Next.js
+import { getSession } from 'next-auth/react'
+
+export async function getServerSideProps(context) {
+  const session = await getSession({ req: context.req })
+
+  if (!session || session.user.role !== 'admin') {
+    return {
+      redirect: {
+        destination: '/login',
+        permanent: false
+      }
+    }
+  }
+
+  return {
+    props: {}
+  }
+
+}
+
+*****************************************************
+
+
+
+
+const util = require('util');
+const fs = require('fs');
+
+const stat = util.promisify(fs.stat);
+stat('.').then((stats) => {
+  // Do something with `stats`
+}).catch((error) => {
+  // Handle the error.
+});
+
+
+
+icon
+https://preview.keenthemes.com/metronic/demo3/features/icons/flaticon.html
+
+
+const email='testEmail@gmail.com'
+console.log(email.split('@')[0]);
+
 return res.status(400).send({
    message: 'This is an error!'
 });

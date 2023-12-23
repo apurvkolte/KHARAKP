@@ -1,0 +1,297 @@
+import * as React from 'react';
+;
+import { Menu, MenuItem, Button, Divider, Box, Fade } from '@mui/material';
+
+import Link from 'next/link';
+
+
+export default function Nav2() {
+    const [anchorEl1, setAnchorEl1] = React.useState(null);
+    const [anchorEl2, setAnchorEl2] = React.useState(null);
+    const [anchorEl3, setAnchorEl3] = React.useState(null);
+    const [anchorEl4, setAnchorEl4] = React.useState(null);
+    const [anchorEl5, setAnchorEl5] = React.useState(null);
+    const [anchorEl6, setAnchorEl6] = React.useState(null);
+    const open1 = Boolean(anchorEl1);
+    const open2 = Boolean(anchorEl2);
+    const open3 = Boolean(anchorEl3);
+    const open4 = Boolean(anchorEl4);
+    const open5 = Boolean(anchorEl5);
+    const open6 = Boolean(anchorEl6);
+
+    let currentlyHovering = false;
+
+    const handleClick1 = (event) => {
+        setAnchorEl1(event.currentTarget);
+    };
+    const handleClose1 = () => {
+        setAnchorEl1(null);
+    };
+
+    const handleClick2 = (event) => {
+        if (anchorEl1) {
+            setAnchorEl2(null);
+        } else {
+            setAnchorEl2(event.currentTarget);
+        };
+    };
+    const handleClose2 = () => {
+        setAnchorEl2(null);
+    };
+
+    const handleClick3 = (event) => {
+        setAnchorEl3(event.currentTarget);
+    };
+    const handleClose3 = () => {
+        setAnchorEl3(null);
+    };
+
+
+    const handleClick4 = (event) => {
+        setAnchorEl4(event.currentTarget);
+    };
+    const handleClose4 = () => {
+        setAnchorEl4(null);
+    };
+
+    const handleClick5 = (event) => {
+        setAnchorEl5(event.currentTarget);
+    };
+    const handleClose5 = () => {
+        setAnchorEl5(null);
+    };
+
+    const handleClick6 = (event) => {
+        setAnchorEl6(event.currentTarget);
+    };
+    const handleClose6 = () => {
+        setAnchorEl6(null);
+    };
+
+
+
+
+
+    return (
+        <div className='menu' >
+            <Box sx={{ width: '100%' }} >
+                <div >
+                    <Link href={"/"} >
+                        <Button variant="text"
+                            className='menu-button mt-1 mb-1 ml-3 text-dark'
+                            id="basic-button1"
+                            aria-controls={open1 ? 'basic-menu1' : undefined}
+                            aria-haspopup="true"
+                            aria-expanded={open1 ? 'true' : undefined}
+                            onMouseOver={handleClick1}
+
+                        >
+                            Headwear Collection
+                        </Button>
+                        <Menu
+                            id="basic-menu1"
+                            anchorEl={anchorEl1}
+                            open={open1}
+                            onClose={handleClose1}
+                            MenuListProps={{ onMouseLeave: handleClose1 }}
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'right',
+                            }}
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            TransitionComponent={Fade}
+                        >
+                            <MenuItem onClick={handleClose1}>Caps</MenuItem>
+                            <MenuItem onClick={handleClose1}>Beanies</MenuItem>
+                            <MenuItem onClick={handleClose1}>Skull Caps</MenuItem>
+                            <MenuItem onClick={handleClose1}>Headbands</MenuItem>
+                            <MenuItem onClick={handleClose1}>Bandanas</MenuItem>
+
+                        </Menu>
+                    </Link>
+
+
+                    <Button variant="text"
+                        className='menu-button mt-1 mb-1 ml-3 text-dark'
+                        id="basic-button2"
+                        aria-controls={open2 ? 'basic-menu2' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open2 ? 'true' : undefined}
+                        onMouseOver={handleClick2}
+
+                    >
+                        T-Shirts Variety
+                    </Button>
+                    <Menu
+                        id="basic-menu2"
+                        anchorEl={anchorEl2}
+                        open={open2}
+                        onClose={handleClose2}
+                        MenuListProps={{ onMouseLeave: handleClose2 }}
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'right',
+                        }}
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        TransitionComponent={Fade}
+                    >
+                        <MenuItem onClick={handleClose2}>Polo T-Shirts</MenuItem>
+                        <MenuItem onClick={handleClose2}>Round Neck T-Shirts</MenuItem>
+                        <MenuItem onClick={handleClose2}>V-Neck T-Shirts</MenuItem>
+                        <MenuItem onClick={handleClose2}>Oversized Drip T-Shirts</MenuItem>
+
+                    </Menu>
+
+
+
+
+                    <Button variant="text"
+                        className='menu-button mt-1 mb-1 ml-3 text-dark'
+                        id="basic-button3"
+                        aria-controls={open3 ? 'basic-menu3' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open3 ? 'true' : undefined}
+                        onMouseOver={handleClick3}
+                    >
+                        Outerwear Selection
+                    </Button>
+                    <Menu
+                        id="basic-menu3"
+                        anchorEl={anchorEl3}
+                        open={open3}
+                        onClose={handleClose3}
+                        MenuListProps={{ onMouseLeave: handleClose3 }}
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'right',
+                        }}
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        TransitionComponent={Fade}
+                    >
+                        <MenuItem onClick={handleClose3}>Hoodies</MenuItem>
+                        <MenuItem onClick={handleClose3}>Varsity Jackets</MenuItem>
+                        <MenuItem onClick={handleClose3}>Sweatshirts</MenuItem>
+                        <MenuItem onClick={handleClose3}>Zipper Hoodies</MenuItem>
+                        <MenuItem onClick={handleClose3}>Zipper Sweatshirts</MenuItem>
+                        <MenuItem onClick={handleClose3}>Standing Collar Sweatshirts with Zip</MenuItem>
+                        <MenuItem onClick={handleClose3}>Sports jacket</MenuItem>
+
+                    </Menu>
+
+
+
+                    <Button variant="text"
+                        className='menu-button mt-1 mb-1 ml-3 text-dark'
+                        id="basic-button4"
+                        aria-controls={open4 ? 'basic-menu4' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open4 ? 'true' : undefined}
+                        onMouseOver={handleClick4}
+                    >
+                        Bottoms Collection
+                    </Button>
+                    <Menu
+                        id="basic-menu4"
+                        anchorEl={anchorEl4}
+                        open={open4}
+                        onClose={handleClose4}
+                        MenuListProps={{ onMouseLeave: handleClose4 }}
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'right',
+                        }}
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        TransitionComponent={Fade}
+                    >
+                        <MenuItem onClick={handleClose4}>Sports Track Pants</MenuItem>
+                        <MenuItem onClick={handleClose4}>Joggers</MenuItem>
+                        <MenuItem onClick={handleClose4}>Cotton Joggers with side pockets</MenuItem>
+                        <MenuItem onClick={handleClose4}>Shorts</MenuItem>
+
+                    </Menu>
+
+
+
+                    <Button variant="text"
+                        className='menu-button mt-1 mb-1 ml-3 text-dark'
+                        id="basic-button5"
+                        aria-controls={open5 ? 'basic-menu5' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open5 ? 'true' : undefined}
+                        onMouseOver={handleClick5}
+                    >
+                        Socks Range
+                    </Button>
+                    <Menu
+                        id="basic-menu5"
+                        anchorEl={anchorEl5}
+                        open={open5}
+                        onClose={handleClose5}
+                        MenuListProps={{ onMouseLeave: handleClose5 }}
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'right',
+                        }}
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        TransitionComponent={Fade}
+                    >
+                        <MenuItem onClick={handleClose5}>Formal Socks</MenuItem>
+                        <MenuItem onClick={handleClose5}>Casual Socks</MenuItem>
+                        <MenuItem onClick={handleClose5}>Bamboo Porosity Socks</MenuItem>
+
+                    </Menu>
+
+
+
+                    <Button variant="text"
+                        className='menu-button mt-1 mb-1 ml-3 text-dark'
+                        id="basic-button6"
+                        aria-controls={open6 ? 'basic-menu6' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open6 ? 'true' : undefined}
+                        onMouseOver={handleClick6}
+                    >
+                        Automotive Accessories
+                    </Button>
+                    <Menu
+                        id="basic-menu6"
+                        anchorEl={anchorEl6}
+                        open={open6}
+                        onClose={handleClose6}
+                        MenuListProps={{ onMouseLeave: handleClose6 }}
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'right',
+                        }}
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        TransitionComponent={Fade}
+                    >
+                        <MenuItem onClick={handleClose6}>Car Badges</MenuItem>
+                        <MenuItem onClick={handleClose6}>Automotive  Badges</MenuItem>
+
+                    </Menu>
+
+                </div>
+
+            </Box >
+        </div >
+    );
+}

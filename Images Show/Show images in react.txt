@@ -1,0 +1,76 @@
+import 'photoswipe/dist/photoswipe.css'
+<Gallery>
+    <Item
+        original={`/images/advertise/${item.image}`}
+        thumbnail={`/images/advertise/${item.image}`}
+        width="724"
+        height="568"
+    >
+        {({ ref, open }) => (
+            <img
+                className="img-whp"
+                src={`/images/advertise/${item.image}`}
+                ref={ref} onClick={open}
+                alt="properties identity"
+            />
+        )}
+    </Item>
+
+
+
+<div className="row ">
+    {advertise_user?.length > 1 && advertise_user?.map((val, i) => (
+        <div className="col-4" key={i}>
+            <div className="spls_style_two img-gallery-box mb24">
+                <Item
+                    original={`/images/advertise/${val.image}`}
+                    thumbnail={`/images/advertise/${val.image}`}
+                    width="1050"
+                    height="568"
+                >
+                    {({ ref, open }) => (
+                        <div role="button" ref={ref} onClick={open}>
+                            <img
+                                className="img-fluid w100"
+                                src={`/images/advertise/${val.image}`}
+                                alt="2.jpg"
+                            />
+                        </div>
+                    )}
+                </Item>
+            </div>
+        </div>
+    ))}
+
+</div>
+</Gallery>
+
+
+
+
+
+
+
+import { Gallery, Item } from 'react-photoswipe-gallery'
+import 'photoswipe/dist/photoswipe.css'
+
+            <Gallery>
+              <Item
+                original={`/images/advertise/${adv.image}`}
+                thumbnail={`/images/advertise/${adv.image}`}
+                width="724"
+                height="568"
+              >
+                {({ ref, open }) => (
+                  <img ref={ref} onClick={open} src={`/images/advertise/${adv.image}`} height={70} width={70} />
+
+                )}
+              </Item>
+            </Gallery>
+
+
+
+
+
+
+

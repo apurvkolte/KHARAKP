@@ -1,0 +1,508 @@
+import React, { useContext, useEffect, useState } from 'react';
+import Link from "next/link";
+import { useParams } from "next/navigation";
+import { useRouter } from "next/router";
+import { IoMdStar, IoMdCheckmark } from 'react-icons/io';
+import { calculateDiscount, displayMoney } from '../../helpers/utils';
+import useDocTitle from '../../hooks/useDocTitle';
+import useActive from '../../hooks/useActive';
+import cartContext from '../../contexts/cart/cartContext';
+import productsData from '../../data/productsData';
+import SectionsHead from '../../components/common/SectionsHead';
+import RelatedSlider from '../../components/sliders/RelatedSlider';
+import ProductSummary from '../../components/product/ProductSummary';
+import Services from '../../components/common/Services';
+import { getAllUserCoupons } from '../../redux/actions/orderActions'
+import { useDispatch, useSelector } from "react-redux";
+import { getProductDetails, newReview, getProductReviews1, getDiscountUI } from "../../redux/actions/productActions";
+import { removeBuyItem, addItemToCart, addBuyItem } from "../../redux/actions/cartActions";
+import { myOrders } from '../../redux/actions/orderActions';
+import { NEW_REVIEW_RESET } from "../../redux/constants/productConstants";
+import ReadMore from "../../components/product/ReadMore ";
+import RelatedItem from "../../components/product/RelatedItem";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Buffer } from 'buffer';
+import Slider from "react-slick";
+import {
+    EmailShareButton,
+    FacebookShareButton,
+    PinterestShareButton,
+    TwitterShareButton,
+    WhatsappShareButton,
+} from "react-share";
+import {
+    EmailIcon,
+    FacebookIcon,
+    PinterestIcon,
+    TwitterIcon,
+    WhatsappIcon,
+} from "react-share";
+import { isMobile } from 'react-device-detect';
+
+const index = () => {
+    // const location = useLocation();
+    const router = useRouter()
+    const id = router.query.id;
+
+    const { asPath, pathname } = useRouter()
+    const [quantity, setQuantity] = useState(1);
+    const [rating, setRating] = useState(0);
+    const [comment, setComment] = useState("");
+    const [img, setImg] = useState([]);
+    const dispatch = useDispatch();
+
+    const { loading, error, product, productImages, RelatedProductImages, relatedProduct, productDetails, productProperties } = useSelector((state) => state.productDetails);
+    const { reviews } = useSelector(state => state.productReviews);
+    const { cartItems } = useSelector(state => state.cart);
+    const { coupons } = useSelector(state => state.allUserCoupons);
+    const { user } = useSelector((state) => state.auth);
+    const { error: reviewError, success } = useSelector((state) => state.newReview);
+    const { productsRelated } = useSelector((state) => state.productsRelated);
+    const { buyItem } = useSelector(state => state.buy);
+    const { orders } = useSelector(state => state.myOrders);
+    const pCategory = product.category;
+    var purchased = false
+
+
+    useDocTitle('Product Details');
+
+    const { handleActive, activeClass } = useActive(0);
+    const quantityArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
+    // const { addItem } = useContext(cartContext);
+
+    const params = useParams();
+
+
+    // here the 'id' received has 'string-type', so converting it to a 'Number'
+    // const prodId = parseInt(params.id);
+
+    // showing the Product based on the received 'id'
+    const product11 = productsData.find(item => item.id === 1);
+
+    const { title, info, category, finalPrice, originalPrice, ratings, rateCount } = product11;
+    const [previewImg, setPreviewImg] = useState(productImages[0]);
+
+
+
+    function onlyUnique(value, index, self) {
+        return self.indexOf(value) === index;
+    }
+
+    var arr = [];
+    if (productProperties) {
+        productProperties.map((item) => {
+            arr.push(item.properties1)
+            arr.push(item.properties2)
+            arr.push(item.properties3)
+        })
+    }
+    // console.log("arr", arr);
+    var arr1 = [];
+    if (productProperties) {
+        productProperties.map((item) => {
+            arr1.push(item.value1)
+        })
+    }
+    // console.log("arr1", arr1);
+
+    var arr2 = [];
+    if (productProperties) {
+        productProperties.map((item) => {
+            arr2.push(item.value2)
+        })
+    }
+    // console.log("arr2", arr2);
+
+    var arr3 = [];
+    if (productProperties) {
+        productProperties.map((item) => {
+            arr3.push(item.value3)
+        })
+    }
+
+    // console.log("arr3", arr2.filter(onlyUnique));
+
+    var arrID = [];
+    if (productProperties) {
+        productProperties.map((item) => {
+            arrID.push(item.id)
+        })
+    }
+
+    //find duplicate value in array
+    const uniq = arr2
+        .map((name) => {
+            return {
+                count: 1,
+                name: name
+            };
+        })
+        .reduce((result, b) => {
+            result[b.name] = (result[b.name] || 0) + b.count;
+
+            return result;
+        }, {});
+
+    const EID = Buffer.from(`${product.id}`, 'binary').toString('base64')
+    // setting the very-first image on re-render
+    useEffect(() => {
+        if (productImages.length) {
+            setPreviewImg(productImages[0].imageName);
+        }
+        handleActive(0);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        if (!EID || EID !== id) {
+            if (id) {
+                dispatch(getProductDetails(id))
+                dispatch(getProductReviews1(id))
+            }
+        }
+        dispatch(getAllUserCoupons());
+
+        // if (pCategory) {
+        //     dispatch(getRelatedProducts(pCategory));
+        // }
+        if (error) {
+            if (error === 'Product not found') {
+                router.push('/404', { replace: true });
+            } else {
+                toast.error(error);
+            }
+        }
+        if (reviewError) {
+            toast.error(reviewError);
+        }
+        if (success) {
+            toast.success("Review posted successfully");
+            dispatch({ type: NEW_REVIEW_RESET });
+        }
+
+        // const body = document.querySelector('#root');
+
+        // body.scrollIntoView({
+        //     behavior: 'smooth'
+        // }, 500)
+    }, [EID, error, id, reviewError, success]);
+
+    function zoom(e) {
+        var zoomer = e.currentTarget;
+        let pageX;
+        let pageY
+        let x
+        let y
+        e.pageX ? (pageX = e.pageX) : (pageX = e.clientX);
+        e.pageY ? (pageY = e.pageY) : (pageX = e.clientY);
+        x = (pageX / zoomer.offsetWidth) * 100;
+        y = (pageY / zoomer.offsetHeight) * 100;
+        zoomer.style.backgroundPosition = x + "% " + y + "%";
+    }
+    //buy now buttion
+    const addToBuy = () => {
+        remove();
+        dispatch(addBuyItem(params.id, quantity));
+        // router.push('/shipping', { state: { prevPath: router.pathname } });
+        router.push('/shipping');
+    }
+    const remove = () => {
+        // localStorage.removeItem("buyItem");
+        if (buyItem) {
+            buyItem.map(item => (
+                dispatch(removeBuyItem(item.product))))
+        }
+    }
+
+    function stockZero() {
+        if (product.stock === 0) {
+            toast.error("Currently product out of stock")
+        }
+    }
+
+    const increaseQty = () => {
+        const count = document.querySelector(".count");
+        if (count.valueAsNumber >= 30) {
+            toast.error("Maximum Orderable Quantity Should be 30")
+        } else {
+            if (count.valueAsNumber >= product.stock) {
+                toast.error(`${product.name} available stock is ${product.stock}`);
+                return;
+            };
+            const qty = count.valueAsNumber + 1;
+            setQuantity(qty);
+
+        }
+    };
+
+    const decreaseQty = () => {
+        const count = document.querySelector(".count");
+        if (count.valueAsNumber <= 1) return;
+        const qty = count.valueAsNumber - 1;
+        setQuantity(qty);
+    };
+    // handling Add-to-cart
+    const handleAddItem = () => {
+        addToCart(EID);
+    };
+
+    const addToCart = (id) => {
+        const BID = Buffer.from(`${id}`, 'base64').toString('binary');
+        if (cartItems.length < 10) {
+            let count = 0;
+
+            const check = cartItems.filter((item) => item.product === Number(BID));
+            if (check.length) {
+                count = check[0].quantity;
+                if (check[0].quantity + quantity > check[0].stock) {
+                    return toast.error("no stock available for this product");
+                }
+            }
+
+            if (count) {
+                dispatch(addItemToCart(id, (quantity + count)));
+                toast.success("Item Added to Cart");
+            } else {
+                dispatch(addItemToCart(id, quantity));
+                toast.success("Item Added to Cart");
+            }
+
+        } else {
+            toast.success("Cart has touched the max limit. Please delete existing cart items to add a new item. ");
+        }
+    };
+
+
+    // handling Preview image
+    const handlePreviewImg = (i) => {
+        setPreviewImg(productImages[i].imageName);
+        handleActive(i);
+    };
+
+
+    // calculating Prices
+    const discountedPrice = originalPrice - finalPrice;
+    const newPrice = displayMoney(finalPrice);
+    const oldPrice = displayMoney(originalPrice);
+    const savedPrice = displayMoney(discountedPrice);
+    const savedDiscount = calculateDiscount(discountedPrice, originalPrice);
+
+
+    return (
+        <>
+            {/* <Header /> */}
+            <ToastContainer />
+            <main>
+                <figure
+                    className="zoom"
+                    style={{ backgroundImage: "url('https://res.cloudinary.com/active-bridge/image/upload/slide1.jpg')" }}
+                    onMouseMove={(event) => zoom(event)}
+                >
+                    <img
+                        src="https://res.cloudinary.com/active-bridge/image/upload/slide1.jpg"
+                    />
+                </figure>
+                <>
+                    {Object.keys(product).length !== 0 &&
+                        <>
+                            <section id="product_details" className="section">
+                                <div className="container">
+                                    <div className="wrapper prod_details_wrapper">
+
+                                        {/*=== Product Details Left-content ===*/}
+                                        <div className="prod_details_left_col">
+                                            <div className="prod_details_tabs">
+                                                {
+                                                    productImages.map((img, i) => (
+                                                        <div
+                                                            key={i}
+                                                            className={`tabs_item bg-white ${activeClass(i)}`}
+                                                            onClick={() => handlePreviewImg(i)}
+                                                        >
+                                                            <img src={`/uploads/product/${img.imageName}`} alt="product-img" />
+                                                        </div>
+                                                    ))
+                                                }
+                                            </div>
+                                            <figure className="prod_details_img bg-white zoom" style={{ backgroundImage: "url('https://res.cloudinary.com/active-bridge/image/upload/slide1.jpg')" }}
+                                                onMouseMove={(event) => zoom(event)} >
+                                                <img src="https://res.cloudinary.com/active-bridge/image/upload/slide1.jpg" alt="product-img" />
+                                            </figure>
+                                        </div>
+
+
+
+                                        {/*=== Product Details Right-content ===*/}
+                                        <div className="prod_details_right_col">
+
+
+                                            <h1 className="prod_details_title">{product.name}</h1>
+                                            <h4 className="prod_details_info">{product.category}</h4>
+
+                                            <div className="prod_details_ratings">
+                                                <span className="rating_star">
+                                                    {
+                                                        [...Array(product.ratings)].map((_, i) => <IoMdStar key={i} />)
+                                                    }
+                                                </span>
+                                                <span>|</span>
+                                                <Link href="*">{product.numOfReviews} Ratings</Link>
+                                            </div>
+
+                                            <div className="separator"></div>
+                                            <div className="prod_details_price">
+                                                <div className="price_box">
+                                                    <h2 className="price">
+                                                        {displayMoney(product.sale_price)} &nbsp;
+                                                        <small className="del_price"><del>{displayMoney(Math.round(getDiscountUI(product.sale_price, product.discount)))}</del></small>
+                                                    </h2>
+                                                    <p className="saved_price">You save: {displayMoney(Math.ceil(product.sale_price - getDiscountUI(product.sale_price, product.discount)))} ({product.discount}%)</p>
+                                                    <span className="tax_txt">(Inclusive of all taxes)</span>
+                                                </div>
+
+                                                {product.stock === 0 ? (
+                                                    <div className="badge1">
+                                                        <span>Out Of Stock</span>
+                                                    </div>
+                                                ) : (
+                                                    <div className="badge">
+                                                        <span><IoMdCheckmark /> In Stock</span>
+                                                    </div>
+                                                )}
+                                            </div>
+
+                                            <div className="separator1"></div>
+                                            <b>Select Quantity  &nbsp; &nbsp; &nbsp;</b>
+                                            <div className="stockCounter d-inline">
+                                                <span className="btn minus-btn" onClick={decreaseQty}>
+                                                    <i class="fa fa-minus" aria-hidden="true"></i>
+                                                </span>
+                                                <input
+                                                    type="number"
+                                                    className="form-control count d-inline"
+                                                    value={quantity}
+                                                    readOnly
+                                                />
+                                                <span className="btn plus-btn" onClick={increaseQty}>
+                                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                                </span>
+                                                <span>
+                                                    {product.stock < 6 && product.stock > 0 ? (
+                                                        <span className="inline-block ml-13">
+                                                            <div className="text-danger d-inline  ml-4">Hurry Up, Only {product.stock} left</div>
+                                                        </span>
+                                                    ) : ("")}
+                                                </span>
+                                            </div>
+
+                                            <div className="separator1"></div><br />
+                                            <div className="prod_details_buy_btn">
+                                                <div className='row'>
+                                                    <button
+                                                        type="button"
+                                                        className="btn  ml-3 "
+                                                        onClick={handleAddItem}
+                                                        disabled={product.stock === 0}
+                                                    >
+                                                        Add to cart
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        className="btn  ml-3 "
+                                                        onClick={addToBuy}
+                                                        disabled={product.stock === 0}
+                                                    >
+                                                        <span onClick={stockZero}> Buy Now </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div className="separator"></div>
+                                            <div className="prod_details_offers">
+                                                <h4>Offers and Discounts</h4>
+                                                <ul>
+                                                    {coupons && coupons.length ? (
+                                                        coupons.map((coupon) => <>
+                                                            {new Date().getTime() < new Date(coupon.lastDate).getTime() ? (
+                                                                <li key={coupon.id}>Apply coupon "{coupon.coupon_code}" to Get Rs. {coupon.cashback} on Rs. {coupon.minValue} minimum order product</li>
+
+                                                            ) : ""}
+                                                        </>
+                                                        )
+                                                    ) : <li>Currently no offers available</li>}
+                                                </ul>
+                                            </div>
+
+                                            <div className="separator"></div>
+                                            <div className="prod_details_buy_btn">
+                                                {product.product_code ? (
+                                                    <div className="row">
+                                                        {
+                                                            arr[0] &&
+                                                            <div>
+                                                                <h5 className="ml-3">Select {arr[0]}</h5><br />
+                                                                <ul id="menu">
+                                                                    <div className="selected">
+                                                                        {arr1.filter(onlyUnique).map((ele, i = 0) => (
+                                                                            (arr1[i] && (<Link href={`/product-details/${Buffer.from(`${arrID[i]}`, 'binary').toString('base64')}`}>
+                                                                                <li className={`${product.value1 === arr1[i] ? 'list-active' : ""}`}>{arr1[i++]}</li></Link>))
+                                                                        ))}
+                                                                    </div>
+                                                                </ul><br /><br />
+                                                            </div>
+                                                        }
+
+                                                        {
+                                                            arr[1] &&
+                                                            <div>
+                                                                <h5 className="ml-3">Select {arr[1]}</h5><br />
+                                                                <ul id="menu">
+                                                                    <div className="selected">
+                                                                        {arr2.filter(onlyUnique).map((ele, i = 0) => (
+                                                                            (arr2[i] && (<Link href={`/product-details/${Buffer.from(`${arrID[i]}`, 'binary').toString('base64')}`}>
+                                                                                <li className={`${product.value2 === arr2[i] ? 'list-active' : ""}`}>{arr2[i++]}</li></Link>))
+                                                                        ))}
+                                                                    </div>
+                                                                </ul><br /><br />
+                                                            </div>
+                                                        }
+
+                                                        {
+                                                            arr[2] &&
+                                                            <div>
+                                                                <h5 className="ml-3">Select {arr[2]}</h5><br />
+                                                                <ul id="menu">
+                                                                    <div className="selected">
+                                                                        {arr3.filter(onlyUnique).map((ele, i = 0) => (
+                                                                            (arr3[i] && (<Link href={`/product-details/${Buffer.from(`${arrID[i]}`, 'binary').toString('base64')}`}>
+                                                                                <li className={`${product.value3 === arr3[i] ? 'list-active' : ""}`}>{arr3[i++]}</li></Link>))
+                                                                        ))}
+                                                                    </div>
+                                                                </ul>
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                ) : ("")}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <ProductSummary key={product.id} product={product} productDetails={productDetails} reviews={reviews} params={params} user={user} />
+
+                            <section id="related_products" className="section">
+                                <div className="container ">
+                                    <SectionsHead heading="Related Products" />
+                                    <RelatedSlider productsRelated={relatedProduct} RelatedProductImages={RelatedProductImages} />
+                                </div>
+                            </section>
+
+                            <Services />
+                        </>
+                    }
+                </>
+            </main >
+        </>
+    )
+}
+
+export default index

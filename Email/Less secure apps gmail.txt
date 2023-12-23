@@ -1,0 +1,6 @@
+
+
+https://stackoverflow.com/questions/72480275/is-there-a-work-around-google-disabling-less-secure-apps
+
+https://myaccount.google.com/u/0/lesssecureapps
+https://myaccount.google.com/u/0/apppasswords

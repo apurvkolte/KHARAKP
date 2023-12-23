@@ -11,6 +11,10 @@ git config --global user.email "apurvkolte10@gmail.com"
 git config --global user.name "apurvkolte10@gmail.com"
 git pull hett copy git to dir
 
+//login
+git config user.name "new name"
+git config credential.username "new name"
+
 git remote set-url origin https://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@github.com/apurvkolte/indicent.git
 
 ------------------------------------
